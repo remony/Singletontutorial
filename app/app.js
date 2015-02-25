@@ -8,8 +8,6 @@ var App = angular.module('app', [
 
 App.config(['$routeProvider', function($routeProvider) {
 
-  console.log('---');
-
   $routeProvider.when('/Home', {
     templateUrl: 'Home/Home.html',
     controller: 'HomeController'

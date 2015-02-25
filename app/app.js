@@ -3,10 +3,10 @@
 // Declare app level module which depends on views, and components
 var App = angular.module('app', [
   'ngRoute',
-  'app.home',
-    'app.kuizu',
     'ngFx',
-    'ngAnimate'
+    'ngAnimate',
+  'gilbox.sparkScroll',
+  'app.home'
 ]);
 
 App.config(['$routeProvider', function($routeProvider) {

@@ -2,6 +2,7 @@
 
 // Creates the Controller
 var HomeController = function($scope) {
+    $scope.pageTitle="Singleton";
 };
 
 // Injects the Dependencies (in a way that can be compressed)

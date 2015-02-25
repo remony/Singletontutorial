@@ -12,6 +12,7 @@
     "angular-mocks": "~1.2.x",
     "html5-boilerplate": "~4.3.0",
     "spark-scroll": "*",
-    "animation-frame": "~0.2.3"
+    "animation-frame": "~0.2.3",
+    "open-sans-fontface": "~1.2.1"
   }
 }

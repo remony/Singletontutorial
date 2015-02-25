@@ -5,6 +5,9 @@
     top:0;
     left:0;
     z-index: -1;
+}
 
-    background-color: gray;
+h1 {
+    position: absolute;
+    margin-top: 100%;
 }

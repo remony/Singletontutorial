@@ -1,22 +1,36 @@
+<link rel="stylesheet" href="directives/quiz/kuizu.css">
+
 <div class="quiz-area" ng-show="inProgress">
     <div ng-show="!quizOver">
+
+        <div class="QuestionResultStatus" ng-show="!answerMode">
+            <div class="answer_correct">
+                <span ng-show="correctAns"><i class="fa fa-check"></i></span>
+            </div>
+            <div class="answer_wrong">
+                <span ng-show="!correctAns"><i class="fa fa-times"></i></span>
+            </div>
+
+
+        </div>
+
+
+
+
         <h2 id="question">{{question}}</h2>
 
-            <form name="QuestionForm" ng-submit="checkAnswer()">
+            <form name="QuestionForm">
                 <ul id="options">
                 <li ng-repeat="option in options">
-                    <input type="radio" name="answer" ng-model="quizValue" value="{{option}}"> {{option}} <br/>
+                    <button ng-click="checkAnswer(option)" value="{{option}}">
+                        {{option}}
+                    </button>
                 </li>
-                    choice = {{quizValue}}
             </ul>
-            <button ng-show="answerMode">Submit</button>
-
             </form>
 
-        <div ng-show="!answerMode">
+        <div class="nextQuestion" ng-show="!answerMode">
             <button ng-click="nextQuestion()" class="next-question">Next</button>
-            <span ng-show="correctAns">That is correct!</span>
-            <span ng-show="!correctAns">Sorry, that is an incorrect answer.</span>
         </div>
     </div>
 
@@ -30,7 +44,7 @@
     </div>
 </div>
 
-<div class="intro" ng-show="!inProgress">
-    <p>Welcome to the QuizApp</p>
-    <button id="startQuiz" ng-click="start()">Start the Quiz</button>
+<div class="intro" >
+    <p>Quiz Time</p>
+    <button ng-show="!inProgress" id="startQuiz" ng-click="start()">Ready?</button>
 </div>

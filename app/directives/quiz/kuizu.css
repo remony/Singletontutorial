@@ -1,0 +1,33 @@
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+button    {
+    background:#2196F3;
+    border:none;
+    padding:10px;
+    width:80%;
+    text-align:center;
+    margin-top:5px;
+    font-size:1em;
+    color:#fff;
+    -webkit-appearance: none;
+}
+
+.nextQuestion button    {
+    background-color:#4CAF50;
+}
+
+.answer_correct, .answer_wrong {
+    font-size:2em;
+    width:80%;
+}
+
+.answer_correct {
+    background-color:#8BC34A;
+}
+.answer_wrong   {
+    background-color:#F44336;
+}

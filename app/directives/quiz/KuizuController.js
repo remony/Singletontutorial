@@ -30,10 +30,10 @@ angular.module('app.kuizu', [])
                     }
                 };
 
-                scope.checkAnswer = function($scope) {
+                scope.checkAnswer = function(ans) {
                     //f(ans.option) return;
-                    var ans = scope.quizValue;
-                    console.log("You entered: " + scope.quizValue);
+                    //var ans = scope.quizValue;
+                    console.log("You entered: " + ans);
                     console.log("Answer is: " + scope.options[scope.answer]);
 
                     if(ans == scope.options[scope.answer]) {

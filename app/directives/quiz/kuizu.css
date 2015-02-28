@@ -1,29 +1,26 @@
-.quiz-area   {
-    padding:10px;
-    background-color:transparent;
+.quiz-area {
+    padding: 10px;
+    background-color: transparent;
 }
 
 .questionNumber {
-    text-align:right;
-    color:#212121;
+    text-align: right;
+    color: #212121;
     font-weight: 600;
-    font-size:1em;
+    font-size: 1em;
 }
 
-.question_window    {
+.question_window {
 
 }
 
-.question_window_icon   {
-    position:relative;
-    float:right;
-    margin-top:-80px;
-    left:0;
-    font-size:9em;
+.question_window_icon {
+    position: relative;
+    float: right;
+    margin-top: -80px;
+    left: 0;
+    font-size: 9em;
 }
-
-
-
 
 ul {
     list-style-type: none;
@@ -31,85 +28,101 @@ ul {
     margin: 0px;
 }
 
-
-button  {
-    background-color:#333;
-    border:none;
-    padding:10px;
-    width:100%;
-    text-align:center;
-    margin-top:5px;
-    font-size:1em;
-    color:#fff;
+button {
+    background-color: #333;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 1em;
+    color: #fff;
     -webkit-appearance: none;
 }
 
-button:hover  {
+button:hover {
     background-color: #111;
 }
 
-.question_list  {
-    background-color:transparent;
+.question_list {
+    background-color: transparent;
 }
 
-.question_list button    {
-    background:#2196F3;
+.question_list button {
+    background: #2196F3;
 }
 
 .question_list button:hover {
     background-color: #208ce5;
 }
 
-.question   {
-    font-size:2em;
-    background-color:transparent;
-    width:100%;
-    padding-top:20px;
-    padding-bottom:50px;
-    text-align:center;
-    color:#212121;
+.question {
+    font-size: 2em;
+    background-color: transparent;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #212121;
     font-weight: 700;
-    margin-bottom:0;
+    margin-bottom: 0;
 }
-
 
 /*
                 Score screen
 
 */
 
-.score  {
+.score {
     text-align: center;
 }
 
 .score p {
-    margin-top:-10px;
-    margin-bottom:-10px;
-    font-size:4em;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    font-size: 4em;
     font-weight: 900;
 }
 
-
-.twitterButton  {
+.twitterButton {
     background-color: #4099FF;
-    padding:10px;
-    color:#fff;
-    min-width:50%;
-    text-align:center;
+    padding: 10px;
+    color: #fff;
+    min-width: 50%;
+    text-align: center;
 }
 
-.twitterButton:hover    {
+.twitterButton:hover {
     background-color: #3682d9;
 }
 
-.twitterButton a:link    {color:#fff; background-color:transparent; text-decoration:none}
-.twitterButton a:visited {color:#fff; background-color:transparent; text-decoration:none}
-.twitterButton a:hover   {color:#fff; background-color:transparent; text-decoration:underline}
-.twitterButton a:active  {color:#fff; background-color:transparent; text-decoration:underline}
+.twitterButton a:link {
+    color: #fff;
+    background-color: transparent;
+    text-decoration: none
+}
+
+.twitterButton a:visited {
+    color: #fff;
+    background-color: transparent;
+    text-decoration: none
+}
+
+.twitterButton a:hover {
+    color: #fff;
+    background-color: transparent;
+    text-decoration: underline
+}
+
+.twitterButton a:active {
+    color: #fff;
+    background-color: transparent;
+    text-decoration: underline
+}
 
 .twitterButton_icon {
-    font-size:2em;
-    color:#333;
+    font-size: 2em;
+    color: #333;
 }
 
 

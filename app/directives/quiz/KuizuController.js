@@ -17,9 +17,7 @@ angular.module('app.kuizu', [])
                     scope.id = 0;
                     scope.quizOver = false;
                     scope.inProgress = true;
-
                     scope.getQuestion();
-
                 };
 
 

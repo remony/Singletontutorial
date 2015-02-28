@@ -22,8 +22,18 @@ $scope.pageTitle="Singleton";
 
   $scope.titleAnimation = {
     ease:'easeOutQuad',
-    80:{ top: '10vh' },
-    20:{ top: '90vh', ease: 'linear'}
+    80: { top: '10vh', 'font-size': '1em' },
+    81: { 'downAddClass,upRemoveClass': 'move stay'},
+    20: { top: '50vh', 'font-size': '4em', ease: 'linear' },
+    21: { 'downAddClass,upRemoveClass': 'stay move' }
+  };
+
+  $scope.skyAnimation = {
+    ease:'easeOutQuad',
+    80:{ opacity: '1.0' },
+    50:{ opacity: '0.0' },
+    0:{ opacity: '0.0' },
+    endAddClass: 'stay'
   };
 
 };

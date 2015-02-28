@@ -14,4 +14,27 @@
 .home_base .title {
     position: relative;
     text-align: center;
+    font-family: "Open Sans";
+    font-weight: 800;
+    color: #5d5d5d;
 }
+
+.stay {
+    position: fixed;
+    top: 10vh;
+    font-size: 1em;
+}
+
+.move {
+    position: absolute;
+}
+
+.home_base .sky {
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 10em;
+    background-color: rgb(12, 144, 255);
+}
+

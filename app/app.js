@@ -6,7 +6,8 @@ var App = angular.module('app', [
     'ngFx',
     'ngAnimate',
   'gilbox.sparkScroll',
-  'app.home'
+  'app.home',
+  'app.kuizu'
 ]);
 
 App.config(['$routeProvider', function($routeProvider) {

@@ -8,7 +8,7 @@ button    {
     background:#2196F3;
     border:none;
     padding:10px;
-    width:80%;
+    width:100%;
     text-align:center;
     margin-top:5px;
     font-size:1em;
@@ -21,8 +21,10 @@ button    {
 }
 
 .answer_correct, .answer_wrong {
-    font-size:2em;
-    width:80%;
+    font-size:5em;
+    font-weight: 800;
+    width:100%;
+    text-align:center;
 }
 
 .answer_correct {
@@ -30,4 +32,13 @@ button    {
 }
 .answer_wrong   {
     background-color:#F44336;
+}
+
+#question   {
+    background-color:#212121;
+    width:100%;
+    padding-top:20px;
+    padding-bottom:50px;
+    text-align:center;
+    color:#fff;
 }

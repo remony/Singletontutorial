@@ -2,7 +2,6 @@
 
 <div class="quiz-area" ng-show="inProgress">
     <div ng-show="!quizOver">
-
         <div class="QuestionResultStatus" ng-show="!answerMode">
             <div class="answer_correct">
                 <span ng-show="correctAns"><i class="fa fa-check"></i></span>
@@ -10,15 +9,12 @@
             <div class="answer_wrong">
                 <span ng-show="!correctAns"><i class="fa fa-times"></i></span>
             </div>
-
-
         </div>
 
 
 
 
         <h2 id="question">{{question}}</h2>
-
             <form name="QuestionForm">
                 <ul id="options">
                 <li ng-repeat="option in options">
@@ -28,23 +24,16 @@
                 </li>
             </ul>
             </form>
-
-        <div class="nextQuestion" ng-show="!answerMode">
-            <button ng-click="nextQuestion()" class="next-question">Next</button>
-        </div>
     </div>
 
     <div ng-show="quizOver">
         <h2>Quiz is over</h2>
+        <p>You got {{score}}/{{id}}</p>
         <button ng-click="reset()">Play again</button>
-    </div>
-
-    <div id="score">
-        Score: {{score}}
     </div>
 </div>
 
-<div class="intro" >
+<div class="intro" ng-show="!inProgress">
     <p>Quiz Time</p>
-    <button ng-show="!inProgress" id="startQuiz" ng-click="start()">Ready?</button>
+    <button  id="startQuiz" ng-click="start()">Ready?</button>
 </div>

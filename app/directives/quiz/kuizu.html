@@ -2,6 +2,9 @@
 
 <div class="quiz-area" ng-show="inProgress">
     <div ng-show="!quizOver">
+        <div class="questionNumber">
+            <p>Question {{id + 1}}</p>
+        </div>
         <div class="QuestionResultStatus" ng-show="!answerMode">
             <div class="answer_correct">
                 <span ng-show="correctAns"><i class="fa fa-check"></i></span>
@@ -11,29 +14,46 @@
             </div>
         </div>
 
+        <div class="question_window">
+            <div class="question_window_icon">
+                <i class="fa fa-question"></i>
+            </div>
+            <p class="question">{{question}}</p>
+        </div>
 
 
-
-        <h2 id="question">{{question}}</h2>
+        <div class="question_list">
             <form name="QuestionForm">
                 <ul id="options">
-                <li ng-repeat="option in options">
-                    <button ng-click="checkAnswer(option)" value="{{option}}">
-                        {{option}}
-                    </button>
-                </li>
-            </ul>
+                    <li ng-repeat="option in options">
+                        <button ng-click="checkAnswer(option)" value="{{option}}">
+                            {{option}}
+                        </button>
+                    </li>
+                </ul>
             </form>
+        </div>
+
     </div>
 
     <div ng-show="quizOver">
-        <h2>Quiz is over</h2>
-        <p>You got {{score}}/{{id}}</p>
+        <div class="score">
+            <h1>Score</h1>
+            <p>{{score}}/{{id}}</p>
+        </div>
+
+        <div class="twitterButton">
+            <div class="twitterButton_icon">
+                <i class="fa fa-twitter">      </i><a href="https://twitter.com/intent/tweet?button_hashtag=ac31009&text=I%20just%20scored%20{{score}}/{{id}}" class="twitter-hashtag-button" data-size="large">    Tweet Your Score</a>
+            </div>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+
         <button ng-click="reset()">Play again</button>
     </div>
 </div>
 
 <div class="intro" ng-show="!inProgress">
     <p>Quiz Time</p>
-    <button  id="startQuiz" ng-click="start()">Ready?</button>
+    <button id="startQuiz" ng-click="start()">Ready?</button>
 </div>

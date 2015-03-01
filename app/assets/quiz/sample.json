@@ -3,11 +3,11 @@
     "question": "2?",
     "options": [
       "1",
-      "2",
+      "two",
       "3",
       "4"
     ],
-    "answer": 2
+    "answer": 1
   },
   {
     "question": "When did the second world war end?",

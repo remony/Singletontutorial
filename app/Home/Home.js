@@ -13,7 +13,7 @@ var HomeController = function($scope, $rootScope, sparkSetup) {
 
   $scope.sunAnimation = {
     ease  :'easeOutQuad',
-    '1000' :  {
+    '5000' :  {
       width               :'3em',
       height              :'3em',
       left                : '80vw',
@@ -21,10 +21,10 @@ var HomeController = function($scope, $rootScope, sparkSetup) {
       'background-color'  : 'rgba(0, 0, 0, 0.00)',
       ease                : 'easeOutSine'
     },
-    '850' :  { width:'3em', height:'3em', left: '60vw', top: '2em', 'background-color' : 'rgb(255, 79, 14)', ease: 'easeOutSine' },
-    '600' :  { width:'3em', height:'3em', left: '50vw', top: '0.5em', 'background-color' : 'rgb(255, 115, 0)', ease: 'easeOutSine' },
-    '500' :  { width:'3em', height:'3em', left: '20vw', top: '2em', 'background-color' : 'rgb(255, 181, 0)', ease: 'easeOutSine' },
-    '420' :  { width:'3em', height:'3em', top: '5em', left: '3vw', 'background-color' : 'rgb(255, 255, 10)', ease: 'easeOutSine' },
+    '4000' :  { width:'3em', height:'3em', left: '60vw', top: '2em', 'background-color' : 'rgb(255, 79, 14)', ease: 'easeOutSine' },
+    '3000' :  { width:'3em', height:'3em', left: '50vw', top: '0.5em', 'background-color' : 'rgb(255, 115, 0)', ease: 'easeOutSine' },
+    '2000' :  { width:'3em', height:'3em', left: '20vw', top: '2em', 'background-color' : 'rgb(255, 181, 0)', ease: 'easeOutSine' },
+    '1000' :  { width:'3em', height:'3em', top: '5em', left: '3vw', 'background-color' : 'rgb(255, 255, 10)', ease: 'easeOutSine' },
     '130'  :  { width:'30vw', height:'30vw', top: '9em', left: '35vw', 'background-color' : 'rgb(255, 255, 10)', ease: 'easeOutSine'},
     '20'  :  { width:'80vw', height:'80vw', top: '10em', left: '10vw', 'background-color' : 'rgb(255, 255, 10)', ease: 'easeOutSine' }
   };
@@ -49,20 +49,114 @@ var HomeController = function($scope, $rootScope, sparkSetup) {
       "background-color"  : 'rgb(12, 144, 255)',
       opacity             : '1.0'
     },
-    '500' : {
+    '1000' : {
       "background-color"  : 'rgb(12, 144, 255)',
       opacity             : '1.0'
     },
-    '700' : {
+    '2000' : {
       "background-color"  : 'rgb(198, 89, 0)',
       opacity             : '1.0'
     },
-    '750' : {
+    '3000' : {
       "background-color"  : 'rgb(198, 89, 0)',
       opacity             : '1.0'
     },
-    '900' : {
+    '4000' : {
       "background-color"  : 'rgb(0, 0, 0)',
+      opacity             : '1.0'
+    },
+    ease  :'easeOutQuad'
+  };
+
+  $scope.sectionOne = {
+    '0' : {
+      opacity             : '0.0'
+    },
+    '400' : {
+      opacity             : '0.0'
+    },
+    '600' : {
+      opacity             : '1.0'
+    },
+    '1600' : {
+      opacity             : '0.0'
+    },
+    ease  :'easeOutQuad'
+  };
+
+  $scope.sectionTwo = {
+    '0' : {
+      opacity             : '0.0'
+    },
+    '1300' : {
+      opacity             : '0.0'
+    },
+    '1600' : {
+      opacity             : '1.0'
+    },
+    '2600' : {
+      opacity             : '0.0'
+    },
+    ease  :'easeOutQuad'
+  };
+
+
+  $scope.sectionThree = {
+    '0' : {
+      opacity             : '0.0'
+    },
+    '2300' : {
+      opacity             : '0.0'
+    },
+    '2600' : {
+      opacity             : '1.0'
+    },
+    '3600' : {
+      opacity             : '0.0'
+    },
+    ease  :'easeOutQuad'
+  };
+
+  $scope.sectionFour = {
+    '0' : {
+      opacity             : '0.0'
+    },
+    '3300' : {
+      opacity             : '0.0'
+    },
+    '3600' : {
+      opacity             : '1.0'
+    },
+    '4600' : {
+      opacity             : '0.0'
+    },
+    ease  :'easeOutQuad'
+  };
+
+  $scope.sectionFive = {
+    '0' : {
+      opacity             : '0.0'
+    },
+    '4300' : {
+      opacity             : '0.0'
+    },
+    '4600' : {
+      opacity             : '1.0'
+    },
+    '5600' : {
+      opacity             : '0.0'
+    },
+    ease  :'easeOutQuad'
+  };
+
+  $scope.quizAnimation = {
+    '0' : {
+      opacity             : '0.0'
+    },
+    '5300' : {
+      opacity             : '0.0'
+    },
+    '5600' : {
       opacity             : '1.0'
     },
     ease  :'easeOutQuad'

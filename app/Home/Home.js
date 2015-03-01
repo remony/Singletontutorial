@@ -11,6 +11,25 @@ var HomeController = function($scope, $rootScope, sparkSetup) {
     //console.log(ratio);
   };
 
+  $scope.backgroundAnimation = {
+    '0'   : {
+      'background-color'  : '#03A9F4'
+    },
+    '500' : {
+      "background-color"  : '#E1F5FE'
+    },
+    '2500' : {
+      "background-color"  : '#E1F5FE'
+    },
+    '3000' : {
+      "background-color"  : '#FFF8E1'
+    },
+    '4000' : {
+      "background-color"  : '#FAFAFA'
+    },
+    ease  :'easeOutQuad'
+  };
+
   $scope.sunAnimation = {
     ease  :'easeOutQuad',
     '5000' :  {
@@ -18,15 +37,16 @@ var HomeController = function($scope, $rootScope, sparkSetup) {
       height              :'3em',
       left                : '80vw',
       top                 : '5em',
-      'background-color'  : 'rgba(0, 0, 0, 0.00)',
+      'background-color'  : '#263238',
+      opacity             : '0.0',
       ease                : 'easeOutSine'
     },
-    '4000' :  { width:'3em', height:'3em', left: '60vw', top: '2em', 'background-color' : 'rgb(255, 79, 14)', ease: 'easeOutSine' },
-    '3000' :  { width:'3em', height:'3em', left: '50vw', top: '0.5em', 'background-color' : 'rgb(255, 115, 0)', ease: 'easeOutSine' },
-    '2000' :  { width:'3em', height:'3em', left: '20vw', top: '2em', 'background-color' : 'rgb(255, 181, 0)', ease: 'easeOutSine' },
-    '1000' :  { width:'3em', height:'3em', top: '5em', left: '3vw', 'background-color' : 'rgb(255, 255, 10)', ease: 'easeOutSine' },
-    '130'  :  { width:'30vw', height:'30vw', top: '9em', left: '35vw', 'background-color' : 'rgb(255, 255, 10)', ease: 'easeOutSine'},
-    '20'  :  { width:'80vw', height:'80vw', top: '10em', left: '10vw', 'background-color' : 'rgb(255, 255, 10)', ease: 'easeOutSine' }
+    '4000' :  { width:'3em', height:'3em', left: '60vw', top: '2em', 'background-color' : '#F57F17', opacity : '1.0', ease: 'easeOutSine' },
+    '3000' :  { width:'3em', height:'3em', left: '50vw', top: '0.5em', 'background-color' : '#F57F17', ease: 'easeOutSine' },
+    '2000' :  { width:'3em', height:'3em', left: '20vw', top: '2em', 'background-color' : '#FFEA00', ease: 'easeOutSine' },
+    '1000' :  { width:'3em', height:'3em', top: '5em', left: '3vw', 'background-color' : '#FFFF00', ease: 'easeOutSine' },
+    '130'  :  { width:'30vw', height:'30vw', top: '9em', left: '35vw', 'background-color' : '#FFFF00', ease: 'easeOutSine'},
+    '20'  :  { width:'80vw', height:'80vw', top: '10em', left: '10vw', 'background-color' : '#FFFF00', ease: 'easeOutSine' }
   };
 
   $scope.titleAnimation = {
@@ -38,31 +58,39 @@ var HomeController = function($scope, $rootScope, sparkSetup) {
 
   $scope.skyAnimation = {
     '0'   : {
-      'background-color'  : 'rgb(12, 144, 255)',
+      'background-color'  : '#81D4FA',
       opacity             : '0.0'
     },
     '220'  : {
-      "background-color"  : 'rgb(12, 144, 255)',
+      "background-color"  : '#81D4FA',
       opacity             : '0.0'
     },
     '320' : {
-      "background-color"  : 'rgb(12, 144, 255)',
+      "background-color"  : '#81D4FA',
       opacity             : '1.0'
     },
     '1000' : {
-      "background-color"  : 'rgb(12, 144, 255)',
+      "background-color"  : '#4FC3F7',
       opacity             : '1.0'
     },
     '2000' : {
-      "background-color"  : 'rgb(198, 89, 0)',
+      "background-color"  : '#29B6F6',
+      opacity             : '1.0'
+    },
+    '2500' : {
+      "background-color"  : '#03A9F4',
       opacity             : '1.0'
     },
     '3000' : {
-      "background-color"  : 'rgb(198, 89, 0)',
+      "background-color"  : '#D84315',
+      opacity             : '1.0'
+    },
+    '3500' : {
+      "background-color"  : '#BF360C',
       opacity             : '1.0'
     },
     '4000' : {
-      "background-color"  : 'rgb(0, 0, 0)',
+      "background-color"  : '#263238',
       opacity             : '1.0'
     },
     ease  :'easeOutQuad'

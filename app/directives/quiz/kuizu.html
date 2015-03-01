@@ -2,41 +2,42 @@
 
 <div class="quiz-area" ng-show="inProgress">
     <div ng-show="!quizOver">
-        <div class="questionNumber">
-            <p>Question {{id + 1}}</p>
-        </div>
-        <div class="QuestionResultStatus" ng-show="!answerMode">
-            <div class="answer_correct">
-                <span ng-show="correctAns"><i class="fa fa-check"></i></span>
-            </div>
-            <div class="answer_wrong">
-                <span ng-show="!correctAns"><i class="fa fa-times"></i></span>
+        <div ng-show="questionStatus" class='fx-fade-left fx-easing-bounce fx-speed-400'>
+            <div class="questionNumber">
+                <p>Question {{id + 1}}</p>
             </div>
         </div>
 
-        <div class="question_window">
-            <div class="question_window_icon">
-                <i class="fa fa-question"></i>
+
+            <div class="question_window">
+                <div ng-show="questionStatus" class='fx-fade-down fx-easing-bounce fx-speed-400'>
+                <div class="question_window_icon">
+                    <i class="fa fa-question"></i>
+                </div>
+                    </div>
+                <div ng-show="questionStatus" class='fx-fade-left fx-easing-bounce fx-speed-400'>
+                <p class="question" class='fx-fade-right fx-speed-400 fx-trigger'>{{question}}</p>
+                </div>
             </div>
-            <p class="question">{{question}}</p>
+
+        <div ng-show="questionStatus" class='fx-fade-right fx-easing-bounce fx-speed-400'>
+            <div class="question_list">
+                <form name="QuestionForm">
+                    <ul id="options" >
+                        <li ng-repeat="option in options">
+                            <button ng-click="checkAnswer(option)" value="{{option}}">
+                                {{option}}
+                            </button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
         </div>
 
-
-        <div class="question_list">
-            <form name="QuestionForm">
-                <ul id="options">
-                    <li ng-repeat="option in options">
-                        <button ng-click="checkAnswer(option)" value="{{option}}">
-                            {{option}}
-                        </button>
-                    </li>
-                </ul>
-            </form>
-        </div>
 
     </div>
 
-    <div ng-show="quizOver">
+    <div ng-show="quizOver" class='fx-fade-down fx-easing-bounce fx-speed-400'>
         <div class="score">
             <h1>Score</h1>
 
@@ -59,6 +60,8 @@
                 }
             }(document, 'script', 'twitter-wjs');</script>
         </div>
+
+        <button id="reset()" ng-click="start()">Start again?</button>
 
 
     </div>

@@ -4,7 +4,9 @@
 var App = angular.module('app', [
   'ngRoute',
   'app.home',
-    'app.kuizu'
+    'app.kuizu',
+    'ngFx',
+    'ngAnimate'
 ]);
 
 App.config(['$routeProvider', function($routeProvider) {

@@ -44,6 +44,10 @@ button:hover {
     background-color: #111;
 }
 
+.options    {
+    position:absolute;
+}
+
 .question_list {
     background-color: transparent;
 }
@@ -124,5 +128,3 @@ button:hover {
     font-size: 2em;
     color: #333;
 }
-
-

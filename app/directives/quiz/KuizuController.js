@@ -3,7 +3,7 @@
 angular.module('app.kuizu', [])
 
 
-    .directive('kuizu', function (kuizuFactory) {
+    .directive('kuizu', function (kuizuFactory, $timeout) {
         return {
             restrict: 'AE',
             scope: {},
@@ -17,6 +17,7 @@ angular.module('app.kuizu', [])
                     scope.id = 0;
                     scope.quizOver = false;
                     scope.inProgress = true;
+                    scope.questionStatus = true;
                     scope.getQuestion();
                 };
 
@@ -28,14 +29,20 @@ angular.module('app.kuizu', [])
 
                 scope.getQuestion = function () {
                     var q = kuizuFactory.getQuestion(scope.id);
+                    $timeout( function(){
                     if (q) {
-                        scope.question = q.question;
-                        scope.options = q.options;
-                        scope.answer = q.answer;
-                        scope.answerMode = true;
+
+                            scope.question = q.question;
+                            scope.options = q.options;
+                            scope.answer = q.answer;
+                            scope.answerMode = true;
+                            scope.questionStatus = true;
+
+
                     } else {
                         scope.quizOver = true;
                     }
+                    }, 500);
                 };
 
                 scope.checkAnswer = function (ans) {
@@ -44,9 +51,11 @@ angular.module('app.kuizu', [])
                     if (ans == scope.options[scope.answer]) {
                         scope.score++;
                         scope.correctAns = true;
+
                     } else {
                         scope.correctAns = false;
                     }
+                    scope.questionStatus = false;
                     scope.id++;
                     scope.getQuestion();
                 };

@@ -1,9 +1,13 @@
 <!--<div ng-include src="'../app/components/header.html'"></div>-->
 
 <div class="home_base">
-    <span class="sky" spark-scroll-animate="skyAnimation"></span>
+    <span class="sky"
+          spark-scroll="{ topBottom:0, topTop:0.5 }"
+          spark-scroll-callback="onScroll"
+          spark-scroll-animate="skyAnimation"></span>
+
     <span class="sun" spark-scroll-animate="sunAnimation"></span>
-    <h1 class="title" spark-scroll-animate="titleAnimation">The Singleton Pattern</h1>
+    <h1 class="title" spark-scroll-animate="titleAnimation">{{ pageTitle }}</h1>
 
     <kuizu datasource="sample.json"/>
 </div>

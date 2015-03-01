@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="directives/quiz/kuizu.css">
+
+<div class="quiz-area" ng-show="inProgress">
+    <div ng-show="!quizOver">
+        <div ng-show="questionStatus" class='fx-fade-left fx-easing-bounce fx-speed-400'>
+            <div class="questionNumber">
+                <p>Question {{id + 1}}</p>
+            </div>
+        </div>
+
+        <div class="question_window">
+            <div ng-show="questionStatus" class='fx-fade-down fx-easing-bounce fx-speed-400'>
+                <div class="question_window_icon">
+                    <i class="fa fa-question"></i>
+                </div>
+            </div>
+            <div ng-show="questionStatus" class='fx-fade-left fx-easing-bounce fx-speed-400'>
+                <p class="question">{{question}}</p>
+            </div>
+        </div>
+
+        <div ng-show="questionStatus" class='fx-fade-right fx-easing-bounce fx-speed-400'>
+            <div class="question_list">
+                <form name="QuestionForm">
+                    <ul id="options" >
+                        <li ng-repeat="option in options">
+                            <button ng-click="checkAnswer(option)" value="{{option}}">
+                                {{option}}
+                            </button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div ng-show="quizOver" class='fx-fade-down fx-easing-bounce fx-speed-400'>
+        <div class="score">
+            <div class="score_title">
+                <h1>Score</h1>
+            </div>
+
+
+            <p>{{score}}/{{id}}</p>
+        </div>
+
+        <div class="twitterButton">
+            <div class="twitterButton_icon">
+                <i class="fa fa-twitter"> </i><a
+                    href="https://twitter.com/intent/tweet?button_hashtag=ac31009&text=I%20just%20scored%20{{score}}/{{id}}"
+                    class="twitter-hashtag-button" data-size="large"> Tweet Your Score</a>
+            </div>
+            <script>!function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p + '://platform.twitter.com/widgets.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, 'script', 'twitter-wjs');</script>
+        </div>
+        <button id="reset()" ng-click="start()">Start again?</button>
+    </div>
+</div>
+
+<div class="intro" ng-show="!inProgress" onload="start()">
+    <p>Quiz Time</p>
+    <button id="startQuiz" ng-click="start()">Ready?</button>
+</div>

@@ -1,39 +1,43 @@
 <!DOCTYPE html>
 <html ng-app="app">
 <head>
-  <meta charset="utf-8">
-  <title>The Singleton</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>The Singleton</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="bower_components/open-sans-fontface/open-sans.css">
-  <link rel="stylesheet" href="Home/Home.css">
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Home/Home.css">
 
 
-  <!-- Angular -->
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
+    <!-- Angular -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
 
-  <!--  -->
-  <script src="bower_components/lodash/dist/lodash.min.js"></script>
-  <script src="bower_components/shifty/dist/shifty.min.js"></script>
-  <script src="bower_components/rekapi/dist/rekapi.min.js"></script>
-  <script src="bower_components/animation-frame/AnimationFrame.min.js"></script>
-  <script src="bower_components/spark-scroll/src/spark-scroll.js"></script>
+    <!--  -->
+    <script src="bower_components/lodash/dist/lodash.min.js"></script>
+    <script src="bower_components/shifty/dist/shifty.min.js"></script>
+    <script src="bower_components/rekapi/dist/rekapi.min.js"></script>
+    <script src="bower_components/animation-frame/AnimationFrame.min.js"></script>
+    <script src="bower_components/spark-scroll/src/spark-scroll.js"></script>
+    <script src="bower_components/ngFx/dist/ngFx.min.js"></script>
 
-  <!-- App -->
-  <script src="app.js"></script>
+    <!-- App -->
+    <script src="app.js"></script>
 
-  <!-- Directives -->
-  <script src="components/ScrollPositionDirective.js"></script>
+    <!-- Directives -->
+    <script src="components/ScrollPositionDirective.js"></script>
 
-  <!-- Controllers -->
-  <script src="Home/Home.js"></script>
+    <script src="directives/quiz/Kuizu.js"></script>
+
+    <!-- Controllers -->
+    <script src="Home/Home.js"></script>
 </head>
 <body>
 
-    <div class="wrapper" ng-view></div>
+<div class="wrapper" ng-view></div>
 
 
 </body>

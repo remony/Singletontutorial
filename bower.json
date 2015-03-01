@@ -13,6 +13,10 @@
     "html5-boilerplate": "~4.3.0",
     "spark-scroll": "*",
     "animation-frame": "~0.2.3",
-    "open-sans-fontface": "~1.2.1"
+    "open-sans-fontface": "~1.2.1",
+    "open-sans": "~1.1.0",
+    "components-font-awesome": "~4.3.0",
+    "ngFx": "~1.0.5",
+    "ngAnimate": "*"
   }
 }

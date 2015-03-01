@@ -8,17 +8,16 @@
             </div>
         </div>
 
-
-            <div class="question_window">
-                <div ng-show="questionStatus" class='fx-fade-down fx-easing-bounce fx-speed-400'>
+        <div class="question_window">
+            <div ng-show="questionStatus" class='fx-fade-down fx-easing-bounce fx-speed-400'>
                 <div class="question_window_icon">
                     <i class="fa fa-question"></i>
                 </div>
-                    </div>
-                <div ng-show="questionStatus" class='fx-fade-left fx-easing-bounce fx-speed-400'>
-                <p class="question" class='fx-fade-right fx-speed-400 fx-trigger'>{{question}}</p>
-                </div>
             </div>
+            <div ng-show="questionStatus" class='fx-fade-left fx-easing-bounce fx-speed-400'>
+                <p class="question">{{question}}</p>
+            </div>
+        </div>
 
         <div ng-show="questionStatus" class='fx-fade-right fx-easing-bounce fx-speed-400'>
             <div class="question_list">
@@ -33,8 +32,6 @@
                 </form>
             </div>
         </div>
-
-
     </div>
 
     <div ng-show="quizOver" class='fx-fade-down fx-easing-bounce fx-speed-400'>
@@ -60,10 +57,7 @@
                 }
             }(document, 'script', 'twitter-wjs');</script>
         </div>
-
         <button id="reset()" ng-click="start()">Start again?</button>
-
-
     </div>
 </div>
 

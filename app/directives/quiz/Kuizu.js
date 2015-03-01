@@ -11,6 +11,7 @@ angular.module('app.kuizu', [])
                 //Starts the quiz
                 scope.start = function () {
                     scope.id = 0;
+                    scope.score = 0;
                     scope.quizOver = false;
                     scope.inProgress = true;
                     scope.questionStatus = true;
@@ -31,7 +32,6 @@ angular.module('app.kuizu', [])
                         if (q) {
                             scope.question = q.question;
                             scope.options = q.options;
-                            console.log("setting answer " + q.answer);
                             scope.answer = q.answer;
                             scope.answerMode = true;
                             scope.questionStatus = true;
@@ -50,15 +50,13 @@ angular.module('app.kuizu', [])
                 //When pressing a option it will check if the answer is right or wrong, if right gets next question
                 scope.checkAnswer = function (ans) {
                     if (ans.option) return;
-                    console.log("Your answer: " + ans);
-                    //console.log("Correct ans: " +  scope.answer);
-                    console.log("Correct ans: " + scope.answer);
                     if (ans ==  scope.options[scope.answer]) {
-                        console.log("correct");
+                        console.log("%cCORRECT", "color:GREEN; font-size: 16pt");
                         scope.score++;
                         scope.correctAns = true;
                         scope.wrongAns = false;
                     } else {
+                        console.log("%cWrong.", "color:RED; font-size: 16pt");
                         scope.wrongAns = true;
                         scope.correctAns = false;
                     }

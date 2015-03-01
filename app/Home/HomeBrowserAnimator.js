@@ -14,10 +14,10 @@ var HomeBrowserAnimator = function() {
 
     this.backgroundAnimation = {
         '0'     : { 'background-color'  : '#03A9F4' },
-        '500'   : { 'background-color'  : '#E1F5FE' },
-        '2500'  : { 'background-color'  : '#E1F5FE' },
-        '3000'  : { 'background-color'  : '#FFF8E1' },
-        '4000'  : { 'background-color'  : '#FAFAFA' },
+        '500'   : { 'background-color'  : '#fff' },
+        '2500'  : { 'background-color'  : '#fff' },
+        '3000'  : { 'background-color'  : '#fff' },
+        '4000'  : { 'background-color'  : '#fff' },
         ease    :'easeOutQuad'
     };
 
@@ -29,15 +29,15 @@ var HomeBrowserAnimator = function() {
         '2000'  : { width :'3em',   height : '3em',     left : '20vw', top: '2em', 'background-color' : '#FFEA00', ease: 'easeOutSine' },
         '3000'  : { width :'3em',   height : '3em',     left : '50vw', top: '0.5em', 'background-color' : '#F57F17', ease: 'easeOutSine' },
         '4000'  : { width :'3em',   height : '3em',     left : '60vw', top: '2em', 'background-color' : '#F57F17', opacity : '1.0', ease: 'easeOutSine' },
-        '5000'  : { width :'3em',   height : '3em',     left : '80vw', top : '5em', 'background-color'  : '#263238', opacity : '0.0', ease : 'easeOutSine'
+        '5000'  : { width :'3em',   height : '3em',     left : '80vw', top : '5em', 'background-color'  : '#FFEB3B', opacity : '0.0', ease : 'easeOutSine'
         }
     };
 
     this.titleAnimation = {
         ease:'easeOutQuad',
-        '420': { top: '7em', 'font-size': '1em', color: '#ffffff' },
+        '420': { top: '0px', 'font-size': '3em', color: '#fff' },
         '350': { color: '#5d5d5d' },
-        '200': { top: '5em', 'font-size': '4em', color: '#5d5d5d', ease: 'linear' }
+        '200': { top: '5em', 'font-size': '6em', color: '#333', ease: 'linear' }
     };
 
     this.skyAnimation = {
@@ -74,7 +74,11 @@ var HomeBrowserAnimator = function() {
             opacity             : '1.0'
         },
         '4000' : {
-            "background-color"  : '#263238',
+            "background-color"  : '#1A237E',
+            opacity             : '1.0'
+        },
+        '5000' : {
+            "background-color"  : '#333',
             opacity             : '1.0'
         },
         ease  :'easeOutQuad'
@@ -82,32 +86,32 @@ var HomeBrowserAnimator = function() {
 
     this.sectionOne = {
         '0' : {
-            opacity             : '0.0'
+            opacity             : '1.0'
         },
         '400' : {
-            opacity             : '0.0'
+            opacity             : '1.0'
         },
         '600' : {
             opacity             : '1.0'
         },
         '1600' : {
-            opacity             : '0.0'
+            opacity             : '1.0'
         },
         ease  :'easeOutQuad'
     };
 
     this.sectionTwo = {
         '0' : {
-            opacity             : '0.0'
+            opacity             : '1.0'
         },
         '1300' : {
-            opacity             : '0.0'
+            opacity             : '1.0'
         },
         '1600' : {
             opacity             : '1.0'
         },
         '2600' : {
-            opacity             : '0.0'
+            opacity             : '1.0'
         },
         ease  :'easeOutQuad'
     };
@@ -115,58 +119,58 @@ var HomeBrowserAnimator = function() {
 
     this.sectionThree = {
         '0' : {
-            opacity             : '0.0'
+            opacity             : '1.0'
         },
         '2300' : {
-            opacity             : '0.0'
+            opacity             : '1.0'
         },
         '2600' : {
             opacity             : '1.0'
         },
         '3600' : {
-            opacity             : '0.0'
+            opacity             : '1.0'
         },
         ease  :'easeOutQuad'
     };
 
     this.sectionFour = {
         '0' : {
-            opacity             : '0.0'
+            opacity             : '1.0'
         },
         '3300' : {
-            opacity             : '0.0'
+            opacity             : '1.0'
         },
         '3600' : {
             opacity             : '1.0'
         },
         '4600' : {
-            opacity             : '0.0'
+            opacity             : '1.0'
         },
         ease  :'easeOutQuad'
     };
 
     this.sectionFive = {
         '0' : {
-            opacity             : '0.0'
+            opacity             : '1.0'
         },
         '4300' : {
-            opacity             : '0.0'
+            opacity             : '1.0'
         },
         '4600' : {
             opacity             : '1.0'
         },
         '5600' : {
-            opacity             : '0.0'
+            opacity             : '1.0'
         },
         ease  :'easeOutQuad'
     };
 
     this.quizAnimation = {
         '0' : {
-            opacity             : '0.0'
+            opacity             : '1.0'
         },
         '5300' : {
-            opacity             : '0.0'
+            opacity             : '1.0'
         },
         '5600' : {
             opacity             : '1.0'

@@ -1,20 +1,27 @@
-.quiz-area {
+/*
+            Kuizu Css
+
+
+*/
+
+
+.kuizu_base {
     padding: 10px;
     background-color: transparent;
 }
 
-.questionNumber {
+.kuizu_questionNumber {
     text-align: right;
     color: #212121;
     font-weight: 600;
     font-size: 1em;
 }
 
-.question_window {
+.kuizu_question_window {
 
 }
 
-.question_window_icon {
+.kuizu_question_window_icon {
     position: relative;
     float: right;
     margin-top: -80px;
@@ -44,23 +51,23 @@ button:hover {
     background-color: #111;
 }
 
-.options    {
+.kuizu_options    {
     position:absolute;
 }
 
-.question_list {
+.kuizu_question_list {
     background-color: transparent;
 }
 
-.question_list button {
+.kuizu_question_list button {
     background: #2196F3;
 }
 
-.question_list button:hover {
+.kuizu_question_list button:hover {
     background-color: #208ce5;
 }
 
-.question {
+.kuizu_question {
     font-size: 2em;
     background-color: transparent;
     width: 100%;
@@ -71,22 +78,36 @@ button:hover {
     font-weight: 700;
     margin-bottom: 0;
 }
+.kuizu_wrong, .kuizu_correct    {
+    font-size:10em;
+    position:absolute;
+    left:50%;
+    right:50%;
+}
+
+.kuizu_correct  {
+    color:#64DD17;
+}
+
+.kuizu_wrong {
+    color:#D50000;
+}
 
 /*
                 Score screen
 
 */
 
-.score {
+.kuizu_score {
     text-align: center;
 }
 
-.score p {
+.kuizu_score p {
     font-size: 4em;
     font-weight: 900;
 }
 
-.score_title   {
+.kuizu_score_title   {
     border-style: solid;
     border-width: 8px;
     width:150px;
@@ -95,7 +116,7 @@ button:hover {
     text-align:center;
 }
 
-.twitterButton {
+.kuizu_twitterButton {
     background-color: #4099FF;
     padding: 10px;
     color: #fff;
@@ -103,35 +124,49 @@ button:hover {
     text-align: center;
 }
 
-.twitterButton:hover {
+.kuizu_twitterButton:hover {
     background-color: #3682d9;
 }
 
-.twitterButton a:link {
+.kuizu_twitterButton a:link {
     color: #fff;
     background-color: transparent;
     text-decoration: none
 }
 
-.twitterButton a:visited {
+.kuizu_twitterButton a:visited {
     color: #fff;
     background-color: transparent;
     text-decoration: none
 }
 
-.twitterButton a:hover {
+.kuizu_twitterButton a:hover {
     color: #fff;
     background-color: transparent;
     text-decoration: underline
 }
 
-.twitterButton a:active {
+.kuizu_twitterButton a:active {
     color: #fff;
     background-color: transparent;
     text-decoration: underline
 }
 
-.twitterButton_icon {
+.kuizu_twitterButton_icon {
     font-size: 2em;
     color: #333;
+}
+
+
+/*
+            File not found view
+*/
+
+.fileNotFound   {
+    width:100%;
+    text-align:center;
+    padding-top:20px;
+    padding-bottom:20px;
+    background-color: #F44336;
+    color:#fff;
 }

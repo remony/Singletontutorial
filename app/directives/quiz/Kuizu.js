@@ -14,6 +14,7 @@ angular.module('app.kuizu', [])
                     scope.quizOver = false;
                     scope.inProgress = true;
                     scope.questionStatus = true;
+                    scope.fileExists = false;
                     scope.getQuestion();
                 };
                 //Resets the quiz to start again
@@ -23,29 +24,42 @@ angular.module('app.kuizu', [])
                 };
                 //Gets the question from the json file and sends it to the view
                 scope.getQuestion = function () {
+
                     var q = kuizuFactory.getQuestion(scope.id);
 
                     $timeout( function(){
                         if (q) {
-                                scope.question = q.question;
-                                scope.options = q.options;
-                                scope.answer = q.answer;
-                                scope.answerMode = true;
-                                scope.questionStatus = true;
+                            scope.question = q.question;
+                            scope.options = q.options;
+                            console.log("setting answer " + q.answer);
+                            scope.answer = q.answer;
+                            scope.answerMode = true;
+                            scope.questionStatus = true;
                         } else {
+                            console.log(scope.log);
+                            if (scope.score == 0)   {
+                                scope.fileExists = true;
+                            }
                             scope.quizOver = true;
                         }
+                        scope.correctAns = false;
+                        scope.wrongAns = false;
                     }, 500);
                 };
 
                 //When pressing a option it will check if the answer is right or wrong, if right gets next question
                 scope.checkAnswer = function (ans) {
                     if (ans.option) return;
-
-                    if (ans == scope.options[scope.answer]) {
+                    console.log("Your answer: " + ans);
+                    //console.log("Correct ans: " +  scope.answer);
+                    console.log("Correct ans: " + scope.answer);
+                    if (ans ==  scope.options[scope.answer]) {
+                        console.log("correct");
                         scope.score++;
                         scope.correctAns = true;
+                        scope.wrongAns = false;
                     } else {
+                        scope.wrongAns = true;
                         scope.correctAns = false;
                     }
                     scope.questionStatus = false;
@@ -62,17 +76,24 @@ angular.module('app.kuizu', [])
 
         return {
             getQuestion: function (id) {
-
-                if (id < questions.length) {
-                    return questions[id];
-                } else {
-
+                //console.log(questions.length);
+                if (questions != null)   {
+                    if (id < questions.length) {
+                        return questions[id];
+                    } else {
+                        return false;
+                    }
+                }   else    {
                     return false;
                 }
+
             },
             //Loads the questions from the defined filesource
             loadQuestions: function (filename) {
-                $http.get('directives/quiz/categories/' + filename)
+                $http.get('assets/quiz/' + filename)
+                    .error(function(res)    {
+                        console.log("The file doesn't exist - please contact the site owner");
+                    })
                     .then(function (res) {
                         questions = res.data;
                     });

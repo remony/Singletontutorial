@@ -1,171 +1,40 @@
 'use strict';
 
 // Creates the Controller
-var HomeController = function($scope, $rootScope, sparkSetup) {
+var HomeController = function($scope, $rootScope, HomeBrowserAnimator, HomeMobileAnimator, sparkSetup) {
   sparkSetup.enableInvalidationInterval();
   sparkSetup.debug = true;
 
   $scope.pageTitle = "The Singleton Pattern";
 
-  $scope.onScroll = function (ratio) {
-    //console.log(ratio);
-  };
+  var mobile = HomeMobileAnimator.inMobile();
+  var windows = HomeBrowserAnimator.inWindows();
 
-  $scope.sunAnimation = {
-    ease  :'easeOutQuad',
-    '5000' :  {
-      width               :'3em',
-      height              :'3em',
-      left                : '80vw',
-      top                 : '5em',
-      'background-color'  : 'rgba(0, 0, 0, 0.00)',
-      ease                : 'easeOutSine'
-    },
-    '4000' :  { width:'3em', height:'3em', left: '60vw', top: '2em', 'background-color' : 'rgb(255, 79, 14)', ease: 'easeOutSine' },
-    '3000' :  { width:'3em', height:'3em', left: '50vw', top: '0.5em', 'background-color' : 'rgb(255, 115, 0)', ease: 'easeOutSine' },
-    '2000' :  { width:'3em', height:'3em', left: '20vw', top: '2em', 'background-color' : 'rgb(255, 181, 0)', ease: 'easeOutSine' },
-    '1000' :  { width:'3em', height:'3em', top: '5em', left: '3vw', 'background-color' : 'rgb(255, 255, 10)', ease: 'easeOutSine' },
-    '130'  :  { width:'30vw', height:'30vw', top: '9em', left: '35vw', 'background-color' : 'rgb(255, 255, 10)', ease: 'easeOutSine'},
-    '20'  :  { width:'80vw', height:'80vw', top: '10em', left: '10vw', 'background-color' : 'rgb(255, 255, 10)', ease: 'easeOutSine' }
-  };
+  console.log('Mobile: ' + mobile);
+  console.log('Windows: ' + windows);
 
-  $scope.titleAnimation = {
-    ease:'easeOutQuad',
-    '420': { top: '7em', 'font-size': '1em', color: '#ffffff' },
-    '350': { color: '#5d5d5d' },
-    '200': { top: '5em', 'font-size': '4em', color: '#5d5d5d', ease: 'linear' }
-  };
+  var Animator = HomeBrowserAnimator;
+  if (mobile) {
+    Animator = HomeMobileAnimator;
+  }
 
-  $scope.skyAnimation = {
-    '0'   : {
-      'background-color'  : 'rgb(12, 144, 255)',
-      opacity             : '0.0'
-    },
-    '220'  : {
-      "background-color"  : 'rgb(12, 144, 255)',
-      opacity             : '0.0'
-    },
-    '320' : {
-      "background-color"  : 'rgb(12, 144, 255)',
-      opacity             : '1.0'
-    },
-    '1000' : {
-      "background-color"  : 'rgb(12, 144, 255)',
-      opacity             : '1.0'
-    },
-    '2000' : {
-      "background-color"  : 'rgb(198, 89, 0)',
-      opacity             : '1.0'
-    },
-    '3000' : {
-      "background-color"  : 'rgb(198, 89, 0)',
-      opacity             : '1.0'
-    },
-    '4000' : {
-      "background-color"  : 'rgb(0, 0, 0)',
-      opacity             : '1.0'
-    },
-    ease  :'easeOutQuad'
-  };
+  $scope.backgroundAnimation = Animator.backgroundAnimation;
+  $scope.sunAnimation   = Animator.sunAnimation;
+  $scope.titleAnimation = Animator.titleAnimation;
+  $scope.skyAnimation   = Animator.skyAnimation;
 
-  $scope.sectionOne = {
-    '0' : {
-      opacity             : '0.0'
-    },
-    '400' : {
-      opacity             : '0.0'
-    },
-    '600' : {
-      opacity             : '1.0'
-    },
-    '1600' : {
-      opacity             : '0.0'
-    },
-    ease  :'easeOutQuad'
-  };
+  $scope.sectionOne     = Animator.sectionOne;
+  $scope.sectionTwo     = Animator.sectionTwo;
+  $scope.sectionThree   = Animator.sectionThree;
+  $scope.sectionFour    = Animator.sectionFour;
+  $scope.sectionFive    = Animator.sectionFive;
 
-  $scope.sectionTwo = {
-    '0' : {
-      opacity             : '0.0'
-    },
-    '1300' : {
-      opacity             : '0.0'
-    },
-    '1600' : {
-      opacity             : '1.0'
-    },
-    '2600' : {
-      opacity             : '0.0'
-    },
-    ease  :'easeOutQuad'
-  };
-
-
-  $scope.sectionThree = {
-    '0' : {
-      opacity             : '0.0'
-    },
-    '2300' : {
-      opacity             : '0.0'
-    },
-    '2600' : {
-      opacity             : '1.0'
-    },
-    '3600' : {
-      opacity             : '0.0'
-    },
-    ease  :'easeOutQuad'
-  };
-
-  $scope.sectionFour = {
-    '0' : {
-      opacity             : '0.0'
-    },
-    '3300' : {
-      opacity             : '0.0'
-    },
-    '3600' : {
-      opacity             : '1.0'
-    },
-    '4600' : {
-      opacity             : '0.0'
-    },
-    ease  :'easeOutQuad'
-  };
-
-  $scope.sectionFive = {
-    '0' : {
-      opacity             : '0.0'
-    },
-    '4300' : {
-      opacity             : '0.0'
-    },
-    '4600' : {
-      opacity             : '1.0'
-    },
-    '5600' : {
-      opacity             : '0.0'
-    },
-    ease  :'easeOutQuad'
-  };
-
-  $scope.quizAnimation = {
-    '0' : {
-      opacity             : '0.0'
-    },
-    '5300' : {
-      opacity             : '0.0'
-    },
-    '5600' : {
-      opacity             : '1.0'
-    },
-    ease  :'easeOutQuad'
-  };
+  $scope.quizAnimation  = Animator.quizAnimation;
 
 };
 
 // Injects the Dependencies (in a way that can be compressed)
-HomeController.$inject = [ '$scope', '$rootScope', 'sparkSetup' ];
+HomeController.$inject = [ '$scope', '$rootScope', 'HomeBrowserAnimator', 'HomeMobileAnimator', 'sparkSetup' ];
 
 // Declares the module
 angular.module('app.home', []).controller('HomeController', HomeController);

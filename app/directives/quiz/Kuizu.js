@@ -25,7 +25,6 @@ angular.module('app.kuizu', [])
                 };
                 //Gets the question from the json file and sends it to the view
                 scope.getQuestion = function () {
-
                     var q = kuizuFactory.getQuestion(scope.id);
 
                     $timeout( function(){
@@ -38,7 +37,9 @@ angular.module('app.kuizu', [])
                         } else {
                             console.log(scope.log);
                             if (scope.score == 0)   {
-                                scope.fileExists = true;
+                                if(!scope.id > 0)    {
+                                    scope.fileExists = true;
+                                }
                             }
                             scope.quizOver = true;
                         }
@@ -64,7 +65,6 @@ angular.module('app.kuizu', [])
                     scope.id++;
                     scope.getQuestion();
                 };
-
                 scope.reset();
             }
         };

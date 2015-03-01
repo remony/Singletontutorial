@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="directives/quiz/kuizu.css">
 
-<div class="fileNotFound" ng-show="fileExists">
+<div class="kuizu_fileNotFound" ng-show="fileExists">
     <p>File not found</p>
 </div>
 
@@ -20,6 +20,13 @@
             </div>
             <div ng-show="questionStatus" class='fx-fade-left fx-easing-bounce fx-speed-400'>
                 <p class="kuizu_question">{{question}}</p>
+                <div class="kuizu_correct" ng-show="correctAns">
+                    <i class="fa fa-check"></i>
+                </div>
+                <div class="kuizu_wrong" ng-show="wrongAns">
+                    <i class="fa fa-times"></i>
+                </div>
+
             </div>
         </div>
 
@@ -27,12 +34,6 @@
             <div class="kuizu_question_list">
                 <form name="QuestionForm">
                     <ul id="options">
-                        <div class="kuizu_correct" ng-show="correctAns">
-                            <i class="fa fa-check"></i>
-                        </div>
-                        <div class="kuizu_wrong" ng-show="wrongAns">
-                            <i class="fa fa-times"></i>
-                        </div>
                         <li ng-repeat="option in options">
                             <button ng-click="checkAnswer(option)" value="{{option}}">
                                 {{option}}
@@ -74,10 +75,14 @@
             <button class="kuizu_restart" ng-click="start()">Start again?</button>
         </div>
     </div>
+
+
 </div>
 
 <div class="kuizu_intro" ng-show="!inProgress" onload="start()">
     <p>Quiz Time</p>
     <button id="startQuiz" ng-click="start()">Ready?</button>
 </div>
+
+
 

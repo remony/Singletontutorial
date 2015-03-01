@@ -3,8 +3,8 @@
 angular.module('app.kuizu', [])
     .directive('kuizu', function (kuizuFactory, $timeout) {
         return {
-            restrict: 'AE',
-            scope: {},
+            restrict: 'AEC',
+            scope: {datasource: '='},
             templateUrl: 'directives/quiz/kuizu.html',
             link: function (scope, elem, attrs) {
                 kuizuFactory.loadQuestions(attrs.datasource);
@@ -16,6 +16,7 @@ angular.module('app.kuizu', [])
                     scope.inProgress = true;
                     scope.questionStatus = true;
                     scope.fileExists = false;
+                    scope.getQuestions();
                     scope.getQuestion();
                 };
                 //Resets the quiz to start again
@@ -23,8 +24,22 @@ angular.module('app.kuizu', [])
                     scope.inProgress = false;
                     scope.score = 0;
                 };
+
+            scope.getQuestions = function() {
+                scope.questions = kuizuFactory.getQuestions();
+            };
+
                 //Gets the question from the json file and sends it to the view
                 scope.getQuestion = function () {
+
+                    $timeout(function() {
+                        scope.question = scope.questions;
+                        console.log(scope.question);
+                    }, 500);
+
+                    /*
+
+
                     var q = kuizuFactory.getQuestion(scope.id);
 
                     $timeout( function(){
@@ -46,6 +61,7 @@ angular.module('app.kuizu', [])
                         scope.correctAns = false;
                         scope.wrongAns = false;
                     }, 500);
+                     */
                 };
 
                 //When pressing a option it will check if the answer is right or wrong, if right gets next question
@@ -73,6 +89,18 @@ angular.module('app.kuizu', [])
         var questions;
 
         return {
+            getQuestions: function()    {
+                if(questions != null)   {
+                    if(questions.length > 0)    {
+                        return questions;
+                    }   else    {
+                        return false;
+                    }
+                }   else    {
+                    return false;
+                }
+            },
+
             getQuestion: function (id) {
                 //console.log(questions.length);
                 if (questions != null)   {

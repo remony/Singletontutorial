@@ -36,7 +36,7 @@
 }
 
 .container    {
-    margin-top:100vh;
+    margin-top:150vh;
 }
 
 
@@ -62,7 +62,7 @@
     position: relative;
     top: 13em;
     left: 10%;
-    margin-bottom:50vh;
+    margin-top:50vh;
     width: 80%;
 }
 
@@ -80,4 +80,5 @@
 .home_base h1   {
     font-size:3em;
     font-weight:800;
+    color:#212121;
 }

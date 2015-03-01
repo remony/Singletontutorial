@@ -15,7 +15,7 @@ var HomeController = function($scope, $rootScope, HomeBrowserAnimator, HomeMobil
 
   var Animator = HomeBrowserAnimator;
   if (mobile) {
-    Animator = HomeMobileAnimator;
+    Animator = HomeBrowserAnimator;//HomeMobileAnimator;
   }
 
   $scope.backgroundAnimation = Animator.backgroundAnimation;

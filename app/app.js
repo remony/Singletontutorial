@@ -7,6 +7,7 @@ var App = angular.module('app', [
   'ngFx',
   'ngAnimate',
   'gilbox.sparkScroll',
+    'hc.marked',
 
   // Home Controller
   'app.home.browser',
@@ -17,6 +18,7 @@ var App = angular.module('app', [
   'app.kuizu'
 ]);
 
+
 App.config(['$routeProvider', function($routeProvider) {
 
   $routeProvider.when('/Home', {
@@ -26,3 +28,5 @@ App.config(['$routeProvider', function($routeProvider) {
 
   $routeProvider.otherwise({redirectTo: '/Home'});
 }]);
+
+

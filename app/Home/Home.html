@@ -14,10 +14,11 @@
     <div class="wrapper">
         <div class="container">
             <section spark-scroll-animate="sectionOne" id="TheSingleton">
+                <kuizu datasource="sample.json" spark-scroll-animate="quizAnimation"></kuizu>
                 <marked ng-include="'assets/content/TheSingleton.md'"></marked>
 
 
-                <kuizu datasource="sample.json" spark-scroll-animate="quizAnimation"></kuizu>
+
             </section>
 
             <section spark-scroll-animate="sectionTwo" id="Singleton-Problems">
@@ -51,17 +52,18 @@
                 <p>Magna deserunt swine proident, pig commodo chuck elit tail corned beef ut fatback ground round. Shank shoulder ham frankfurter, ribeye drumstick voluptate ham hock. Sed swine chicken flank exercitation dolore, quis in. Landjaeger minim frankfurter, ea enim ullamco dolor sunt prosciutto quis elit nulla lorem bacon commodo. Et laboris dolore pork chop pig eu.</p>
             </section>
             <section spark-scroll-animate="sectionSix">
-                <kuizu datasource="whatisasingleton.json" spark-scroll-animate="quizAnimation"></kuizu>
+                <kuizu datasource="whatisasingleton.json"></kuizu>
             </section>
+            <a id="bottom"></a> You're at the bottom!
         </div>
 
 
         <div class="navigation" spark-scroll-animate="navigationAnimations">
-            <a href="#/Home#TheSingleton">What is a Singleton?</a><br />
-            <a href="#/Home#Singleton-Problems">Problems with Singletons</a><br />
-            <a href="#/Home#Singletons-Pros">Pros of Singletons</a><br />
-            <a href="#/Home#Were-To-Use">Where should we use Singletons</a><br />
-            <a href="#/Home#Singletons-Alternatives">What can we use instead</a><br />
+            <button scroll-to="TheSingleton" duration="1800">Summary</button>
+            <button scroll-to="Singleton-Problems" duration="1800">Problems</button>
+            <button scroll-to="Singletons-Pros" duration="1800">The pros</button>
+            <button scroll-to="Were-To-Use" duration="1800">Where to use</button>
+            <button scroll-to="Singletons-Alternatives" duration="1800">Alternatives</button>
         </div>
 
     </div>

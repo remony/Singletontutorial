@@ -29,8 +29,17 @@ var HomeBrowserAnimator = function() {
         '2000'  : { width :'3em',   height : '3em',     left : '20vw', top: '2em', 'background-color' : '#FFEA00', ease: 'easeOutSine' },
         '3000'  : { width :'3em',   height : '3em',     left : '50vw', top: '0.5em', 'background-color' : '#F57F17', ease: 'easeOutSine' },
         '4000'  : { width :'3em',   height : '3em',     left : '60vw', top: '2em', 'background-color' : '#F57F17', opacity : '1.0', ease: 'easeOutSine' },
-        '5000'  : { width :'3em',   height : '3em',     left : '80vw', top : '5em', 'background-color'  : '#FFEB3B', opacity : '0.0', ease : 'easeOutSine'
-        }
+        '5000'  : { width :'3em',   height : '3em',     left : '80vw', top : '5em', 'background-color'  : '#FFEB3B', opacity : '0.0', ease : 'easeOutSine'},
+        '5001'  : { width :'3em',   height : '3em',     top : '5em', left: '3vw', 'background-color' : '#FFF', ease: 'easeOutSine' },
+        '6000'  : { width :'3em',   height : '3em',     left : '20vw', top: '2em', 'background-color' : '#fff', ease: 'easeOutSine' },
+        '7000'  : { width :'3em',   height : '3em',     left : '50vw', top: '0.5em', 'background-color' : '#fff', ease: 'easeOutSine' },
+        '8000'  : { width :'3em',   height : '3em',     left : '60vw', top: '2em', 'background-color' : '#fff', opacity : '1.0', ease: 'easeOutSine' },
+        '9000'  : { width :'3em',   height : '3em',     left : '80vw', top : '5em', 'background-color'  : '#fff', opacity : '0.0', ease : 'easeOutSine'},
+        '9001'  : { width :'3em',   height : '3em',     top : '5em', left: '3vw', 'background-color' : '#FFFF00', ease: 'easeOutSine' },
+        '10000'  : { width :'3em',   height : '3em',     left : '20vw', top: '2em', 'background-color' : '#FFEA00', ease: 'easeOutSine' },
+        '11000'  : { width :'3em',   height : '3em',     left : '50vw', top: '0.5em', 'background-color' : '#F57F17', ease: 'easeOutSine' },
+        '12000'  : { width :'3em',   height : '3em',     left : '60vw', top: '2em', 'background-color' : '#F57F17', opacity : '1.0', ease: 'easeOutSine' },
+        '13000'  : { width :'3em',   height : '3em',     left : '80vw', top : '5em', 'background-color'  : '#FFEB3B', opacity : '0.0', ease : 'easeOutSine'}
     };
 
     this.titleAnimation = {
@@ -180,10 +189,10 @@ var HomeBrowserAnimator = function() {
 
     this.navigationAnimations ={
         '300' : {
-            'transform' : 'translate3d(-100%, 0, 0)'
+            'opacity' : '0'
         },
         '500' : {
-            'transform' : 'translate3d(0%, 0, 0)'
+            'opacity' : '1'
         }
     };
 

@@ -1,7 +1,7 @@
 'use strict';
 
 // Creates the Controller
-var HomeController = function($scope, $rootScope, HomeBrowserAnimator, HomeMobileAnimator, sparkSetup, marked) {
+var HomeController = function($scope, $rootScope, HomeBrowserAnimator, HomeMobileAnimator, sparkSetup, marked, $location, $anchorScroll, $routeParams) {
   sparkSetup.enableInvalidationInterval();
   sparkSetup.debug = false;
 

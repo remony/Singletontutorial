@@ -8,6 +8,7 @@
 .kuizu_base {
     padding: 10px;
     background-color: transparent;
+
 }
 
 .kuizu_questionNumber {
@@ -120,8 +121,9 @@
 .kuizu_score_title   {
     border-style: solid;
     border-width: 8px;
+    border-color:#333333;
     width:150px;
-    height:80px;
+    height:90px;
     margin:0 auto;
     text-align:center;
 

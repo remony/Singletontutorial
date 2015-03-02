@@ -32,7 +32,7 @@ angular.module('app.kuizu', [])
                 //Gets the question from the json file and sends it to the view
                 $scope.getQuestion = function () {
                     var question = $scope.readQuestion($scope.id);
-
+                    $timeout( function(){
                     if (question) {
                         $scope.question = question.question;
                         $scope.options = question.options;
@@ -49,24 +49,27 @@ angular.module('app.kuizu', [])
                     }
                     $scope.correctAns = false;
                     $scope.wrongAns = false;
+                    }, 500);
                 };
 
                 //When pressing a option it will check if the answer is right or wrong, if right gets next question
                 $scope.checkAnswer = function (ans) {
                     if (ans.option) return;
+
                     if (ans ==  $scope.options[$scope.answer]) {
-                        console.log("%cCORRECT", "color:GREEN; font-size: 16pt");
+                        //console.log("%cCORRECT", "color:GREEN; font-size: 16pt");
                         $scope.score++;
                         $scope.correctAns = true;
                         $scope.wrongAns = false;
                     } else {
-                        console.log("%cWrong.", "color:RED; font-size: 16pt");
+                        //console.log("%cWrong.", "color:RED; font-size: 16pt");
                         $scope.wrongAns = true;
                         $scope.correctAns = false;
                     }
                     $scope.questionStatus = false;
                     $scope.id++;
                     $scope.getQuestion();
+
                 };
 
                 $scope.reset();

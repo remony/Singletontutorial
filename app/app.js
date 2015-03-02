@@ -8,6 +8,7 @@ var App = angular.module('app', [
   'ngFx',
   'ngAnimate',
   'gilbox.sparkScroll',
+    'smoothScroll',
 
   // Home Controller
   'app.home.browser',

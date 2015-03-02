@@ -6,11 +6,11 @@
           spark-scroll-callback="onScroll"
           spark-scroll-animate="skyAnimation"></span>
 
-    <span class="sun" spark-scroll-animate="sunAnimation"></span>
+    <span class="sun  animated rollIn" spark-scroll-animate="sunAnimation"></span>
 
 
 
-    <h1 class="title" spark-scroll-animate="titleAnimation">{{ pageTitle }}</h1>
+    <h1 class="title animated zoomInUp" spark-scroll-animate="titleAnimation">{{ pageTitle }}</h1>
     <div class="wrapper">
         <div class="container">
             <section spark-scroll-animate="sectionOne" id="TheSingleton">
@@ -68,8 +68,8 @@
 
 
 
-        <div class="arrowdown" spark-scroll-animate="arrowAnimations">
-            <a class="fa fa-arrow-down" href="" easing="easeInOutCubic" scroll-to="TheSingleton" duration="1800"></a>
+        <div class="arrowdown fx-fade-down" spark-scroll-animate="arrowAnimations">
+            <a class="fa fa-arrow-down animated infinite bounce" href="" easing="easeInOutCubic" scroll-to="TheSingleton" duration="1800"></a>
         </div>
 
     </div>

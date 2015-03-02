@@ -1,7 +1,7 @@
 'use strict';
 
 // Creates the Controller
-var HomeController = function($scope, $rootScope, HomeBrowserAnimator, HomeMobileAnimator, sparkSetup, marked, $location, $anchorScroll, $routeParams) {
+var HomeController = function($scope, $rootScope,  HomeBrowserAnimator, HomeMobileAnimator, sparkSetup, marked) {
   sparkSetup.enableInvalidationInterval();
   sparkSetup.debug = false;
 
@@ -20,8 +20,9 @@ var HomeController = function($scope, $rootScope, HomeBrowserAnimator, HomeMobil
     Animator = HomeBrowserAnimator;//HomeMobileAnimator;
   }
 
+
   $scope.backgroundAnimation = Animator.backgroundAnimation;
-  $scope.sunAnimation   = Animator.sunAnimation;
+    $scope.sunAnimation   = Animator.sunAnimation;
   $scope.titleAnimation = Animator.titleAnimation;
   $scope.skyAnimation   = Animator.skyAnimation;
 
@@ -34,6 +35,10 @@ var HomeController = function($scope, $rootScope, HomeBrowserAnimator, HomeMobil
   $scope.quizAnimation  = Animator.quizAnimation;
     $scope.navigationAnimations = Animator.navigationAnimations;
     $scope.arrowAnimations = Animator.arrowAnimations;
+
+
+
+
 };
 
 // Injects the Dependencies (in a way that can be compressed)

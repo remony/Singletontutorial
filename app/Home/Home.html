@@ -7,45 +7,81 @@
           spark-scroll-animate="skyAnimation"></span>
 
     <span class="sun" spark-scroll-animate="sunAnimation"></span>
+
+
+
     <h1 class="title" spark-scroll-animate="titleAnimation">{{ pageTitle }}</h1>
+    <div class="wrapper">
+        <div class="container">
+            <section spark-scroll-animate="sectionOne">
+                <h1>What is a Singleton?</h1>
 
-    <section spark-scroll-animate="sectionOne">
-        <h3>Section 1</h3>
-        <p>Bacon ipsum dolor amet irure t-bone ut tri-tip, pork loin picanha excepteur andouille minim reprehenderit ham hock proident eiusmod. Et shankle rump sint. Anim voluptate adipisicing, ham hock shoulder meatball jerky eu capicola bacon qui turkey et t-bone nulla. Jerky meatball jowl id aute frankfurter fugiat sausage fatback lorem. Aliquip est in culpa ipsum tail brisket esse ball tip ut.</p>
-        <p>Id incididunt pig dolore. Proident exercitation ham hock boudin. Nulla incididunt bresaola, dolore in quis deserunt capicola laboris rump esse ad. Ribeye filet mignon deserunt ground round, biltong shank cow reprehenderit lorem ut laborum nisi.</p>
-        <p>Magna deserunt swine proident, pig commodo chuck elit tail corned beef ut fatback ground round. Shank shoulder ham frankfurter, ribeye drumstick voluptate ham hock. Sed swine chicken flank exercitation dolore, quis in. Landjaeger minim frankfurter, ea enim ullamco dolor sunt prosciutto quis elit nulla lorem bacon commodo. Et laboris dolore pork chop pig eu.</p>
-    </section>
+                <p>
+                <h3>Singleton</h3><br>
+                <i>ˈsɪŋɡ(ə)lt(ə)n/</i><br/>
+                noun<br/>
+                <p>
 
-    <section spark-scroll-animate="sectionTwo">
-        <h3>Section 2</h3>
-        <p>Bacon ipsum dolor amet irure t-bone ut tri-tip, pork loin picanha excepteur andouille minim reprehenderit ham hock proident eiusmod. Et shankle rump sint. Anim voluptate adipisicing, ham hock shoulder meatball jerky eu capicola bacon qui turkey et t-bone nulla. Jerky meatball jowl id aute frankfurter fugiat sausage fatback lorem. Aliquip est in culpa ipsum tail brisket esse ball tip ut.</p>
-        <p>Id incididunt pig dolore. Proident exercitation ham hock boudin. Nulla incididunt bresaola, dolore in quis deserunt capicola laboris rump esse ad. Ribeye filet mignon deserunt ground round, biltong shank cow reprehenderit lorem ut laborum nisi.</p>
-        <p>Magna deserunt swine proident, pig commodo chuck elit tail corned beef ut fatback ground round. Shank shoulder ham frankfurter, ribeye drumstick voluptate ham hock. Sed swine chicken flank exercitation dolore, quis in. Landjaeger minim frankfurter, ea enim ullamco dolor sunt prosciutto quis elit nulla lorem bacon commodo. Et laboris dolore pork chop pig eu.</p>
-    </section>
+                    a single person or thing of the kind under consideration.<br/>
+                    "splitting the clumps of plants into singletons"
 
-
-    <section spark-scroll-animate="sectionThree">
-        <h3>Section 3</h3>
-        <p>Bacon ipsum dolor amet irure t-bone ut tri-tip, pork loin picanha excepteur andouille minim reprehenderit ham hock proident eiusmod. Et shankle rump sint. Anim voluptate adipisicing, ham hock shoulder meatball jerky eu capicola bacon qui turkey et t-bone nulla. Jerky meatball jowl id aute frankfurter fugiat sausage fatback lorem. Aliquip est in culpa ipsum tail brisket esse ball tip ut.</p>
-        <p>Id incididunt pig dolore. Proident exercitation ham hock boudin. Nulla incididunt bresaola, dolore in quis deserunt capicola laboris rump esse ad. Ribeye filet mignon deserunt ground round, biltong shank cow reprehenderit lorem ut laborum nisi.</p>
-        <p>Magna deserunt swine proident, pig commodo chuck elit tail corned beef ut fatback ground round. Shank shoulder ham frankfurter, ribeye drumstick voluptate ham hock. Sed swine chicken flank exercitation dolore, quis in. Landjaeger minim frankfurter, ea enim ullamco dolor sunt prosciutto quis elit nulla lorem bacon commodo. Et laboris dolore pork chop pig eu.</p>
-    </section>
+                    <br/><br/>
 
 
-    <section spark-scroll-animate="sectionFour">
-        <h3>Section 4</h3>
-        <p>Bacon ipsum dolor amet irure t-bone ut tri-tip, pork loin picanha excepteur andouille minim reprehenderit ham hock proident eiusmod. Et shankle rump sint. Anim voluptate adipisicing, ham hock shoulder meatball jerky eu capicola bacon qui turkey et t-bone nulla. Jerky meatball jowl id aute frankfurter fugiat sausage fatback lorem. Aliquip est in culpa ipsum tail brisket esse ball tip ut.</p>
-        <p>Id incididunt pig dolore. Proident exercitation ham hock boudin. Nulla incididunt bresaola, dolore in quis deserunt capicola laboris rump esse ad. Ribeye filet mignon deserunt ground round, biltong shank cow reprehenderit lorem ut laborum nisi.</p>
-        <p>Magna deserunt swine proident, pig commodo chuck elit tail corned beef ut fatback ground round. Shank shoulder ham frankfurter, ribeye drumstick voluptate ham hock. Sed swine chicken flank exercitation dolore, quis in. Landjaeger minim frankfurter, ea enim ullamco dolor sunt prosciutto quis elit nulla lorem bacon commodo. Et laboris dolore pork chop pig eu.</p>
-    </section>
+                    The main advantage of a singleton over a class consisting of statics is that you can later easily decide that you need in fact more than one instance, e.g. one per thread.
+                    </br>
+                    However, in practice the main purpose of singletons is to make people feel less bad about having global variables.
+                    </br>
+                    A practical example for a good use of a singleton: you have an app that uses an SQL database and you need a connection pool. The purpose of such a pool is to reuse DB connection, so you definitely want all clients to use the same pool. Thus, having it as a singleton is the correct design. But one day you need the app to connect to a second DB server, and realize that you cannot have connections to different servers in the same pool. Thus your "one instance overall" singleton becomes "one instance per DB server".
+                </p>
 
 
-    <section spark-scroll-animate="sectionFive">
-        <h3>Section 5</h3>
-        <p>Bacon ipsum dolor amet irure t-bone ut tri-tip, pork loin picanha excepteur andouille minim reprehenderit ham hock proident eiusmod. Et shankle rump sint. Anim voluptate adipisicing, ham hock shoulder meatball jerky eu capicola bacon qui turkey et t-bone nulla. Jerky meatball jowl id aute frankfurter fugiat sausage fatback lorem. Aliquip est in culpa ipsum tail brisket esse ball tip ut.</p>
-        <p>Id incididunt pig dolore. Proident exercitation ham hock boudin. Nulla incididunt bresaola, dolore in quis deserunt capicola laboris rump esse ad. Ribeye filet mignon deserunt ground round, biltong shank cow reprehenderit lorem ut laborum nisi.</p>
-        <p>Magna deserunt swine proident, pig commodo chuck elit tail corned beef ut fatback ground round. Shank shoulder ham frankfurter, ribeye drumstick voluptate ham hock. Sed swine chicken flank exercitation dolore, quis in. Landjaeger minim frankfurter, ea enim ullamco dolor sunt prosciutto quis elit nulla lorem bacon commodo. Et laboris dolore pork chop pig eu.</p>
-    </section>
 
-    <kuizu datasource="sample.json" spark-scroll-animate="quizAnimation" />
+                <kuizu datasource="sample.json" spark-scroll-animate="quizAnimation"></kuizu>
+            </section>
+
+            <section spark-scroll-animate="sectionTwo">
+                <h1>Section 2</h1>
+                <p>Bacon ipsum dolor amet irure t-bone ut tri-tip, pork loin picanha excepteur andouille minim reprehenderit ham hock proident eiusmod. Et shankle rump sint. Anim voluptate adipisicing, ham hock shoulder meatball jerky eu capicola bacon qui turkey et t-bone nulla. Jerky meatball jowl id aute frankfurter fugiat sausage fatback lorem. Aliquip est in culpa ipsum tail brisket esse ball tip ut.</p>
+                <p>Id incididunt pig dolore. Proident exercitation ham hock boudin. Nulla incididunt bresaola, dolore in quis deserunt capicola laboris rump esse ad. Ribeye filet mignon deserunt ground round, biltong shank cow reprehenderit lorem ut laborum nisi.</p>
+                <p>Magna deserunt swine proident, pig commodo chuck elit tail corned beef ut fatback ground round. Shank shoulder ham frankfurter, ribeye drumstick voluptate ham hock. Sed swine chicken flank exercitation dolore, quis in. Landjaeger minim frankfurter, ea enim ullamco dolor sunt prosciutto quis elit nulla lorem bacon commodo. Et laboris dolore pork chop pig eu.</p>
+            </section>
+
+
+            <section spark-scroll-animate="sectionThree">
+                <h1>Section 3</h1>
+                <p>Bacon ipsum dolor amet irure t-bone ut tri-tip, pork loin picanha excepteur andouille minim reprehenderit ham hock proident eiusmod. Et shankle rump sint. Anim voluptate adipisicing, ham hock shoulder meatball jerky eu capicola bacon qui turkey et t-bone nulla. Jerky meatball jowl id aute frankfurter fugiat sausage fatback lorem. Aliquip est in culpa ipsum tail brisket esse ball tip ut.</p>
+                <p>Id incididunt pig dolore. Proident exercitation ham hock boudin. Nulla incididunt bresaola, dolore in quis deserunt capicola laboris rump esse ad. Ribeye filet mignon deserunt ground round, biltong shank cow reprehenderit lorem ut laborum nisi.</p>
+                <p>Magna deserunt swine proident, pig commodo chuck elit tail corned beef ut fatback ground round. Shank shoulder ham frankfurter, ribeye drumstick voluptate ham hock. Sed swine chicken flank exercitation dolore, quis in. Landjaeger minim frankfurter, ea enim ullamco dolor sunt prosciutto quis elit nulla lorem bacon commodo. Et laboris dolore pork chop pig eu.</p>
+            </section>
+
+
+            <section spark-scroll-animate="sectionFour">
+                <h1>Section 4</h1>
+                <p>Bacon ipsum dolor amet irure t-bone ut tri-tip, pork loin picanha excepteur andouille minim reprehenderit ham hock proident eiusmod. Et shankle rump sint. Anim voluptate adipisicing, ham hock shoulder meatball jerky eu capicola bacon qui turkey et t-bone nulla. Jerky meatball jowl id aute frankfurter fugiat sausage fatback lorem. Aliquip est in culpa ipsum tail brisket esse ball tip ut.</p>
+                <p>Id incididunt pig dolore. Proident exercitation ham hock boudin. Nulla incididunt bresaola, dolore in quis deserunt capicola laboris rump esse ad. Ribeye filet mignon deserunt ground round, biltong shank cow reprehenderit lorem ut laborum nisi.</p>
+                <p>Magna deserunt swine proident, pig commodo chuck elit tail corned beef ut fatback ground round. Shank shoulder ham frankfurter, ribeye drumstick voluptate ham hock. Sed swine chicken flank exercitation dolore, quis in. Landjaeger minim frankfurter, ea enim ullamco dolor sunt prosciutto quis elit nulla lorem bacon commodo. Et laboris dolore pork chop pig eu.</p>
+            </section>
+
+
+            <section spark-scroll-animate="sectionFive">
+                <h1>Section 5</h1>
+                <p>Bacon ipsum dolor amet irure t-bone ut tri-tip, pork loin picanha excepteur andouille minim reprehenderit ham hock proident eiusmod. Et shankle rump sint. Anim voluptate adipisicing, ham hock shoulder meatball jerky eu capicola bacon qui turkey et t-bone nulla. Jerky meatball jowl id aute frankfurter fugiat sausage fatback lorem. Aliquip est in culpa ipsum tail brisket esse ball tip ut.</p>
+                <p>Id incididunt pig dolore. Proident exercitation ham hock boudin. Nulla incididunt bresaola, dolore in quis deserunt capicola laboris rump esse ad. Ribeye filet mignon deserunt ground round, biltong shank cow reprehenderit lorem ut laborum nisi.</p>
+                <p>Magna deserunt swine proident, pig commodo chuck elit tail corned beef ut fatback ground round. Shank shoulder ham frankfurter, ribeye drumstick voluptate ham hock. Sed swine chicken flank exercitation dolore, quis in. Landjaeger minim frankfurter, ea enim ullamco dolor sunt prosciutto quis elit nulla lorem bacon commodo. Et laboris dolore pork chop pig eu.</p>
+            </section>
+            <section spark-scroll-animate="sectionSix">
+                <kuizu datasource="whatisasingleton.json" spark-scroll-animate="quizAnimation"></kuizu>
+            </section>
+        </div>
+
+
+        <div class="navigation" spark-scroll-animate="navigationAnimations">
+            <a href="#Whatisasingleton"></a>
+        </div>
+
+    </div>
+
+
+
 </div>

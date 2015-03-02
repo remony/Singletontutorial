@@ -2,13 +2,13 @@
     position: absolute;
     width: 100%;
     height: 1000%;
-    background-color: #B3E5FC;
+    background-color: #fff;
 }
 
 .home_base .sun {
     position: fixed;
     border-radius: 50%;
-    background-color: yellow;
+    background-color: #FFEB3B;
     z-index: 11;
 
     box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
@@ -35,6 +35,8 @@
     position: absolute;
 }
 
+
+
 .home_base .sky {
     position: fixed;
     top: 0;
@@ -54,20 +56,48 @@
 }
 
 .home_base section {
-    position: fixed;
+    position: relative;
     top: 13em;
     left: 10%;
+    margin-top:50vh;
+    width:100%;
+    text-wrap: normal;
+}
 
-    width: 80%;
+.home_base .wrapper  {
+    width:80%;
 }
 
 .home_base kuizu {
-    position: fixed;
-    top: 13em;
-    left: 10%;
+    position: relative;
+    width:100%;
+}
 
-    width: 80%;
-    min-width: 80%;
-    max-width: 80%;
-    height: 10em;
+
+/*
+                Font stuff
+
+*/
+
+.home_base h1   {
+    font-size:3em;
+    font-weight:800;
+    color:#212121;
+}
+
+
+.container    {
+    margin-top:100vh;
+    margin-left:300px;
+}
+
+
+.navigation {
+    position:fixed;
+    left:0;
+    top:10em;
+    background-color:#333;
+    height:100%;
+    width:300px;
+    z-index: 8;
 }

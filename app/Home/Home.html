@@ -14,27 +14,7 @@
     <div class="wrapper">
         <div class="container">
             <section spark-scroll-animate="sectionOne" id="TheSingleton">
-                <h1>What is a Singleton?</h1>
-
-                <p>
-                <h3>Singleton</h3><br>
-                <i>ˈsɪŋɡ(ə)lt(ə)n/</i><br/>
-                noun<br/>
-                <p>
-
-                    a single person or thing of the kind under consideration.<br/>
-                    "splitting the clumps of plants into singletons"
-
-                    <br/><br/>
-
-
-                    The main advantage of a singleton over a class consisting of statics is that you can later easily decide that you need in fact more than one instance, e.g. one per thread.
-                    </br>
-                    However, in practice the main purpose of singletons is to make people feel less bad about having global variables.
-                    </br>
-                    A practical example for a good use of a singleton: you have an app that uses an SQL database and you need a connection pool. The purpose of such a pool is to reuse DB connection, so you definitely want all clients to use the same pool. Thus, having it as a singleton is the correct design. But one day you need the app to connect to a second DB server, and realize that you cannot have connections to different servers in the same pool. Thus your "one instance overall" singleton becomes "one instance per DB server".
-                </p>
-
+                <marked ng-include="'assets/content/TheSingleton.md'"></marked>
 
 
                 <kuizu datasource="sample.json" spark-scroll-animate="quizAnimation"></kuizu>

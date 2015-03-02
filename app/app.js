@@ -3,6 +3,7 @@
 // Declare app level module which depends on views, and components
 var App = angular.module('app', [
   // Plugins
+  'hc.marked',
   'ngRoute',
   'ngFx',
   'ngAnimate',
@@ -17,6 +18,7 @@ var App = angular.module('app', [
   'app.kuizu'
 ]);
 
+
 App.config(['$routeProvider', function($routeProvider) {
 
   $routeProvider.when('/Home', {
@@ -26,3 +28,14 @@ App.config(['$routeProvider', function($routeProvider) {
 
   $routeProvider.otherwise({redirectTo: '/Home'});
 }]);
+
+App.config(['markedProvider', function(markedProvider) {
+  markedProvider.setOptions({
+    gfm: true,
+    tables: true,
+    highlight: function (code) {
+      return hljs.highlightAuto(code).value;
+    }
+  });
+}]);
+

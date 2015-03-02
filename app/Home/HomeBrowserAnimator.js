@@ -21,6 +21,12 @@ var HomeBrowserAnimator = function() {
         ease    :'easeOutQuad'
     };
 
+    this.arrowAnimations = {
+        ease    : 'easeOutQuad',
+        '20'    : {opacity: 1 },
+        '600'  : { opacity : 0 }
+    }
+
     this.sunAnimation = {
         ease    : 'easeOutQuad',
         '20'    : { width :'80vw',  height : '80vw',    top : '10em', left: '10vw', 'background-color' : '#FFFF00', ease: 'easeOutSine' },

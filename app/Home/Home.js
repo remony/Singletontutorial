@@ -33,6 +33,7 @@ var HomeController = function($scope, $rootScope, HomeBrowserAnimator, HomeMobil
 
   $scope.quizAnimation  = Animator.quizAnimation;
     $scope.navigationAnimations = Animator.navigationAnimations;
+    $scope.arrowAnimations = Animator.arrowAnimations;
 };
 
 // Injects the Dependencies (in a way that can be compressed)

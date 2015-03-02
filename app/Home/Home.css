@@ -59,7 +59,7 @@
     position: relative;
     top: 13em;
     left: 10%;
-    padding-top:20em;
+    padding-top:10em;
     width:100%;
     text-wrap: normal;
 }
@@ -88,7 +88,7 @@
 
 .container    {
     margin-top:100vh;
-    margin-left:300px;
+    margin-left:150px;
 }
 
 
@@ -97,7 +97,7 @@
     left:0;
     top:12em;
     height:100%;
-    width:300px;
+    width:150px;
     z-index: 8;
     padding:10px;
     text-align: center;
@@ -131,4 +131,38 @@
     color: #333;
     background-color: transparent;
     text-decoration: underline
+}
+
+
+.arrowdown  {
+    position:fixed;
+    bottom:0;
+    left:50%;
+    right:50%;
+    z-index: 100;
+    font-size:5em;
+}
+
+.arrowdown a:link {
+    color: #333;
+    background-color: transparent;
+    text-decoration: none
+}
+
+.arrowdown a:visited {
+    color: #333;
+    background-color: transparent;
+    text-decoration: none
+}
+
+.arrowdown a:hover {
+    color: #333;
+    background-color: transparent;
+    text-decoration: none
+}
+
+.arrowdown a:active {
+    color: #333;
+    background-color: transparent;
+    text-decoration: none
 }

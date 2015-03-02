@@ -35,8 +35,6 @@
     position: absolute;
 }
 
-
-
 .home_base .sky {
     position: fixed;
     top: 0;
@@ -59,57 +57,54 @@
     position: relative;
     top: 13em;
     left: 10%;
-    padding-top:10em;
-    width:100%;
+    padding-top: 10em;
+    width: 100%;
     text-wrap: normal;
 }
 
-.home_base .wrapper  {
-    width:80%;
+.home_base .wrapper {
+    width: 80%;
 }
 
 .home_base kuizu {
     position: relative;
-    width:100%;
+    width: 100%;
 }
-
 
 /*
                 Font stuff
 
 */
 
-.home_base h1   {
-    font-size:3em;
-    font-weight:800;
-    color:#212121;
+.home_base h1 {
+    font-size: 3em;
+    font-weight: 800;
+    color: #212121;
 }
 
-
-.container    {
-    margin-top:100vh;
-    margin-left:150px;
+.container {
+    margin-top: 100vh;
+    margin-left: 150px;
 }
-
 
 .navigation {
-    position:fixed;
-    left:0;
-    top:12em;
-    height:100%;
-    width:150px;
+    position: fixed;
+    left: 0;
+    top: 12em;
+    height: 100%;
+    width: 150px;
     z-index: 8;
-    padding:10px;
+    padding: 10px;
     text-align: center;
 }
 
 .navigation a {
-    margin-top:2em;
+    margin-top: 2em;
 }
 
 .navigation a:link {
     color: #e3e3e3;
-    font-size:1em;
+    font-size: 1em;
     font-weight: 700;
     background-color: transparent;
     text-decoration: none
@@ -133,14 +128,13 @@
     text-decoration: underline
 }
 
-
-.arrowdown  {
-    position:fixed;
-    bottom:0;
-    left:50%;
-    right:50%;
+.arrowdown {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
     z-index: 100;
-    font-size:9em;
+    font-size: 9em;
 }
 
 .arrowdown a:link {
@@ -166,3 +160,7 @@
     background-color: transparent;
     text-decoration: none
 }
+
+
+
+

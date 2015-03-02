@@ -18,6 +18,7 @@
     "components-font-awesome": "~4.3.0",
     "ngFx": "~1.0.5",
     "ngAnimate": "*",
-    "angular-marked": "~0.0.12"
+    "angular-marked": "~0.0.12",
+    "highlightjs": "~8.4.0"
   }
 }

@@ -94,7 +94,7 @@ var HomeBrowserAnimator = function() {
         '600' : {
             opacity             : '1.0'
         },
-        '1600' : {
+        '900' : {
             opacity             : '1.0'
         },
         ease  :'easeOutQuad'
@@ -176,6 +176,15 @@ var HomeBrowserAnimator = function() {
             opacity             : '1.0'
         },
         ease  :'easeOutQuad'
+    };
+
+    this.navigationAnimations ={
+        '300' : {
+            'transform' : 'translate3d(-100%, 0, 0)'
+        },
+        '500' : {
+            'transform' : 'translate3d(0%, 0, 0)'
+        }
     };
 
     return this;

@@ -6,19 +6,19 @@
 
 <div class="kuizu_base" ng-show="inProgress">
     <div ng-show="!quizOver">
-        <div ng-show="questionStatus" class='fx-fade-left fx-easing-bounce fx-speed-400'>
+        <div ng-show="questionStatus">
             <div class="kuizu_questionNumber">
                 <p>Question {{id + 1}}</p>
             </div>
         </div>
 
         <div class="kuizu_question_window">
-            <div ng-show="questionStatus" class='fx-fade-down fx-easing-bounce fx-speed-400'>
+            <div ng-show="questionStatus">
                 <div class="kuizu_question_window_icon">
                     <i class="fa fa-question"></i>
                 </div>
             </div>
-            <div ng-show="questionStatus" class='fx-fade-left fx-easing-bounce fx-speed-400'>
+            <div ng-show="questionStatus">
                 <p class="kuizu_question">{{question}}</p>
                 <div class="kuizu_correct" ng-show="correctAns">
                     <i class="fa fa-check"></i>
@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <div ng-show="questionStatus" class='fx-fade-right fx-easing-bounce fx-speed-400'>
+        <div ng-show="questionStatus">
             <div class="kuizu_question_list">
                 <form name="QuestionForm">
                     <ul id="options">
@@ -45,7 +45,7 @@
         </div>
     </div>
 
-    <div ng-show="quizOver" class='fx-fade-down fx-easing-bounce fx-speed-400'>
+    <div ng-show="quizOver">
         <div ng-show="!fileExists">
             <div class="kuizu_score">
                 <div class="kuizu_score_title">

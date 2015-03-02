@@ -35,9 +35,6 @@
     position: absolute;
 }
 
-.container    {
-    margin-top:100vh;
-}
 
 
 .home_base .sky {
@@ -63,12 +60,17 @@
     top: 13em;
     left: 10%;
     margin-top:50vh;
-    width: 80%;
+    width:100%;
+    text-wrap: normal;
+}
+
+.home_base .wrapper  {
+    width:80%;
 }
 
 .home_base kuizu {
     position: relative;
-
+    width:100%;
 }
 
 
@@ -81,4 +83,21 @@
     font-size:3em;
     font-weight:800;
     color:#212121;
+}
+
+
+.container    {
+    margin-top:100vh;
+    margin-left:300px;
+}
+
+
+.navigation {
+    position:fixed;
+    left:0;
+    top:10em;
+    background-color:#333;
+    height:100%;
+    width:300px;
+    z-index: 8;
 }

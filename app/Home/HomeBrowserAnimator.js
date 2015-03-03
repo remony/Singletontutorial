@@ -26,6 +26,11 @@ var HomeBrowserAnimator = function() {
         '20'    : {opacity: 1 },
         '600'  : { opacity : 0 }
     }
+    this.videoAnimations = {
+        ease    : 'easeOutQuad',
+        '20'    : {opacity: 1 },
+        '600'  : { opacity : 0 }
+    }
 
     this.sunAnimation = {
         ease    : 'easeOutQuad',

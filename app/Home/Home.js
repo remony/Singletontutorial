@@ -35,6 +35,7 @@ var HomeController = function($scope, $rootScope,  HomeBrowserAnimator, HomeMobi
   $scope.quizAnimation  = Animator.quizAnimation;
     $scope.navigationAnimations = Animator.navigationAnimations;
     $scope.arrowAnimations = Animator.arrowAnimations;
+    $scope.videoAnimations = Animator.videoAnimations;
 
 
 

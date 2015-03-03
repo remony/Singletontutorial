@@ -96,6 +96,46 @@ var HomeBrowserAnimator = function() {
             "background-color"  : '#333',
             opacity             : '1.0'
         },
+        '6000'   : {
+            'background-color'  : '#81D4FA',
+            opacity             : '1.0'
+        },
+        '7000'  : {
+            "background-color"  : '#81D4FA',
+            opacity             : '1.0'
+        },
+        '8000' : {
+            "background-color"  : '#81D4FA',
+            opacity             : '1.0'
+        },
+        '9000' : {
+            "background-color"  : '#4FC3F7',
+            opacity             : '1.0'
+        },
+        '10000' : {
+            "background-color"  : '#29B6F6',
+            opacity             : '1.0'
+        },
+        '11000' : {
+            "background-color"  : '#03A9F4',
+            opacity             : '1.0'
+        },
+        '12000' : {
+            "background-color"  : '#D84315',
+            opacity             : '1.0'
+        },
+        '13000' : {
+            "background-color"  : '#BF360C',
+            opacity             : '1.0'
+        },
+        '14000' : {
+            "background-color"  : '#1A237E',
+            opacity             : '1.0'
+        },
+        '15000' : {
+            "background-color"  : '#333',
+            opacity             : '1.0'
+        },
         ease  :'easeOutQuad'
     };
 

@@ -7,7 +7,7 @@ angular.module('app.kuizu', [])
                 datasource: '='
             },
             templateUrl: 'directives/quiz/kuizu.html',
-            controller: function ($scope, $element, $attrs, $http, $timeout) {
+            controller: function ($scope, $rootScope,  $element, $attrs, $http, $timeout) {
                 $scope.datasource = $attrs.datasource;
                 console.log($scope.datasource);
 
@@ -19,7 +19,7 @@ angular.module('app.kuizu', [])
                     $scope.inProgress = true;
                     $scope.questionStatus = true;
                     $scope.fileExists = false;
-
+                    $scope.kuizuComplete = "";
                     $scope.getQuestion();
                 };
 
@@ -46,6 +46,10 @@ angular.module('app.kuizu', [])
                             }
                         }
                         $scope.quizOver = true;
+
+                        var complete = $scope.datasource.replace('.json','complete');
+
+                        $rootScope.kuizuComplete = complete;
                     }
                     $scope.correctAns = false;
                     $scope.wrongAns = false;

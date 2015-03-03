@@ -19,6 +19,8 @@
     "ngFx": "~1.0.5",
     "ngAnimate": "*",
     "angular-marked": "~0.0.12",
-    "highlightjs": "~8.4.0"
+    "highlightjs": "~8.4.0",
+    "scrollmagic": "~2.0.0",
+    "iscroll": "~5.1.3"
   }
 }

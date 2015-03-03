@@ -7,11 +7,8 @@ var App = angular.module('app', [
   'ngRoute',
   'ngFx',
   'ngAnimate',
-  'gilbox.sparkScroll',
 
   // Home Controller
-  'app.home.browser',
-  'app.home.mobile',
   'app.home',
 
   // Directives

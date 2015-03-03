@@ -1,26 +1,21 @@
 <!--<div ng-include src="'../app/components/header.html'"></div>-->
 
-<div class="home_base" spark-scroll-animate="backgroundAnimation">
-    <span class="sky"
-          spark-scroll="{ topBottom:0, topTop:0.5 }"
-          spark-scroll-callback="onScroll"
-          spark-scroll-animate="skyAnimation"></span>
+<div class="home_base" id="Home">
+    <span class="sky" id="sky"></span>
 
-    <span class="sun" spark-scroll-animate="sunAnimation"></span>
+    <span class="sun"></span>
 
 
 
-    <h1 class="title" spark-scroll-animate="titleAnimation">{{ pageTitle }}</h1>
-    <div class="wrapper">
-        <div class="container">
-            <section spark-scroll-animate="sectionOne" id="TheSingleton">
+    <h1 class="title">{{ pageTitle }}</h1>
+    <div class="wrapper" id="test">
+        <div class="container scrollContent">
+            <section id="TheSingleton">
                 <marked ng-include="'assets/content/TheSingleton.md'"></marked>
-
-
-                <kuizu datasource="sample.json" spark-scroll-animate="quizAnimation"></kuizu>
+                <kuizu datasource="sample.json"></kuizu>
             </section>
 
-            <section spark-scroll-animate="sectionTwo" id="Singleton-Problems">
+            <section id="Singleton-Problems">
                 <h1>Problems with Singletons</h1>
                 <p>Bacon ipsum dolor amet irure t-bone ut tri-tip, pork loin picanha excepteur andouille minim reprehenderit ham hock proident eiusmod. Et shankle rump sint. Anim voluptate adipisicing, ham hock shoulder meatball jerky eu capicola bacon qui turkey et t-bone nulla. Jerky meatball jowl id aute frankfurter fugiat sausage fatback lorem. Aliquip est in culpa ipsum tail brisket esse ball tip ut.</p>
                 <p>Id incididunt pig dolore. Proident exercitation ham hock boudin. Nulla incididunt bresaola, dolore in quis deserunt capicola laboris rump esse ad. Ribeye filet mignon deserunt ground round, biltong shank cow reprehenderit lorem ut laborum nisi.</p>
@@ -28,7 +23,7 @@
             </section>
 
 
-            <section spark-scroll-animate="sectionThree" id="Singletons-Pros">
+            <section id="Singletons-Pros">
                 <h1>Pros of Singletons</h1>
                 <p>Bacon ipsum dolor amet irure t-bone ut tri-tip, pork loin picanha excepteur andouille minim reprehenderit ham hock proident eiusmod. Et shankle rump sint. Anim voluptate adipisicing, ham hock shoulder meatball jerky eu capicola bacon qui turkey et t-bone nulla. Jerky meatball jowl id aute frankfurter fugiat sausage fatback lorem. Aliquip est in culpa ipsum tail brisket esse ball tip ut.</p>
                 <p>Id incididunt pig dolore. Proident exercitation ham hock boudin. Nulla incididunt bresaola, dolore in quis deserunt capicola laboris rump esse ad. Ribeye filet mignon deserunt ground round, biltong shank cow reprehenderit lorem ut laborum nisi.</p>
@@ -36,7 +31,7 @@
             </section>
 
 
-            <section spark-scroll-animate="sectionFour" id="Were-To-Use">
+            <section id="Were-To-Use">
                 <h1>Where should we use Singletons</h1>
                 <p>Bacon ipsum dolor amet irure t-bone ut tri-tip, pork loin picanha excepteur andouille minim reprehenderit ham hock proident eiusmod. Et shankle rump sint. Anim voluptate adipisicing, ham hock shoulder meatball jerky eu capicola bacon qui turkey et t-bone nulla. Jerky meatball jowl id aute frankfurter fugiat sausage fatback lorem. Aliquip est in culpa ipsum tail brisket esse ball tip ut.</p>
                 <p>Id incididunt pig dolore. Proident exercitation ham hock boudin. Nulla incididunt bresaola, dolore in quis deserunt capicola laboris rump esse ad. Ribeye filet mignon deserunt ground round, biltong shank cow reprehenderit lorem ut laborum nisi.</p>
@@ -44,25 +39,25 @@
             </section>
 
 
-            <section spark-scroll-animate="sectionFive" id="Singletons-Alternatives">
+            <section id="Singletons-Alternatives">
                 <h1>What can we use instead</h1>
                 <p>Bacon ipsum dolor amet irure t-bone ut tri-tip, pork loin picanha excepteur andouille minim reprehenderit ham hock proident eiusmod. Et shankle rump sint. Anim voluptate adipisicing, ham hock shoulder meatball jerky eu capicola bacon qui turkey et t-bone nulla. Jerky meatball jowl id aute frankfurter fugiat sausage fatback lorem. Aliquip est in culpa ipsum tail brisket esse ball tip ut.</p>
                 <p>Id incididunt pig dolore. Proident exercitation ham hock boudin. Nulla incididunt bresaola, dolore in quis deserunt capicola laboris rump esse ad. Ribeye filet mignon deserunt ground round, biltong shank cow reprehenderit lorem ut laborum nisi.</p>
                 <p>Magna deserunt swine proident, pig commodo chuck elit tail corned beef ut fatback ground round. Shank shoulder ham frankfurter, ribeye drumstick voluptate ham hock. Sed swine chicken flank exercitation dolore, quis in. Landjaeger minim frankfurter, ea enim ullamco dolor sunt prosciutto quis elit nulla lorem bacon commodo. Et laboris dolore pork chop pig eu.</p>
             </section>
-            <section spark-scroll-animate="sectionSix">
-                <kuizu datasource="whatisasingleton.json" spark-scroll-animate="quizAnimation"></kuizu>
+            <section>
+                <kuizu datasource="whatisasingleton.json"></kuizu>
             </section>
         </div>
 
 
-        <div class="navigation" spark-scroll-animate="navigationAnimations">
-            <a href="#/Home#TheSingleton">What is a Singleton?</a><br />
-            <a href="#/Home#Singleton-Problems">Problems with Singletons</a><br />
-            <a href="#/Home#Singletons-Pros">Pros of Singletons</a><br />
-            <a href="#/Home#Were-To-Use">Where should we use Singletons</a><br />
-            <a href="#/Home#Singletons-Alternatives">What can we use instead</a><br />
-        </div>
+        <!--<div class="navigation">-->
+            <!--<a href="#/Home#TheSingleton">What is a Singleton?</a><br />-->
+            <!--<a href="#/Home#Singleton-Problems">Problems with Singletons</a><br />-->
+            <!--<a href="#/Home#Singletons-Pros">Pros of Singletons</a><br />-->
+            <!--<a href="#/Home#Were-To-Use">Where should we use Singletons</a><br />-->
+            <!--<a href="#/Home#Singletons-Alternatives">What can we use instead</a><br />-->
+        <!--</div>-->
 
     </div>
 

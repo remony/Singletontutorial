@@ -44,10 +44,15 @@
                 <h1>What can we use instead</h1>
                 <marked ng-include="'assets/content/TheSingleton.md'"></marked>
             </section>
-            <section spark-scroll-animate="sectionSix">
-                <kuizu datasource="whatisasingleton.json"></kuizu>
+            <section spark-scroll-animate="sectionSix" id="BigTest">
+                <div ng-include="'assets/content/BigTest.html'"></div>
             </section>
-            <a id="bottom"></a> You're at the bottom!
+            <section spark-scroll-animate="sectionSix" id="About">
+                <div ng-include="'assets/content/About.html'"></div>
+            </section>
+            <section spark-scroll-animate="sectionFive" id="Footer">
+                Made with AngularJS
+            </section>
         </div>
 
 
@@ -59,6 +64,8 @@
                 <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Singletons-Pros" duration="1800">The pros</a></li>
                 <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Were-To-Use" duration="1800">Where to use</a></li>
                 <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Singletons-Alternatives" duration="1800">Alternatives</a></li>
+                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="BigTest" duration="1800">Big Test</a></li>
+                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="About" duration="1800">About</a></li>
             </ul>
 
 

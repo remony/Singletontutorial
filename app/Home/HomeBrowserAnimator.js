@@ -234,12 +234,10 @@ var HomeBrowserAnimator = function() {
     };
 
     this.navigationAnimations ={
-        '300' : {
-            'opacity' : '0'
-        },
-        '500' : {
-            'opacity' : '1'
-        }
+        '20'    : {left: '-250px',
+                    opacity: 0},
+        '600'  : { left : '0em',
+        opacity: 1}
     };
 
     return this;

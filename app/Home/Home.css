@@ -83,31 +83,46 @@
 }
 
 .container {
-    margin-top: 60vh;
+    margin-top: 72vh;
     margin-left: 150px;
 }
 
 .navigation {
     position: fixed;
-    left: 5em;
-    top: 12em;
+    top: 10em;
     height: 100%;
-    width: 150px;
+    width: 250px;
+    background-color:#f3f3f3;
     z-index: 8;
     padding: 10px;
     text-align: left;
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
 }
 
+.navigation h2  {
+    position:relative;
+    font-size:2.3em;
+    left:1.2em;
+    font-weight: 800;
+}
+
+.navigation ul{
+    padding-top:0.5em;
+}
+
+
 .navigation a {
-    margin-top: 2em;
+    position:relative;
+    top:2em;
+    left:3em;
     padding:2px;
 
 }
 
 .navigation a:link {
     color: #333;
-    font-size: 1em;
-    font-weight: 700;
+    font-size: 1.1em;
+    font-weight: 600;
     background-color: transparent;
     text-decoration: none;
 
@@ -131,6 +146,12 @@
     color: #333;
     background-color: transparent;
     text-decoration: underline
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
 }
 
 .nav_item   {
@@ -182,7 +203,6 @@
 
 
 blockquote p {
-    z-index: 14;
     position:relative;
     left:2em;
 }

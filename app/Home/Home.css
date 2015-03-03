@@ -1,7 +1,7 @@
 .home_base {
     position: absolute;
     width: 100%;
-    height: 1000%;
+    height: 100%;
     background-color: #fff;
 }
 
@@ -83,7 +83,7 @@
 }
 
 .container {
-    margin-top: 100vh;
+    margin-top: 60vh;
     margin-left: 150px;
 }
 
@@ -100,6 +100,7 @@
 
 .navigation a {
     margin-top: 2em;
+    padding:2px;
 
 }
 
@@ -122,8 +123,8 @@
     color: #222;
     background-color: transparent;
     text-decoration: underline;
-    padding:2px;
-    font-size:1.2em;
+
+    font-size:1.04em;
 }
 
 .navigation a:active {
@@ -147,7 +148,7 @@
 }
 
 .arrowdown:hover    {
-
+    color:#444;
 }
 
 .arrowdown a:link {
@@ -180,9 +181,18 @@
 
 
 
-pre code {
-    background-color:#e3e3e3;
-    width:100%;
+blockquote p {
+    z-index: 14;
+    position:relative;
+    left:2em;
+}
+
+blockquote .fa{
+    position:absolute;
+    left:0;
+    font-size:3em;
+    text-align:right;
+    color:#212121;
 }
 
 

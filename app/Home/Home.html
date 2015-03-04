@@ -6,66 +6,103 @@
           spark-scroll-callback="onScroll"
           spark-scroll-animate="skyAnimation"></span>
 
-    <span class="sun" spark-scroll-animate="sunAnimation"></span>
+    <span class="sun  animated zoomInDown" spark-scroll-animate="sunAnimation"></span>
 
 
 
-    <h1 class="title" spark-scroll-animate="titleAnimation">{{ pageTitle }}</h1>
+    <h1 class="title animated zoomInUp" spark-scroll-animate="titleAnimation">{{ pageTitle }}</h1>
     <div class="wrapper">
         <div class="container">
+            <section spark-scroll-animate="sectionOne" id="summary">
+                <div ng-include="'assets/content/summary.html'"></div>
+            </section>
+
+
             <section spark-scroll-animate="sectionOne" id="TheSingleton">
-                <marked ng-include="'assets/content/TheSingleton.md'"></marked>
+                <div hljs>
+                    public void test () {
+                    // comment, sample code
+                    }
+                </div>
 
-
+                <div ng-include="'assets/content/TheSingleton.html'"></div>
                 <kuizu datasource="sample.json" spark-scroll-animate="quizAnimation"></kuizu>
+
+
+
             </section>
 
             <section spark-scroll-animate="sectionTwo" id="Singleton-Problems">
                 <h1>Problems with Singletons</h1>
-                <p>Bacon ipsum dolor amet irure t-bone ut tri-tip, pork loin picanha excepteur andouille minim reprehenderit ham hock proident eiusmod. Et shankle rump sint. Anim voluptate adipisicing, ham hock shoulder meatball jerky eu capicola bacon qui turkey et t-bone nulla. Jerky meatball jowl id aute frankfurter fugiat sausage fatback lorem. Aliquip est in culpa ipsum tail brisket esse ball tip ut.</p>
-                <p>Id incididunt pig dolore. Proident exercitation ham hock boudin. Nulla incididunt bresaola, dolore in quis deserunt capicola laboris rump esse ad. Ribeye filet mignon deserunt ground round, biltong shank cow reprehenderit lorem ut laborum nisi.</p>
-                <p>Magna deserunt swine proident, pig commodo chuck elit tail corned beef ut fatback ground round. Shank shoulder ham frankfurter, ribeye drumstick voluptate ham hock. Sed swine chicken flank exercitation dolore, quis in. Landjaeger minim frankfurter, ea enim ullamco dolor sunt prosciutto quis elit nulla lorem bacon commodo. Et laboris dolore pork chop pig eu.</p>
+
             </section>
 
 
             <section spark-scroll-animate="sectionThree" id="Singletons-Pros">
-                <h1>Pros of Singletons</h1>
-                <p>Bacon ipsum dolor amet irure t-bone ut tri-tip, pork loin picanha excepteur andouille minim reprehenderit ham hock proident eiusmod. Et shankle rump sint. Anim voluptate adipisicing, ham hock shoulder meatball jerky eu capicola bacon qui turkey et t-bone nulla. Jerky meatball jowl id aute frankfurter fugiat sausage fatback lorem. Aliquip est in culpa ipsum tail brisket esse ball tip ut.</p>
-                <p>Id incididunt pig dolore. Proident exercitation ham hock boudin. Nulla incididunt bresaola, dolore in quis deserunt capicola laboris rump esse ad. Ribeye filet mignon deserunt ground round, biltong shank cow reprehenderit lorem ut laborum nisi.</p>
-                <p>Magna deserunt swine proident, pig commodo chuck elit tail corned beef ut fatback ground round. Shank shoulder ham frankfurter, ribeye drumstick voluptate ham hock. Sed swine chicken flank exercitation dolore, quis in. Landjaeger minim frankfurter, ea enim ullamco dolor sunt prosciutto quis elit nulla lorem bacon commodo. Et laboris dolore pork chop pig eu.</p>
+
+               <div ng-include="'assets/content/prosandcons.html'"></div>
             </section>
 
 
             <section spark-scroll-animate="sectionFour" id="Were-To-Use">
                 <h1>Where should we use Singletons</h1>
-                <p>Bacon ipsum dolor amet irure t-bone ut tri-tip, pork loin picanha excepteur andouille minim reprehenderit ham hock proident eiusmod. Et shankle rump sint. Anim voluptate adipisicing, ham hock shoulder meatball jerky eu capicola bacon qui turkey et t-bone nulla. Jerky meatball jowl id aute frankfurter fugiat sausage fatback lorem. Aliquip est in culpa ipsum tail brisket esse ball tip ut.</p>
-                <p>Id incididunt pig dolore. Proident exercitation ham hock boudin. Nulla incididunt bresaola, dolore in quis deserunt capicola laboris rump esse ad. Ribeye filet mignon deserunt ground round, biltong shank cow reprehenderit lorem ut laborum nisi.</p>
-                <p>Magna deserunt swine proident, pig commodo chuck elit tail corned beef ut fatback ground round. Shank shoulder ham frankfurter, ribeye drumstick voluptate ham hock. Sed swine chicken flank exercitation dolore, quis in. Landjaeger minim frankfurter, ea enim ullamco dolor sunt prosciutto quis elit nulla lorem bacon commodo. Et laboris dolore pork chop pig eu.</p>
+
+            </section>
+
+            <section spark-scroll-animate="sectionFour" id="Were-Not-To-Use">
+                <div ng-include="'assets/content/wherenottouse.html'"></div>
+
             </section>
 
 
             <section spark-scroll-animate="sectionFive" id="Singletons-Alternatives">
                 <h1>What can we use instead</h1>
-                <p>Bacon ipsum dolor amet irure t-bone ut tri-tip, pork loin picanha excepteur andouille minim reprehenderit ham hock proident eiusmod. Et shankle rump sint. Anim voluptate adipisicing, ham hock shoulder meatball jerky eu capicola bacon qui turkey et t-bone nulla. Jerky meatball jowl id aute frankfurter fugiat sausage fatback lorem. Aliquip est in culpa ipsum tail brisket esse ball tip ut.</p>
-                <p>Id incididunt pig dolore. Proident exercitation ham hock boudin. Nulla incididunt bresaola, dolore in quis deserunt capicola laboris rump esse ad. Ribeye filet mignon deserunt ground round, biltong shank cow reprehenderit lorem ut laborum nisi.</p>
-                <p>Magna deserunt swine proident, pig commodo chuck elit tail corned beef ut fatback ground round. Shank shoulder ham frankfurter, ribeye drumstick voluptate ham hock. Sed swine chicken flank exercitation dolore, quis in. Landjaeger minim frankfurter, ea enim ullamco dolor sunt prosciutto quis elit nulla lorem bacon commodo. Et laboris dolore pork chop pig eu.</p>
+                <div ng-include="'assets/content/TheSingleton.md'"></div>
             </section>
-            <section spark-scroll-animate="sectionSix">
-                <kuizu datasource="whatisasingleton.json" spark-scroll-animate="quizAnimation"></kuizu>
+            <section spark-scroll-animate="sectionSix" id="BigTest">
+                <div ng-include="'assets/content/BigTest.html'"></div>
+
+            </section>
+            <section spark-scroll-animate="sectionSix" id="About">
+                <div ng-include="'assets/content/About.html'"></div>
+            </section>
+            <section spark-scroll-animate="sectionFive" id="Footer">
+                Made with AngularJS
             </section>
         </div>
 
 
         <div class="navigation" spark-scroll-animate="navigationAnimations">
-            <a href="#/Home#TheSingleton">What is a Singleton?</a><br />
-            <a href="#/Home#Singleton-Problems">Problems with Singletons</a><br />
-            <a href="#/Home#Singletons-Pros">Pros of Singletons</a><br />
-            <a href="#/Home#Were-To-Use">Where should we use Singletons</a><br />
-            <a href="#/Home#Singletons-Alternatives">What can we use instead</a><br />
+            <ul>
+                <li><h2>Topics</h2></li>
+                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="summary" duration="1800">Overview/summary</a></li>
+                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="TheSingleton" duration="1800">What is a Singleton</a></li>
+                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Singleton-Problems" duration="1800">Problems</a></li>
+                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Singletons-Pros" duration="1800">Pro's and con's</a></li>
+                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Were-To-Use" duration="1800">Where to use</a></li>
+                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Were-Not-To-Use" duration="1800">Where <b>not</b> to use</a></li>
+
+                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Singletons-Alternatives" duration="1800">Alternatives</a></li>
+                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="BigTest" duration="1800">Big Test</a></li>
+                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="About" duration="1800">About</a></li>
+            </ul>
+
+
+
+
+
+
+
+        </div>
+
+
+
+        <div class="arrowdown fx-fade-down" spark-scroll-animate="arrowAnimations">
+            <h2>Scroll</h2>
+            <a class="fa fa-angle-down animated infinite bounce" href="" easing="easeInOutCubic" scroll-to="summary" duration="1800"></a>
         </div>
 
     </div>
-
 
 
 </div>

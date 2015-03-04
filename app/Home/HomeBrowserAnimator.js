@@ -21,6 +21,17 @@ var HomeBrowserAnimator = function() {
         ease    :'easeOutQuad'
     };
 
+    this.arrowAnimations = {
+        ease    : 'easeOutQuad',
+        '20'    : {opacity: 1 },
+        '600'  : { opacity : 0 }
+    }
+    this.videoAnimations = {
+        ease    : 'easeOutQuad',
+        '20'    : {opacity: 1 },
+        '600'  : { opacity : 0 }
+    }
+
     this.sunAnimation = {
         ease    : 'easeOutQuad',
         '20'    : { width :'80vw',  height : '80vw',    top : '10em', left: '10vw', 'background-color' : '#FFFF00', ease: 'easeOutSine' },
@@ -29,8 +40,17 @@ var HomeBrowserAnimator = function() {
         '2000'  : { width :'3em',   height : '3em',     left : '20vw', top: '2em', 'background-color' : '#FFEA00', ease: 'easeOutSine' },
         '3000'  : { width :'3em',   height : '3em',     left : '50vw', top: '0.5em', 'background-color' : '#F57F17', ease: 'easeOutSine' },
         '4000'  : { width :'3em',   height : '3em',     left : '60vw', top: '2em', 'background-color' : '#F57F17', opacity : '1.0', ease: 'easeOutSine' },
-        '5000'  : { width :'3em',   height : '3em',     left : '80vw', top : '5em', 'background-color'  : '#FFEB3B', opacity : '0.0', ease : 'easeOutSine'
-        }
+        '5000'  : { width :'3em',   height : '3em',     left : '80vw', top : '5em', 'background-color'  : '#FFEB3B', opacity : '0.0', ease : 'easeOutSine'},
+        '5001'  : { width :'3em',   height : '3em',     top : '5em', left: '3vw', 'background-color' : '#FFF', ease: 'easeOutSine' },
+        '6000'  : { width :'3em',   height : '3em',     left : '20vw', top: '2em', 'background-color' : '#fff', ease: 'easeOutSine' },
+        '7000'  : { width :'3em',   height : '3em',     left : '50vw', top: '0.5em', 'background-color' : '#fff', ease: 'easeOutSine' },
+        '8000'  : { width :'3em',   height : '3em',     left : '60vw', top: '2em', 'background-color' : '#fff', opacity : '1.0', ease: 'easeOutSine' },
+        '9000'  : { width :'3em',   height : '3em',     left : '80vw', top : '5em', 'background-color'  : '#fff', opacity : '0.0', ease : 'easeOutSine'},
+        '9001'  : { width :'3em',   height : '3em',     top : '5em', left: '3vw', 'background-color' : '#FFFF00', ease: 'easeOutSine' },
+        '10000'  : { width :'3em',   height : '3em',     left : '20vw', top: '2em', 'background-color' : '#FFEA00', ease: 'easeOutSine' },
+        '11000'  : { width :'3em',   height : '3em',     left : '50vw', top: '0.5em', 'background-color' : '#F57F17', ease: 'easeOutSine' },
+        '12000'  : { width :'3em',   height : '3em',     left : '60vw', top: '2em', 'background-color' : '#F57F17', opacity : '1.0', ease: 'easeOutSine' },
+        '13000'  : { width :'3em',   height : '3em',     left : '80vw', top : '5em', 'background-color'  : '#FFEB3B', opacity : '0.0', ease : 'easeOutSine'}
     };
 
     this.titleAnimation = {
@@ -78,6 +98,46 @@ var HomeBrowserAnimator = function() {
             opacity             : '1.0'
         },
         '5000' : {
+            "background-color"  : '#333',
+            opacity             : '1.0'
+        },
+        '6000'   : {
+            'background-color'  : '#81D4FA',
+            opacity             : '1.0'
+        },
+        '7000'  : {
+            "background-color"  : '#81D4FA',
+            opacity             : '1.0'
+        },
+        '8000' : {
+            "background-color"  : '#81D4FA',
+            opacity             : '1.0'
+        },
+        '9000' : {
+            "background-color"  : '#4FC3F7',
+            opacity             : '1.0'
+        },
+        '10000' : {
+            "background-color"  : '#29B6F6',
+            opacity             : '1.0'
+        },
+        '11000' : {
+            "background-color"  : '#03A9F4',
+            opacity             : '1.0'
+        },
+        '12000' : {
+            "background-color"  : '#D84315',
+            opacity             : '1.0'
+        },
+        '13000' : {
+            "background-color"  : '#BF360C',
+            opacity             : '1.0'
+        },
+        '14000' : {
+            "background-color"  : '#1A237E',
+            opacity             : '1.0'
+        },
+        '15000' : {
             "background-color"  : '#333',
             opacity             : '1.0'
         },
@@ -179,12 +239,10 @@ var HomeBrowserAnimator = function() {
     };
 
     this.navigationAnimations ={
-        '300' : {
-            'transform' : 'translate3d(-100%, 0, 0)'
-        },
-        '500' : {
-            'transform' : 'translate3d(0%, 0, 0)'
-        }
+        '20'    : {left: '-250px',
+                    opacity: 0},
+        '600'  : { left : '0em',
+        opacity: 1}
     };
 
     return this;

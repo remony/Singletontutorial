@@ -1,7 +1,7 @@
 .home_base {
     position: absolute;
     width: 100%;
-    height: 1000%;
+    height: 100%;
     background-color: #fff;
 }
 
@@ -35,8 +35,6 @@
     position: absolute;
 }
 
-
-
 .home_base .sky {
     position: fixed;
     top: 0;
@@ -59,45 +57,168 @@
     position: relative;
     top: 13em;
     left: 10%;
-    margin-top:50vh;
-    width:100%;
+    padding-top: 10em;
+    min-height: 100vh;
+    width: 100%;
     text-wrap: normal;
 }
 
-.home_base .wrapper  {
-    width:80%;
+.home_base .wrapper {
+    width: 80%;
 }
 
 .home_base kuizu {
     position: relative;
-    width:100%;
+    width: 100%;
 }
-
 
 /*
                 Font stuff
 
 */
 
-.home_base h1   {
+.home_base h1 {
+    font-size: 3em;
+    font-weight: 800;
+    color: #212121;
+}
+
+.container {
+    margin-top: 100vh;
+    position:relative;
+    left:250px;
+    width:80%;
+}
+
+.navigation {
+    position: fixed;
+    top: 10em;
+    height: 100%;
+    width: 250px;
+    background-color:#f3f3f3;
+    z-index: 8;
+    padding: 10px;
+    text-align: left;
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+}
+
+.navigation h2  {
+    position:relative;
+    font-size:2.3em;
+    left:1.2em;
+    font-weight: 800;
+}
+
+.navigation ul{
+    padding-top:0.5em;
+}
+
+
+.navigation a {
+    position:relative;
+    top:2em;
+    left:3em;
+    padding:2px;
+
+}
+
+.navigation a:link {
+    color: #333;
+    font-size: 1.1em;
+    font-weight: 600;
+    background-color: transparent;
+    text-decoration: none;
+
+}
+
+.navigation a:visited {
+    color: #333;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: #222;
+    background-color: transparent;
+    text-decoration: underline;
+
+    font-size:1.04em;
+}
+
+.navigation a:active {
+    color: #333;
+    background-color: transparent;
+    text-decoration: underline
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav_item   {
+    padding-top:10px;
+}
+
+.arrowdown {
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    text-align: center;
+    z-index: 100;
+    font-size: 9em;
+
+}
+
+.arrowdown:hover    {
+    color:#444;
+}
+
+.arrowdown a:link {
+    color: #333;
+    background-color: transparent;
+    text-decoration: none;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+
+.arrowdown a:visited {
+    color: #333;
+    background-color: transparent;
+    text-decoration: none
+}
+
+.arrowdown a:hover {
+    color: #333;
+    background-color: transparent;
+    text-decoration: none;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.56);
+
+}
+
+.arrowdown a:active {
+    color: #333;
+    background-color: transparent;
+    text-decoration: none
+}
+
+
+
+
+blockquote p {
+    position:relative;
+    left:2em;
+}
+
+blockquote .fa{
+    position:absolute;
+    left:0;
     font-size:3em;
-    font-weight:800;
+    text-align:right;
     color:#212121;
 }
 
 
-.container    {
-    margin-top:100vh;
-    margin-left:300px;
-}
 
 
-.navigation {
-    position:fixed;
-    left:0;
-    top:10em;
-    background-color:#333;
-    height:100%;
-    width:300px;
-    z-index: 8;
-}
+

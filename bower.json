@@ -19,6 +19,7 @@
     "ngFx": "~1.0.5",
     "ngAnimate": "*",
     "angular-marked": "~0.0.12",
-    "highlightjs": "~8.4.0"
+    "highlightjs": "~8.4.0",
+    "ngSmoothScroll": "~1.7.1"
   }
 }

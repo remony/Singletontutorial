@@ -10,16 +10,7 @@
 <p>Sometimes, you will need to provide global access to a class, such as in games development, where you may have a global <code>World</code> or <code>Game</code> object. Sometimes you may have a global <code>FileSystem</code>, <code>AudioEngine</code>, <code>PhysicsEngine</code>, or other. Let&rsquo;s take a look at some of these examples, and, why in some instances, although you may think using a Singleton is the best idea, it can sometimes really not be.</p>
 
 <h2 id="toc_3">Problems with Singletons</h2>
-
-<h3 id="toc_4">A, B, and C, or friends and secrets</h3>
-
-<p>Lets say you have classes <code>A</code> and <code>B</code>, which are completely unrelated. You also have a global Singleton called <code>C</code>.</p>
-
-<p>Upon reading the code, a developer may think that <code>A</code> and <code>B</code> are unrelated (which they seem to be), but if they both use <code>C</code>, and the global state of <code>C</code> affects <code>A</code> and <code>B</code>, then they really are related by the functionality and state provided by <code>C</code>.</p>
-
-<p>This is an increase in coupling caused by a Singleton, which can make code not perform as you expect, and also introduce increased and unexpected complexity.</p>
-
-<p>Or, as <em>Miško Hevery</em> puts it<sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup>:</p>
+it<sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup>:</p>
 
 <blockquote>
     <p>Think of it another way. You can live in a society where everyone (every class) declares who their friends (collaborators) are. If I know that Joe knows Mary but neither Mary nor Joe knows Tim, then it is safe for me to assume that if I give some information to Joe he may give it to Mary, but under no circumstances will Tim get hold of it. Now, imagine that everyone (every class) declares some of their friends (collaborators), but other friends (collaborators which are singletons) are kept secret. Now you are left wondering how in the world did Tim got hold of the information you gave to Joe.</p>
@@ -58,7 +49,16 @@
     ...
     }</code></pre>
 
-<p>This now means you cannot print a payroll without paying an Employee! All of that because it was too easy to use the Singleton <code>BankAccount</code> to make the payments automatic upon printing&hellip;</p>
+<p>This now means you cannot print a payroll without paying an Em
+<h3 id="toc_4">A, B, and C, or friends and secrets</h3>
+
+<p>Lets say you have classes <code>A</code> and <code>B</code>, which are completely unrelated. You also have a global Singleton called <code>C</code>.</p>
+
+<p>Upon reading the code, a developer may think that <code>A</code> and <code>B</code> are unrelated (which they seem to be), but if they both use <code>C</code>, and the global state of <code>C</code> affects <code>A</code> and <code>B</code>, then they really are related by the functionality and state provided by <code>C</code>.</p>
+
+<p>This is an increase in coupling caused by a Singleton, which can make code not perform as you expect, and also introduce increased and unexpected complexity.</p>
+
+<p>Or, as <em>Miško Hevery</em> puts ployee! All of that because it was too easy to use the Singleton <code>BankAccount</code> to make the payments automatic upon printing&hellip;</p>
 
 <p>You&rsquo;d have to assume code authors would never do something like that, but people make mistakes. Singletons can aid in these mistakes.</p>
 

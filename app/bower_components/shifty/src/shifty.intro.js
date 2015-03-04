@@ -1,2 +1,1 @@
-;(function () {
-  var root = this;
+;(function (root) {

@@ -37,18 +37,6 @@ are:
   easing formulas adapted from
   [Scripty2](https://github.com/madrobby/scripty2).
 
-## Installation
-
-Shifty is available through NPM and Bower:
-
-````
-npm install --save shifty
-````
-
-````
-bower install --save shifty
-````
-
 ## Using Shifty
 
 Shifty has no dependencies, so you can just load
@@ -62,7 +50,7 @@ Shifty](#building-shifty)).
 
 This section explains how to get started with Shifty.  For full documentation
 on each method, please see [the API
-documentation](http://jeremyckahn.github.io/shifty/dist/doc/classes/Tweenable.html).
+documentation](http://jeremyckahn.github.io/shifty/dist/doc/src/shifty.core.js.html).
 
 ## Making a `tweenable()` instance
 
@@ -112,6 +100,9 @@ tweenable.tween({
 });
 ````
 
+__Important!__  A reference to the `from` object is retained throughout the
+life of the tween and is modified by Shifty.
+
 ## Advanced usage
 
 You can control the state of a tween with the following methods:
@@ -130,7 +121,7 @@ Tweenable.prototype.set();
 ````
 
 These, as well as all other methods, are detailed more in the [API
-documentation](http://jeremyckahn.github.io/shifty/dist/doc/classes/Tweenable.html).
+documentation](http://jeremyckahn.github.io/shifty/dist/doc/src/shifty.core.js.html).
 
 ## Using multiple easing formulas
 

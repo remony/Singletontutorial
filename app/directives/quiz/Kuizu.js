@@ -5,6 +5,7 @@ angular.module('app.kuizu', [])
         var prefix = (window.location.pathname.search('/app') === -1)?'app/':'';
 
         return {
+            restrict: 'AEC',
             scope: {
                 datasource: '='
             },

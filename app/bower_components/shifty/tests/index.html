@@ -63,25 +63,6 @@
           'Anything after end of the tween equates to 1.0 of the target value');
     });
 
-    test('step handler receives timestamp offset', function () {
-      var tweenable = new Tweenable();
-      mockTime = function () {return 0;};
-      var capturedOffset;
-      tweenable.tween({
-        from: { x: 0 }
-        ,to: { x: 100 }
-        ,duration: 1000
-        ,step: function (state, attachment, offset) {
-          capturedOffset = offset;
-        }
-      });
-
-      mockTime = function () {return 500;};
-      forceInternalUpdate(tweenable);
-      equals(capturedOffset, 500,
-          'The offset was passed along to the step handler');
-    });
-
 
     module('Tweenable.prototype.pause');
 
@@ -108,78 +89,6 @@
       forceInternalUpdate(tweenable);
       equals(tweenable.get().x, 100,
           'The tween ends at the modified end time');
-    });
-
-
-    module('Tweenable.prototype.seek');
-
-    test('seek() forces the tween to a specific point on the timeline', function () {
-      var tweenable = new Tweenable();
-      mockTime = function () {return 0;};
-      tweenable.tween({
-        from: { x: 0 },
-        to: { x: 100 },
-        duration: 1000
-      });
-
-      tweenable.seek(500);
-      equals(tweenable._timestamp, -500, 'The timestamp was properly offset');
-    });
-
-    test('The seek() parameter cannot be less than 0', function () {
-      var tweenable = new Tweenable();
-      mockTime = function () {return 0;};
-      tweenable.tween({
-        from: { x: 0 },
-        to: { x: 100 },
-        duration: 1000
-      });
-
-      tweenable.seek(-500);
-      equals(tweenable._timestamp, 0, 'The seek() parameter was forced to 0');
-    });
-
-    test('Seeking to the current millisecond is a no-op', function () {
-      var tweenable = new Tweenable();
-      var stepHandlerCallCount = 0;
-      mockTime = function () {return 0;};
-
-      tweenable.tween({
-        from: { x: 0 },
-        to: { x: 100 },
-        duration: 1000,
-        step: function () {
-          stepHandlerCallCount++;
-        }
-      });
-
-      tweenable.seek(50);
-      tweenable.stop();
-      tweenable.seek(50);
-      equals(stepHandlerCallCount, 1,
-        'The second seek() call did not trigger any handlers');
-    });
-
-    test('seek() keep time reference (rel #60)', function () {
-      var tweenable = new Tweenable({}, {
-        from: { x: 0 },
-        to: { x: 100 },
-        duration: 100
-      });
-
-      // express a delay in time between the both time it's called
-      mockTime = function () {
-        mockTime = function () {return 100;};
-        return 98;
-      };
-
-      var callCount = 0;
-      tweenable.stop = function () {
-        callCount += 1;
-      };
-
-      tweenable.seek(98);
-      equals(callCount, 0, 'stop should not have been called');
     });
 
 

@@ -1,6 +1,6 @@
 {
   "name": "shifty",
-  "version": "1.3.11",
+  "version": "1.2.2",
   "main": "./dist/shifty.min.js",
   "homepage": "http://jeremyckahn.github.io/shifty",
   "description": "A teeny tiny tweening engine in JavaScript.",
@@ -27,20 +27,16 @@
     {
       "name": "Jonathan Raoult",
       "email": "jesuisjonathan@gmx.fr"
-    },
-    {
-      "name": "Adrian Voica",
-      "email": "adrian.voica@nanokyte.com"
     }
   ],
   "license": "MIT",
-  "_release": "1.3.11",
+  "_release": "1.2.2",
   "_resolution": {
     "type": "version",
-    "tag": "1.3.11",
-    "commit": "d64c58876f08ba47f3b5f8d92bcee1f9cc6210d0"
+    "tag": "1.2.2",
+    "commit": "6584ab28b2d6e0e1b225f7caddca71fd069c1b4b"
   },
   "_source": "git://github.com/jeremyckahn/shifty.git",
-  "_target": "~1.3.4",
+  "_target": "1.2.2",
   "_originalSource": "shifty"
 }

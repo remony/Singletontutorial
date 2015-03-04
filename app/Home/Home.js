@@ -1,12 +1,11 @@
 'use strict';
 
 // Creates the Controller
-var HomeController = function($scope, $rootScope,  HomeBrowserAnimator, HomeMobileAnimator, sparkSetup, marked) {
+var HomeController = function($scope, $rootScope,  HomeBrowserAnimator, HomeMobileAnimator, sparkSetup) {
   $scope.prefix = (window.location.pathname.search('/app') === -1)?'app/':'';
   sparkSetup.enableInvalidationInterval();
   sparkSetup.debug = false;
 
-  $scope.html = marked('');
 
   $scope.pageTitle = "The Singleton Pattern";
 
@@ -44,7 +43,7 @@ var HomeController = function($scope, $rootScope,  HomeBrowserAnimator, HomeMobi
 };
 
 // Injects the Dependencies (in a way that can be compressed)
-HomeController.$inject = [ '$scope', '$rootScope', 'HomeBrowserAnimator', 'HomeMobileAnimator', 'sparkSetup', 'marked' ];
+HomeController.$inject = [ '$scope', '$rootScope', 'HomeBrowserAnimator', 'HomeMobileAnimator', 'sparkSetup' ];
 
 // Declares the module
 angular.module('app.home', []).controller('HomeController', HomeController);

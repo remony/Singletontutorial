@@ -1,1 +1,1 @@
-}).call(null);
+}(this));

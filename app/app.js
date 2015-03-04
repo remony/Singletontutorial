@@ -21,10 +21,11 @@ var App = angular.module('app', [
 ]);
 
 
-App.config(['$routeProvider', function($routeProvider) {
+App.config(['$routeProvider', function($routeProvider, $rootScope) {
+  var prefix = (window.location.pathname.search('/app') === -1)?'app/':'';
 
   $routeProvider.when('/Home', {
-    templateUrl: 'Home/Home.html',
+    templateUrl: prefix + 'Home/Home.html',
     controller: 'HomeController'
   });
 

@@ -2,6 +2,7 @@
 
 // Creates the Controller
 var HomeController = function($scope, $rootScope,  HomeBrowserAnimator, HomeMobileAnimator, sparkSetup, marked) {
+  $scope.prefix = (window.location.pathname.search('/app') === -1)?'app/':'';
   sparkSetup.enableInvalidationInterval();
   sparkSetup.debug = false;
 

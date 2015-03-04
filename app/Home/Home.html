@@ -14,7 +14,7 @@
     <div class="wrapper">
         <div class="container">
             <section spark-scroll-animate="sectionOne" id="summary">
-                <div ng-include="'assets/content/summary.html'"></div>
+                <div ng-include="prefix+'assets/content/summary.html'"></div>
             </section>
 
 
@@ -25,7 +25,7 @@
                     }
                 </div>
 
-                <div ng-include="'assets/content/TheSingleton.html'"></div>
+                <div ng-include="prefix+'assets/content/TheSingleton.html'"></div>
                 <kuizu datasource="sample.json" spark-scroll-animate="quizAnimation"></kuizu>
 
 
@@ -40,7 +40,7 @@
 
             <section spark-scroll-animate="sectionThree" id="Singletons-Pros">
 
-               <div ng-include="'assets/content/prosandcons.html'"></div>
+               <div ng-include="prefix+'assets/content/prosandcons.html'"></div>
             </section>
 
 
@@ -50,21 +50,21 @@
             </section>
 
             <section spark-scroll-animate="sectionFour" id="Were-Not-To-Use">
-                <div ng-include="'assets/content/wherenottouse.html'"></div>
+                <div ng-include="prefix+'assets/content/wherenottouse.html'"></div>
 
             </section>
 
 
             <section spark-scroll-animate="sectionFive" id="Singletons-Alternatives">
                 <h1>What can we use instead</h1>
-                <div ng-include="'assets/content/TheSingleton.md'"></div>
+                <div ng-include="prefix+'assets/content/TheSingleton.md'"></div>
             </section>
             <section spark-scroll-animate="sectionSix" id="BigTest">
-                <div ng-include="'assets/content/BigTest.html'"></div>
+                <div ng-include="prefix+'assets/content/BigTest.html'"></div>
 
             </section>
             <section spark-scroll-animate="sectionSix" id="About">
-                <div ng-include="'assets/content/About.html'"></div>
+                <div ng-include="prefix+'assets/content/About.html'"></div>
             </section>
             <section spark-scroll-animate="sectionFive" id="Footer">
                 Made with AngularJS

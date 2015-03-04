@@ -2,11 +2,13 @@
 
 angular.module('app.kuizu', [])
     .directive('kuizu', function () {
+        var prefix = (window.location.pathname.search('/app') === -1)?'app/':'';
+
         return {
             scope: {
                 datasource: '='
             },
-            templateUrl: 'directives/quiz/kuizu.html',
+            templateUrl: prefix + 'directives/quiz/kuizu.html',
             controller: function ($scope, $rootScope,  $element, $attrs, $http, $timeout) {
                 $scope.datasource = $attrs.datasource;
                 console.log($scope.datasource);
@@ -88,7 +90,7 @@ angular.module('app.kuizu', [])
 
                 $scope.loadQuestions = function () {
                     $http({
-                        url: 'assets/quiz/' + $scope.datasource,
+                        url: prefix + 'assets/quiz/' + $scope.datasource,
                         method: 'GET',
                         dataType: 'json',
                         data: null,

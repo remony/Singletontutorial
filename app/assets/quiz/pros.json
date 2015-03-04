@@ -1,0 +1,33 @@
+[
+  {
+    "question": "Which is NOT a con for using singletons? ",
+    "options": [
+      "Debugging Problems",
+      "Concurrency Issues",
+      "Difficult to implement",
+      "Coupling"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which is not a pro for using singletons?",
+    "options": [
+      "Good for management of memory",
+      "use of lazy initialisation ",
+      "Makes sure that only one class is created",
+      "Easy to debug "
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What SOLID rule does singleton break? ",
+    "options": [
+      "Single responsibility ",
+      "Open-closed ",
+      "Liskov substitution ",
+      "Interface segregation ",
+      "Dependency inversion "
+    ],
+    "answer": 1
+  }
+]

@@ -20,6 +20,7 @@
     "ngAnimate": "*",
     "angular-marked": "~0.0.12",
     "highlightjs": "~8.4.0",
-    "ngSmoothScroll": "~1.7.1"
+    "ngSmoothScroll": "~1.7.1",
+    "angular-highlightjs": "~0.4.1"
   }
 }

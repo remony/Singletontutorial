@@ -1,40 +1,39 @@
-<H1>What is the Singleton Pattern</H1>
+<h1 id="toc_0">What is a Singleton?</h1>
+
 <p>From Wikipedia:</p>
+
 <blockquote>
-    <i class="fa fa-quote-right"></i>
-
-    <p>In software engineering, the singleton pattern is a design pattern that restricts the instantiation of a class to
-        one object. This is useful when exactly one object is needed to coordinate actions across the system.</p>
+    <p>In software engineering, the singleton pattern is a design pattern that restricts the instantiation of a class to one object. This is useful when exactly one object is needed to coordinate actions across the system.</p>
 </blockquote>
-<h2>Instantiating a Singleton</h2>
-<p>Singletons can only have one instance in the whole application. This is achieved via a private constructor and a
-    <code>getInstance()</code> method.</p>
-<pre>
-    <code class="java">
-        public class SampleSingleton {
-        private static SampleSingleton instance = null;
-        private SampleSingleton() {</p>
-        }
-        public static SampleSingleton getInstance() {
-        if(instance == null) instance = new SampleSingleton();
-        return instance;
 
+<h2 id="toc_1">Instantiating a Singleton</h2>
 
-        }
-    </code>
-</pre>
-<h2>Problem with concurrency</h2>
-<p>Sometimes, when using a singleton we can find problems with concurrency. These occur when two threads simultaneously
-    try to access the single instance returned by <code>getInstance()</code>.</p>
-<p>Both threads lock the resource, and they enter into <strong>deadlock</strong>. Programming languages often provide
-    ways around this, with syntax to lock the resource before it is used, but it can be a problem for newer programmers.
-</p>
-<p>A way to prevent these concurrency problems in Java is to synchronize the instantiation of the Singleton:</p>
-<p>```java
-    public class SampleSingleton {
+<p>Singletons can only have one instance in the whole application. This is achieved via a private constructor and a <code>getInstance()</code> method.</p>
+
+<pre class="line-numbers"><code class="language-java">public class SampleSingleton {
     private static SampleSingleton instance = null;
-    private SampleSingleton() {</p>
-<pre><code>}
+    private SampleSingleton() {
+
+    }
+    public static SampleSingleton getInstance() {
+    if(instance == null) instance = new SampleSingleton();
+    return instance;
+    }
+    }</code></pre>
+
+<h2 id="toc_2">Problem with concurrency</h2>
+
+<p>Sometimes, when using a singleton we can find problems with concurrency. These occur when two threads simultaneously try to access the single instance returned by <code>getInstance()</code>.</p>
+
+<p>Both threads lock the resource, and they enter into <strong>deadlock</strong>. Programming languages often provide ways around this, with syntax to lock the resource before it is used, but it can be a problem for newer programmers.</p>
+
+<p>A way to prevent these concurrency problems in Java is to synchronize the instantiation of the Singleton:</p>
+
+<pre class="line-numbers"><code class="language-java">public class SampleSingleton {
+    private static SampleSingleton instance = null;
+    private SampleSingleton() {
+
+    }
     public static SampleSingleton getInstance() {
     if(instance == null) {
     synchronized(SampleSingleton.class) {
@@ -43,136 +42,135 @@
     }
     return instance;
     }
-</code></pre>
+    }</code></pre>
 
-<p>}
-    ```</p>
-<p>Even this way of doing it isn't perfectly safe, however. The only way to guarantee 100% that the class is thread-safe
-    is to make the instance <code>static</code>, and instantiate it as a class variable:</p>
-<p>```java
-    public class SampleSingleton {
+<p>Even this way of doing it isn&rsquo;t perfectly safe, however. The only way to guarantee 100% that the class is thread-safe is to make the instance <code>static</code>, and instantiate it as a class variable:</p>
+
+<pre class="line-numbers"><code class="language-java">public class SampleSingleton {
     private static final SampleSingleton INSTANCE = new SampleSingleton();
-    private SampleSingleton() {</p>
-<pre><code>}
-</code></pre>
+    private SampleSingleton() {
 
-<p>}
-    ```</p>
+    }
+    }</code></pre>
+
 <p>And then accessing the instance like so:</p>
-<p><code>java
-    ...
+
+<pre class="line-numbers"><code class="language-java">...
     SampleSingleton singleton = SampleSingleton.INSTANCE;
-    ...</code></p>
-<h2>Subclassing a singleton</h2>
-<p>Subclassing a singleton may be interesting if there are properties we want to be be able to change, while the
-    singleton still remains a globally accessible object.</p>
-<p>For example, if we had a <code>FileSystem</code> singleton, we could subclass it to <code>PS3FileSystem</code> or
-    <code>XboxFileSystem</code>, depending on which platform we are using.</p>
-<p>```cpp
-    FileSystem&amp; FileSystem::instance()
+    ...</code></pre>
+
+<h2 id="toc_3">Subclassing a singleton</h2>
+
+<p>Subclassing a singleton may be interesting if there are properties we want to be be able to change, while the singleton still remains a globally accessible object.</p>
+
+<p>For example, if we had a <code>FileSystem</code> singleton, we could subclass it to <code>PS3FileSystem</code> or <code>XboxFileSystem</code>, depending on which platform we are using.</p>
+
+<pre class="line-numbers"><code class="language-cpp">FileSystem&amp; FileSystem::instance()
     {
     #if PLATFORM == PLAYSTATION3
     static FileSystem *instance = new PS3FileSystem();
     #elif PLATFORM == WII
     static FileSystem *instance = new WiiFileSystem();
-    #endif</p>
-<p>return *instance;
-    }
-    ```</p>
-<h2>Regretting the singleton</h2>
-<p>Many people are against singletons (and global variables as a whole). There are a few reasons for this<sup
-        id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, such as:</p>
+    #endif
+
+    return *instance;
+    }</code></pre>
+
+<h2 id="toc_4">Regretting the singleton</h2>
+
+<p>Many people are against singletons (and global variables as a whole). There are a few reasons for this<sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup>, such as:</p>
+
 <ol>
-    <li>Make code harder to understand, because calling <code>SomeClass.getGlobalData()</code> introduces a dependency
-        on a function that should otherwise be self-contained.
-    </li>
-    <li>They encourage coupling: calling your global <code>AudioEngine</code> singleton from a <code>Physics</code>
-        class sounds like a terrible idea, but not if you don't know any better.
-    </li>
+    <li>Make code harder to understand, because calling <code>SomeClass.getGlobalData()</code> introduces a dependency on a function that should otherwise be self-contained.</li>
+    <li>They encourage coupling: calling your global <code>AudioEngine</code> singleton from a <code>Physics</code> class sounds like a terrible idea, but not if you don&rsquo;t know any better.</li>
     <li>The concurrency problems mentioned above.</li>
 </ol>
-<h2>What can we use instead?</h2>
-<p>```cpp
-    class Bullet
+
+<h2 id="toc_5">What can we use instead?</h2>
+
+<pre class="line-numbers"><code class="language-cpp">class Bullet
     {
     public:
-    int getX() const { return x<em>; }
-        int getY() const { return y</em>; }</p>
-<p>void setX(int x) { x_ = x; }
-    void setY(int y) { y_ = y; }</p>
-<p>private:
-    int x<em>, y</em>;
-    };</p>
-<p>class BulletManager
+    int getX() const { return x_; }
+    int getY() const { return y_; }
+
+    void setX(int x) { x_ = x; }
+    void setY(int y) { y_ = y; }
+
+    private:
+    int x_, y_;
+    };
+
+    class BulletManager
     {
     public:
     Bullet* create(int x, int y)
     {
     Bullet* bullet = new Bullet();
     bullet-&gt;setX(x);
-    bullet-&gt;setY(y);</p>
-<pre><code>return bullet;
-</code></pre>
+    bullet-&gt;setY(y);
 
-<p>}</p>
-<p>bool isOnScreen(Bullet&amp; bullet)
+    return bullet;
+    }
+
+    bool isOnScreen(Bullet&amp; bullet)
     {
     return bullet.getX() &gt;= 0 &amp;&amp;
     bullet.getX() &lt; SCREEN_WIDTH &amp;&amp;
     bullet.getY() &gt;= 0 &amp;&amp;
     bullet.getY() &lt; SCREEN_HEIGHT;
-    }</p>
-<p>void move(Bullet&amp; bullet)
+    }
+
+    void move(Bullet&amp; bullet)
     {
     bullet.setX(bullet.getX() + 5);
     }
-    };
-    ```</p>
-<p>In the example above, someone was using a <code>Bullet</code> class to hold data about a bullet, like its
-    <code>x</code> and <code>y</code> location. They were then using a <code>BulletManager</code> class to move the
-    bullet. This is an extreme example, but nevertheless worth exploring.</p>
+    };</code></pre>
+
+<p>In the example above, someone was using a <code>Bullet</code> class to hold data about a bullet, like its <code>x</code> and <code>y</code> location. They were then using a <code>BulletManager</code> class to move the bullet. This is an extreme example, but nevertheless worth exploring.</p>
+
 <p>An obvious solution below:</p>
-<p>```cpp
-    class Bullet
+
+<pre class="line-numbers"><code class="language-cpp">class Bullet
     {
     public:
-    Bullet(int x, int y) : x<em>(x), y</em>(y) {}</p>
-<p>bool isOnScreen()
+    Bullet(int x, int y) : x_(x), y_(y) {}
+
+    bool isOnScreen()
     {
     return x_ &gt;= 0 &amp;&amp; x_ &lt; SCREEN_WIDTH &amp;&amp;
     y_ &gt;= 0 &amp;&amp; y_ &lt; SCREEN_HEIGHT;
-    }</p>
-<p>void move() { x_ += 5; }</p>
-<p>private:
-    int x<em>, y</em>;
-    };
-    ```</p>
+    }
+
+    void move() { x_ += 5; }
+
+    private:
+    int x_, y_;
+    };</code></pre>
+
 <p>There was no need for <code>BulletManager</code> in the first place!</p>
-<h3>Use something already global</h3>
-<p>Usually, games will have an unavoidable singleton, like <strong><code>Game</code></strong>, or
-    <strong><code>World</code></strong>. Often it is better to have these singletons contain things like <code>FileSystem</code>,
-    <code>AudioEngine</code>, <code>Log</code>, or others.</p>
-<h3>Pass it as a parameter!</h3>
-<p>It can be cumbersome, but it can also be a good solution. <strong>Android</strong> passes a <code>Context</code>
-    class nearly everywhere. Are our games going to be that large and complex that passing a couple parameters here and
-    there is too difficult?</p>
-<p>In order to pass it as a parameter everywhere, the Google Testing Blog<sup id="fnref:2"><a href="#fn:2"
-                                                                                              rel="footnote">2</a></sup>
-    recommends using an <code>ApplicationFactory</code> class, which will instantiate the necessary classes. You will
-    only create one instance of an <code>ApplicationFactory</code> class in the <code>main()</code> method.</p>
+
+<h3 id="toc_6">Use something already global</h3>
+
+<p>Usually, games will have an unavoidable singleton, like <strong><code>Game</code></strong>, or <strong><code>World</code></strong>. Often it is better to have these singletons contain things like <code>FileSystem</code>, <code>AudioEngine</code>, <code>Log</code>, or others.</p>
+
+<h3 id="toc_7">Pass it as a parameter!</h3>
+
+<p>It can be cumbersome, but it can also be a good solution. <strong>Android</strong> passes a <code>Context</code> class nearly everywhere. Are our games going to be that large and complex that passing a couple parameters here and there is too difficult?</p>
+
+<p>In order to pass it as a parameter everywhere, the Google Testing Blog<sup id="fnref2"><a href="#fn2" rel="footnote">2</a></sup> recommends using an <code>ApplicationFactory</code> class, which will instantiate the necessary classes. You will only create one instance of an <code>ApplicationFactory</code> class in the <code>main()</code> method.</p>
 
 <div class="footnotes">
-    <hr/>
+    <hr>
     <ol>
-        <li id="fn:1">
-            <p>http://gameprogrammingpatterns.com/singleton.html#why-we-regret-using-it&nbsp;<a href="#fnref:1"
-                                                                                                rev="footnote">
-                &#8617;</a></p>
+
+        <li id="fn1">
+            <p>http://gameprogrammingpatterns.com/singleton.html#why-we-regret-using-it&nbsp;<a href="#fnref1" rev="footnote">&#8617;</a></p>
         </li>
-        <li id="fn:2">
-            <p>http://googletesting.blogspot.co.uk/2008/08/where-have-all-singletons-gone.html&nbsp;<a href="#fnref:2"
-                                                                                                       rev="footnote">
-                &#8617;</a></p>
+
+        <li id="fn2">
+            <p>http://googletesting.blogspot.co.uk/2008/08/where-have-all-singletons-gone.html&nbsp;<a href="#fnref2" rev="footnote">&#8617;</a></p>
         </li>
+
     </ol>
 </div>

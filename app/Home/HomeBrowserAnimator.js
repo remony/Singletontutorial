@@ -49,31 +49,26 @@ var HomeBrowserAnimator = function() {
     this.cloud1Animations = {
         ease    : 'easeOutQuad',
         '0'    : { left: '140vh', opacity : 1 },
-        '300'   : { left: '-0.9em' },
         '400'   : { left: '-50em', opacity : 1 }
     };
     this.cloud2Animations = {
         ease    : 'easeOutQuad',
-        '0'    : { left: '-50vh', opacity : 1 },
-        '300'   : { left: '-0.9em' },
-        '400'   : { left: '100vh', opacity : 1 }
+        '0'    : { left: '0vh', opacity : 1 },
+        '400'   : { left: '200vh', opacity : 1 }
     };
     this.cloud3Animations = {
         ease    : 'easeOutQuad',
-        '0'    : { left: '-50vh', opacity : 1 },
-        '300'   : { left: '-0.9em' },
-        '400'   : { left: '2000vh', opacity : 1 }
+        '0'    : { left: '10vh', opacity : 1 },
+        '400'   : { left: '200vh', opacity : 1 }
     };
     this.cloud4Animations = {
         ease    : 'easeOutQuad',
-        '0'    : { left: '100vh', opacity : 1 },
-        '300'   : { left: '-0.9em' },
+        '0'    : { left: '40vh', opacity : 1 },
         '400'   : { left: '-50em', opacity : 1 }
     };
     this.cloud5Animations = {
         ease    : 'easeOutQuad',
         '0'    : { left: '100vh', opacity : 1 },
-        '300'   : { left: '-0.9em' },
         '400'   : { left: '-50em', opacity : 1 }
     };
 

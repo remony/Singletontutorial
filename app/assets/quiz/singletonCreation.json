@@ -1,0 +1,31 @@
+[
+  {
+    "question": "The Instance variable is ______",
+    "options": [
+      "String",
+      "Final",
+      "Static",
+      "Public"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "If the instance variable is null. What does the instance method do?",
+    "options": [
+      "Creates a new instance",
+      "Throws an error",
+      "Reads the instance file",
+      "Pulls the instance from the database"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The constructor of the singleton has to be?",
+    "options": [
+      "Public",
+      "Protected",
+      "Private"
+    ],
+    "answer": 2
+  }
+]

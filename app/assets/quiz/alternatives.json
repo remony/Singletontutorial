@@ -1,0 +1,29 @@
+[
+  {
+    "question": "The Unity community recommends ______ instead of a normal Singleton",
+    "options": [
+      "Observer",
+      "Toolbox",
+      "Static Class"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "How does android avoid using Singletons?",
+    "options": [
+      "Uses static variables",
+      "Uses a SQLite database to manage the data",
+      "It passes the context as a parameter almost everywhere"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Would you save things like Audio Manager or Log Manager in the Global Game Manager?",
+    "options": [
+      "Yes",
+      "No",
+      "I would put them on a Singleton"
+    ],
+    "answer": 0
+  }
+]

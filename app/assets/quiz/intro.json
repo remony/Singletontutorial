@@ -12,11 +12,11 @@
     "question": "Which is a good use case for a singleton?",
     "options": [
       "the whole project",
-      "controlling what the user/player can do",
       "as a game manager",
+      "controlling what the user/player can do",
       "as an interface to a library"
     ],
-    "answer": 2
+    "answer": 3
   },
   {
     "question": "What happens to the singleton when an application closes? ",

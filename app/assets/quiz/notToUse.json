@@ -1,0 +1,39 @@
+[
+  {
+    "question": "Would you use a Singleton for the Player Object?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Would you use a Singleton for the Game Manager Object?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Would you use a Singleton for the Music Manager Object?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Having more than __ Singletons is bad",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "many"
+    ],
+    "answer": 1
+  }
+]

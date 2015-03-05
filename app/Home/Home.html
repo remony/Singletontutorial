@@ -20,6 +20,7 @@
 
             <section spark-scroll-animate="sectionTwo" id="singletoncreation">
                 <div ng-include="prefix+'assets/content/howtocreatesingleton.html'"></div>
+                <kuizu datasource="singletonCreation.json" spark-scroll-animate="quizAnimation"></kuizu>
             </section>
 
             <section spark-scroll-animate="sectionThree" id="Singletons-Pros">
@@ -28,19 +29,18 @@
 
 
             <section spark-scroll-animate="sectionFour" id="Were-To-Use">
-
                 <div ng-include="prefix+'assets/content/wheretouse.html'"></div>
 
             </section>
 
             <section spark-scroll-animate="sectionFour" id="Were-Not-To-Use">
                 <div ng-include="prefix+'assets/content/problems.html'"></div>
-
+                <kuizu datasource="notToUse.json" spark-scroll-animate="quizAnimation"></kuizu>
             </section>
-
 
             <section spark-scroll-animate="sectionFive" id="Singletons-Alternatives">
                 <div ng-include="prefix+'assets/content/alternatives.html'"></div>
+                <kuizu datasource="alternatives.json" spark-scroll-animate="quizAnimation"></kuizu>
             </section>
             <section spark-scroll-animate="sectionSix" id="BigTest">
                 <div ng-include="prefix+'assets/content/BigTest.html'"></div>

@@ -115,7 +115,68 @@ var HomeBrowserAnimator = function() {
         '200': { top: '8em', 'font-size': '4em', color: '#212121', ease: 'linear' }
     };
 
+    this.headerCloud1Animations  = {
+        ease    : 'easeOutQuad',
+        '20'    : { left:'-10vw', ease: 'easeOutSine' },
+        '130'   : { left:'-10vw', ease: 'easeOutSine' },
+        '1000'  : { left:'100vw', ease: 'easeOutSine' },
+        '2000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '3000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '4000'  : { left:'100vw', ease: 'easeOutSine' },
+        '5000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '5001'  : { left:'-10vw', ease: 'easeOutSine' },
+        '6000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '7000'  : { left:'100vw', ease: 'easeOutSine' },
+        '8000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '9000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '9001'  : { left:'100vw', ease: 'easeOutSine' },
+        '10000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '11000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '12000'  : { left:'100vw', ease: 'easeOutSine' },
+        '13000'  : { left:'-10vw', ease: 'easeOutSine' }
+    };
 
+    this.headerCloud2Animations  = {
+        ease    : 'easeOutQuad',
+        '20'    : { left:'200vh', ease: 'easeOutSine' },
+        '130'   : { left:'200vh', ease: 'easeOutSine' },
+        '1000'  : { left:'200vh', ease: 'easeOutSine' },
+        '2000'  : { left:'-10vh', ease: 'easeOutSine' },
+        '3000'  : { left:'200vh', ease: 'easeOutSine' },
+        '4000'  : { left:'200vh', ease: 'easeOutSine' },
+        '5000'  : { left:'-10vh', ease: 'easeOutSine' },
+        '5001'  : { left:'200vh', ease: 'easeOutSine' },
+        '6000'  : { left:'200vh', ease: 'easeOutSine' },
+        '7000'  : { left:'200vh', ease: 'easeOutSine' },
+        '8000'  : { left:'-10vh', ease: 'easeOutSine' },
+        '9000'  : { left:'200vh', ease: 'easeOutSine' },
+        '9001'  : { left:'200vh', ease: 'easeOutSine' },
+        '10000'  : { left:'-10vh', ease: 'easeOutSine' },
+        '11000'  : { left:'200vh', ease: 'easeOutSine' },
+        '12000'  : { left:'-10vh', ease: 'easeOutSine' },
+        '13000'  : { left:'200vh', ease: 'easeOutSine' }
+    };
+
+    this.headerCloud3Animations  = {
+        ease    : 'easeOutQuad',
+        '20'    : { left:'-10vw', ease: 'easeOutSine' },
+        '130'   : { left:'100vw', ease: 'easeOutSine' },
+        '1000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '2000'  : { left:'100vw', ease: 'easeOutSine' },
+        '3000'  : { left:'100vw', ease: 'easeOutSine' },
+        '4000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '5000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '5001'  : { left:'100vw', ease: 'easeOutSine' },
+        '6000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '7000'  : { left:'100vw', ease: 'easeOutSine' },
+        '8000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '9000'  : { left:'100vw', ease: 'easeOutSine' },
+        '9001'  : { left:'-10vw', ease: 'easeOutSine' },
+        '10000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '11000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '12000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '13000'  : { left:'100vw', ease: 'easeOutSine' }
+    };
 
     this.skyAnimation = {
         '0'   : {

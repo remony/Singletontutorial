@@ -46,6 +46,8 @@ var HomeController = function($scope, $rootScope,  HomeBrowserAnimator, HomeMobi
 
 
     $scope.headerCloud1Animations = Animator.headerCloud1Animations;
+    $scope.headerCloud2Animations = Animator.headerCloud2Animations;
+    $scope.headerCloud3Animations = Animator.headerCloud3Animations;
 
 
 

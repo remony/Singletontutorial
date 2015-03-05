@@ -262,6 +262,8 @@ p{
             Clouds
 
 */
+
+
 .cloud1 {
     position:fixed;
     top:0;
@@ -269,6 +271,7 @@ p{
     font-size:12em;
     color:#fff;
     z-index: 12;
+    opacity:0.9;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 .cloud2 {
@@ -276,7 +279,8 @@ p{
     bottom:0;
     left:0;
     font-size:10em;
-    color:#4099FF;
+    color:#FAFAFA;
+    opacity:0.9;
     z-index: 12;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
@@ -287,6 +291,7 @@ p{
     font-size:18em;
     color:#fff;
     z-index: 12;
+    opacity:0.9;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 .cloud4 {
@@ -295,7 +300,7 @@ p{
     right:200px;
     font-size:14em;
     color: #fafafa;
-    z-index: 12;
+    z-index: 12;opacity:0.9;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 .cloud5 {
@@ -305,5 +310,39 @@ p{
     font-size:7em;
     color:#fff;
     z-index: 12;
+    opacity:0.9;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+
+
+
+.headerCloud1   {
+    position:fixed;
+    top:0.1em;
+    left:0;
+    font-size:3em;
+    color:#fff;
+    z-index: 12;
+    opacity:0.9;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+.headerCloud2   {
+    position:fixed;
+    top:0.3em;
+    right:0;
+    font-size:2em;
+    color:#fff;
+    z-index: 12;
+    opacity:0.9;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+.headerCloud3   {
+    position:fixed;
+    top:0.1em;
+    left:0;
+    font-size:2.3em;
+    color:#fefefe;
+    z-index: 12;
+    opacity:0.9;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }

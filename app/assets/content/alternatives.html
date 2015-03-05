@@ -1,3 +1,79 @@
+<h1>Alternatives</h1>
+<p>Think about whether you really need the Singleton. The example below shows a project where a singleton, <code>BulletManager</code> was used, but it wasn&rsquo;t really necessary.</p>
+
+<pre class="line-numbers"><code class="language-cpp">class Bullet
+    {
+    public:
+    int getX() const { return x_; }
+    int getY() const { return y_; }
+
+    void setX(int x) { x_ = x; }
+    void setY(int y) { y_ = y; }
+
+    private:
+    int x_, y_;
+    };
+
+    class BulletManager
+    {
+    public:
+    Bullet* create(int x, int y)
+    {
+    Bullet* bullet = new Bullet();
+    bullet-&gt;setX(x);
+    bullet-&gt;setY(y);
+
+    return bullet;
+    }
+
+    bool isOnScreen(Bullet&amp; bullet)
+    {
+    return bullet.getX() &gt;= 0 &amp;&amp;
+    bullet.getX() &lt; SCREEN_WIDTH &amp;&amp;
+    bullet.getY() &gt;= 0 &amp;&amp;
+    bullet.getY() &lt; SCREEN_HEIGHT;
+    }
+
+    void move(Bullet&amp; bullet)
+    {
+    bullet.setX(bullet.getX() + 5);
+    }
+    };</code></pre>
+
+<p>In the example above, someone was using a <code>Bullet</code> class to hold data about a bullet, like its <code>x</code> and <code>y</code> location. They were then using a <code>BulletManager</code> class to move the bullet. This is an extreme example, but nevertheless worth exploring.</p>
+
+<p>An obvious solution below:</p>
+
+<pre class="line-numbers"><code class="language-cpp">class Bullet
+    {
+    public:
+    Bullet(int x, int y) : x_(x), y_(y) {}
+
+    bool isOnScreen()
+    {
+    return x_ &gt;= 0 &amp;&amp; x_ &lt; SCREEN_WIDTH &amp;&amp;
+    y_ &gt;= 0 &amp;&amp; y_ &lt; SCREEN_HEIGHT;
+    }
+
+    void move() { x_ += 5; }
+
+    private:
+    int x_, y_;
+    };</code></pre>
+
+<p>There was no need for <code>BulletManager</code> in the first place!</p>
+
+<h3 id="toc_20">Use something already global</h3>
+
+<p>Usually, games will have an unavoidable singleton, like <strong><code>Game</code></strong>, or <strong><code>World</code></strong>. Often it is better to have these singletons contain things like <code>FileSystem</code>, <code>AudioEngine</code>, <code>Log</code>, or others.</p>
+
+<h3 id="toc_21">Pass it as a parameter!</h3>
+
+<p>It can be cumbersome, but it can also be a good solution. <strong>Android</strong> passes a <code>Context</code> class nearly everywhere. Are our games going to be that large and complex that passing a couple parameters here and there is too difficult?</p>
+
+<p>In order to pass it as a parameter everywhere, the Google Testing Blog<sup id="fnref7"><a href="#fn7" rel="footnote">7</a></sup> recommends using an <code>ApplicationFactory</code> class, which will instantiate the necessary classes. You will only create one instance of an <code>ApplicationFactory</code> class in the <code>main()</code> method.</p>
+
+
 <h2>
     The Unity Alternative
 </h2>

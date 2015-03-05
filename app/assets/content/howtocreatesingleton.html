@@ -1,0 +1,156 @@
+<h1>
+    How to create a Singleton
+</h1>
+
+<h2 id="toc_6">Instantiating a Singleton</h2>
+
+<p>Singletons can only have one instance in the whole application. This is achieved via a private constructor and a <code>getInstance()</code> method.</p>
+
+<pre class="line-numbers"><code class="language-java">public class SampleSingleton {
+    private static SampleSingleton instance = null;
+    private SampleSingleton() {
+
+    }
+    public static SampleSingleton getInstance() {
+    if(instance == null) instance = new SampleSingleton();
+    return instance;
+    }
+    }</code></pre>
+
+
+<h3 id="toc_7">Problem with concurrency</h3>
+
+<p>Sometimes, when using a singleton we can find problems with concurrency. These occur when two threads simultaneously try to access the single instance returned by <code>getInstance()</code>.</p>
+
+<p>Both threads lock the resource, and they enter into <strong>deadlock</strong>. Programming languages often provide ways around this, with syntax to lock the resource before it is used, but it can be a problem for newer programmers.</p>
+
+<p>A way to prevent these concurrency problems in Java is to synchronize the instantiation of the Singleton:</p>
+
+<pre class="line-numbers"><code class="language-java">public class SampleSingleton {
+    private static SampleSingleton instance = null;
+    private SampleSingleton() {
+
+    }
+    public static SampleSingleton getInstance() {
+    if(instance == null) {
+    synchronized(SampleSingleton.class) {
+    instance = new SampleSingleton();
+    }
+    }
+    return instance;
+    }
+    }</code></pre>
+
+<p>Even this way of doing it isn&rsquo;t perfectly safe, however. Another option, commonly recommended, is to eagerly initialise the singleton as a static variable:</p>
+
+<pre class="line-numbers"><code class="language-java">public class SampleSingleton {
+    private static final SampleSingleton INSTANCE = new SampleSingleton();
+    private SampleSingleton() {
+
+    }
+    }</code></pre>
+
+<p>And then accessing the instance like so:</p>
+
+<pre class="line-numbers"><code class="language-java">...
+    SampleSingleton singleton = SampleSingleton.INSTANCE;
+    ...</code></pre>
+
+<p>The last option, to guarantee 100% of the time that the singleton will be thread-safe, is to create a static inner class:</p>
+
+<pre class="line-numbers"><code class="language-java">public static class SimpleSingleton {
+    private SimpleSingleton() {
+    // Private constructor prevents initialisation from other classes
+    }
+
+    public static SimpleSingleton getInstance() {
+    return SingletonHolder.INSTANCE;
+    }
+
+    private static class SingletonHolder {
+    private static final SimpleSingleton INSTANCE = new SimpleSingleton();
+    }
+    }</code></pre>
+
+<h2 id="toc_8">Subclassing a singleton</h2>
+
+<p>Subclassing a singleton may be interesting if there are properties we want to be be able to change, while the singleton still remains a globally accessible object.</p>
+
+<p>For example, if we had a <code>FileSystem</code> singleton, we could subclass it to <code>PS3FileSystem</code> or <code>XboxFileSystem</code>, depending on which platform we are using.</p>
+
+<pre class="line-numbers"><code class="language-cpp">FileSystem&amp; FileSystem::instance()
+    {
+    #if PLATFORM == PLAYSTATION3
+    static FileSystem *instance = new PS3FileSystem();
+    #elif PLATFORM == WII
+    static FileSystem *instance = new WiiFileSystem();
+    #endif
+
+    return *instance;
+    }</code></pre>
+
+<h2 id="toc_1">Unity Example of implementation of a Singleton</h2>
+
+<p>In our gameManager class we want to implement our singleton which will be accessed by the other classes in the game, for this example we want to access the singleton to check if the game is paused or not. In the code example below is the C# script for the singleton implementation.</p>
+
+<p><em>GameManager.cs</em>: The Script is attached to the camera in Unity:</p>
+
+<pre class="line-numbers"><code class="language-csharp">using UnityEngine;
+    using System.Collections;
+
+    public class GameManager : MonoBehaviour
+    {
+    static GameManager _instance;
+
+    public static GameManager managerInstance
+    {
+    get
+    {
+    if (_instance == null)
+    {
+    _instance = GameObject.Find(&quot;Main Camera&quot;).GetComponent();
+    }
+
+    return _instance;
+    }
+    }
+
+    public bool isPaused = false;
+    }</code></pre>
+
+<p>To check if the game is paused we want to access the gamemanager singleton, in the character script below we are accessing the singleton to check if the game is paused or not.</p>
+
+<p><em>character.cs</em></p>
+
+<pre class="line-numbers"><code class="language-csharp">using UnityEngine;
+    using System.Collections;
+
+    public class Character : MonoBehaviour
+    {
+
+    void update ()
+    {
+    if (!GameManager.managerInstance.isPaused)
+    {
+    //is paused
+    }
+    else
+    {
+    //not paused
+    }
+    }
+    }</code></pre>
+
+
+
+
+<h2 id="toc_9">Regretting the singleton</h2>
+
+<p>Many people are against singletons (and global variables as a whole). There are a few reasons for this<sup id="fnref3"><a href="#fn3" rel="footnote">3</a></sup>, such as:</p>
+
+<ol>
+    <li>Make code harder to understand, because calling <code>SomeClass.getGlobalData()</code> introduces a dependency on a function that should otherwise be self-contained.</li>
+    <li>They encourage coupling: calling your global <code>AudioEngine</code> singleton from a <code>Physics</code> class sounds like a terrible idea, but not if you don&rsquo;t know any better.</li>
+    <li>The concurrency problems mentioned above.</li>
+</ol>
+

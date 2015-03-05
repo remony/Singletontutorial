@@ -1,16 +1,22 @@
 <h1>Pro's and Con's of The Singleton Pattern</h1>
-<h2 id="pros">Pros</h2>
+
+
+
+<h3 id="toc_4">Pros<sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup></h3>
+
 <ul>
-    <li>Since the singleton is initialized when it is first accessed it doesn&#39;t create instances of classes that are never accessed. This is good for memory management.</li>
+    <li>Since the singleton is initialized when it is first accessed it doesn&rsquo;t create instances of classes that are never accessed. This is good for memory management.</li>
     <li>It ensures that only one instance of a class is created.</li>
     <li>The alternative to using singletons is static classes however there is one main issue with this: automatic initialization. The static class cannot access information which is not known until the program is running. Using lazy initialization the singletons are initialized as late as possible so it can access information when running.</li>
 </ul>
-<h2 id="cons">Cons</h2>
+
+<h3 id="toc_5">Cons</h3>
+
 <ul>
-    <li>Singletons break the single responsibility of object oriented design. A singleton class has the responsibility of its main activity and the responsibility of creating an instance of itself. </li>
-    <li>Its harder to find bugs within the program if they are globally accessed. You will have to look through a lot more code to find the problem if its accessed globally.</li>
-    <li>It can encourage coupling -- As each classes are globally accessed it is easier for team members to code things together that shouldn&#39;t be together. If singletons are not used then no global access would mean that this code wouldn&#39;t work and they would have to code these two things separately. </li>
-    <li>Concurrency Problems -- Since the singleton can be accesses globally every thread can access a class at  any time without knowing what other threads are doing. This can cause problems with deadlock, race conditions</li>
+    <li>Singletons break the single responsibility of object oriented design. A singleton class has the responsibility of its main activity and the responsibility of creating an instance of itself.<sup id="fnref2"><a href="#fn2" rel="footnote">2</a></sup></li>
+    <li>It&rsquo;s harder to find bugs within the program if they are globally accessed. You will have to look through a lot more code to find the problem if its accessed globally.</li>
+    <li>It can encourage coupling &ndash; As each classes are globally accessed it is easier for team members to code things together that shouldn&rsquo;t be together. If singletons are not used then no global access would mean that this code wouldn&rsquo;t work and they would have to code these two things separately.</li>
+    <li>Concurrency Problems &ndash; Since the singleton can be accesses globally every thread can access a class at any time without knowing what other threads are doing. This can cause problems with deadlock, race conditions. There is some more details about this below:</li>
 </ul>
 
 

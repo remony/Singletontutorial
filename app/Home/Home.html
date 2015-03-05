@@ -14,45 +14,32 @@
     <div class="wrapper">
         <div class="container">
             <section spark-scroll-animate="sectionOne" id="summary">
-                <div ng-include="prefix+'assets/content/all.html'"></div>
+                <div ng-include="prefix+'assets/content/summary.html'"></div>
             </section>
 
 
-            <section spark-scroll-animate="sectionOne" id="TheSingleton">
-
-
-                <div ng-include="prefix+'assets/content/TheSingleton.html'"></div>
-                <kuizu datasource="sample.json" spark-scroll-animate="quizAnimation"></kuizu>
-
-
+            <section spark-scroll-animate="sectionTwo" id="singletoncreation">
+                <div ng-include="prefix+'assets/content/howtocreatesingleton.html'"></div>
             </section>
-
-            <section spark-scroll-animate="sectionTwo" id="Singleton-Problems">
-                <h1>Problems with Singletons</h1>
-
-            </section>
-
 
             <section spark-scroll-animate="sectionThree" id="Singletons-Pros">
-
                 <div ng-include="prefix+'assets/content/prosandcons.html'"></div>
             </section>
 
 
             <section spark-scroll-animate="sectionFour" id="Were-To-Use">
-                <h1>Where should we use Singletons</h1>
+
+                <div ng-include="prefix+'assets/content/wheretouse.html'"></div>
 
             </section>
 
             <section spark-scroll-animate="sectionFour" id="Were-Not-To-Use">
-                <div ng-include="prefix+'assets/content/wherenottouse.html'"></div>
+                <div ng-include="prefix+'assets/content/problems.html'"></div>
 
             </section>
 
 
             <section spark-scroll-animate="sectionFive" id="Singletons-Alternatives">
-                <h1>Alternatives to Singletons</h1>
-
                 <div ng-include="prefix+'assets/content/alternatives.html'"></div>
             </section>
             <section spark-scroll-animate="sectionSix" id="BigTest">
@@ -65,25 +52,29 @@
             <section spark-scroll-animate="sectionFive" id="Footer">
                 Made with AngularJS
             </section>
+            <section spark-scroll-animate="sectionFive" id="footnotes">
+                <div ng-include="prefix+'assets/content/footnotes.html'"></div>
+            </section>
         </div>
 
         <div class="navigation" spark-scroll-animate="navigationAnimations">
             <ul ng-hide="firefox">
                 <li><h2>Topics</h2></li>
                 <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="summary" duration="1800">Overview/summary</a></li>
-                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="TheSingleton" duration="1800">What is a Singleton</a></li>
-                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Singleton-Problems" duration="1800">Problems</a></li>
+                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="singletoncreation" duration="1800">Singleton creation</a></li>
                 <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Singletons-Pros" duration="1800">Pro's and con's</a></li>
                 <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Were-To-Use" duration="1800">Where to use</a></li>
                 <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Were-Not-To-Use" duration="1800">Where <b>not</b> to use</a></li>
                 <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Singletons-Alternatives" duration="1800">Alternatives</a></li>
                 <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="BigTest" duration="1800">Big Test</a></li>
+                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="footnotes" duration="1800">Footnotes</a></li>
                 <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="About" duration="1800">About</a></li>
             </ul>
             <ul ng-show="firefox">
                 <li><h2>Topics</h2></li>
                 <li><a class="nav_item" href="#/Home/#summary">Overview/summary</a></li>
                 <li><a class="nav_item" href="#/Home/#TheSingleton">What is a Singleton</a></li>
+                <li><a class="nav_item" href="#/Home/#singletoncreation">How to create a Singleton</a></li>
                 <li><a class="nav_item" href="#/Home/#Singleton-Problems">Problems</a></li>
                 <li><a class="nav_item" href="#/Home/#Singletons-Pros">Pro's and con's</a></li>
                 <li><a class="nav_item" href="#/Home/#Were-To-Use">Where to use</a></li>

@@ -9,7 +9,7 @@
     <span class="sun  animated zoomInDown" spark-scroll-animate="sunAnimation"></span>
 
 
-    <h1 class="title animated zoomInUp" spark-scroll-animate="titleAnimation">{{ pageTitle }}</h1>
+    <h1 class="title animated zoomInUp" spark-scroll-animate="titleAnimation"><i class="fa fa-globe"></i>      {{ pageTitle }}</h1>
 
     <div class="wrapper">
         <div class="container">
@@ -35,12 +35,11 @@
 
             <section spark-scroll-animate="sectionFour" id="Were-Not-To-Use">
                 <div ng-include="prefix+'assets/content/problems.html'"></div>
-                <kuizu datasource="notToUse.json" spark-scroll-animate="quizAnimation"></kuizu>
+
             </section>
 
             <section spark-scroll-animate="sectionFive" id="Singletons-Alternatives">
                 <div ng-include="prefix+'assets/content/alternatives.html'"></div>
-                <kuizu datasource="alternatives.json" spark-scroll-animate="quizAnimation"></kuizu>
             </section>
             <section spark-scroll-animate="sectionSix" id="BigTest">
                 <div ng-include="prefix+'assets/content/BigTest.html'"></div>
@@ -49,8 +48,8 @@
             <section spark-scroll-animate="sectionSix" id="About">
                 <div ng-include="prefix+'assets/content/About.html'"></div>
             </section>
-            <section spark-scroll-animate="sectionFive" id="Footer">
-                Made with AngularJS
+            <section spark-scroll-animate="sectionFive" id="extrareading">
+                <div ng-include="prefix+'assets/content/extrareading.html'"></div>
             </section>
             <section spark-scroll-animate="sectionFive" id="footnotes">
                 <div ng-include="prefix+'assets/content/footnotes.html'"></div>
@@ -60,15 +59,19 @@
         <div class="navigation" spark-scroll-animate="navigationAnimations">
             <ul ng-hide="firefox">
                 <li><h2>Topics</h2></li>
-                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="summary" duration="1800">Overview/summary</a></li>
+                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="summary" duration="1800">Introduction</a></li>
                 <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="singletoncreation" duration="1800">Singleton creation</a></li>
-                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Singletons-Pros" duration="1800">Pro's and con's</a></li>
+                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Singletons-Pros" duration="1800">Pro's and Con's</a></li>
                 <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Were-To-Use" duration="1800">Where to use</a></li>
                 <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Were-Not-To-Use" duration="1800">Where <b>not</b> to use</a></li>
                 <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Singletons-Alternatives" duration="1800">Alternatives</a></li>
-                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="BigTest" duration="1800">Big Test</a></li>
-                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="footnotes" duration="1800">Footnotes</a></li>
-                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="About" duration="1800">About</a></li>
+                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="BigTest" duration="1800"><b>Main Test</b></a></li>
+                <div class="bottom_options">
+                    <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="extrareading" duration="1800">Extra Reading</a></li>
+                    <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="footnotes" duration="1800">Footnotes</a></li>
+                    <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="About" duration="1800">About</a></li>
+                </div>
+
             </ul>
             <ul ng-show="firefox">
                 <li><h2>Topics</h2></li>
@@ -80,7 +83,7 @@
                 <li><a class="nav_item" href="#/Home/#Were-To-Use">Where to use</a></li>
                 <li><a class="nav_item" href="#/Home/#Were-Not-To-Use">Where <b>not</b> to use</a></li>
                 <li><a class="nav_item" href="#/Home/#Singletons-Alternatives">Alternatives</a></li>
-                <li><a class="nav_item" href="#/Home/#BigTest">Big Test</a></li>
+                <li><a class="nav_item" href="#/Home/#BigTest"><b>Main Test</b></a></li>
                 <li><a class="nav_item" href="#/Home/#About">About</a></li>
             </ul>
         </div>
@@ -93,4 +96,17 @@
     </div>
 
 
+
+
+</div>
+
+<div class="banner" ng-show="firefox" spark-scroll-animate="bannerAnimations">
+    <p>
+        Best viewed in <b>Chrome</b>.
+    </p>
+</div>
+
+
+<div class="cloud1" spark-scroll-animate="cloud1Animations">
+    <i class="fa fa-cloud"></i>
 </div>

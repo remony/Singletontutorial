@@ -46,6 +46,13 @@ var HomeBrowserAnimator = function() {
         '400'   : { bottom: '-50em', opacity : 0 }
     };
 
+    this.bannerAnimations = {
+        ease    : 'easeOutQuad',
+        '0'    : { top: '0em', opacity : 1 },
+        '300'   : { top: '-0.9em' },
+        '400'   : { top: '-50em', opacity : 0 }
+    }
+
     this.videoAnimations = {
         ease    : 'easeOutQuad',
         '20'    : {opacity: 1 },
@@ -75,9 +82,9 @@ var HomeBrowserAnimator = function() {
 
     this.titleAnimation = {
         ease:'easeOutQuad',
-        '420': { top: '0px', 'font-size': '3em', color: '#fff' },
+        '420': { top: '0.8em', 'font-size': '4em', color: '#fff' },
         '350': { color: '#5d5d5d' },
-        '200': { top: '5em', 'font-size': '6em', color: '#333', ease: 'linear' }
+        '200': { top: '8em', 'font-size': '4em', color: '#212121', ease: 'linear' }
     };
 
     this.skyAnimation = {
@@ -264,6 +271,8 @@ var HomeBrowserAnimator = function() {
         '600'  : { left : '0em',
         opacity: 1}
     };
+
+
 
     return this;
 };

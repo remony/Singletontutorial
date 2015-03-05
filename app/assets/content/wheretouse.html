@@ -1,1 +1,22 @@
-<h1>Where should we use Singletons</h1>
+<h1>Where should we use Singletons <i class="fa fa-thumbs-up makeGreen"></i></h1>
+<P>
+    You use Singletons when you have a class which you want to be accessed globally. One way to implement a singleton is to lazy load it. Singletons are lazy loaded only when they are required which can be useful when handling heavy load like database connections or multiplayer connections.
+    <br>
+    <br>
+    Instead of lazy utilizing a singleton we use singletons to avoid creating multiple instances of a class ensuring that there is only one until the application/game is closed. Another example of a singleton are persistent singletons where in unity you would use this to have a singleton to last between scenes for example you would use this if you wanted a song to continue playing as you switched between two scenes.
+    <br><br>
+    Both of these solutions bring issues such as concurrency related issues with lazy loading and global state issues with the singleton.
+<br>
+    Uses cases where you can use singletons are:
+</P>
+<ul>
+    <li>As a logger</li>
+    <li>Audio manager</li>
+    <li>Texture manager</li>
+    <li>Etc.</li>
+</ul>
+
+<br>
+<br>
+
+<kuizu datasource="notToUse.json" spark-scroll-animate="quizAnimation"></kuizu>

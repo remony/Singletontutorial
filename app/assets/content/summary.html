@@ -1,2 +1,77 @@
 <h1>The Singleton Pattern</h1>
-<h2>Summary</h2>
+
+
+<blockquote>
+    <p>The Sun, you see it everyday, and its always the same no matter where in the world you are until the night sky appears.</p>
+</blockquote>
+
+<p>The Singleton pattern is a commonly design pattern where you have a single instance of a class with global access to its resources. For example in a game you would implement a singleton to provide a global access to to a games core functions or managers such as music which would play between scenes or writing logs on the console but you also want to send them to a server. The singleton ensures that throughout the life cycle of that application/game there will only be one instance of that class until the application or game has ended.</p>
+
+<blockquote>
+    <p>"Ensure a class has one instance, and provide a global point of access to it"</p>
+</blockquote>
+<br/>
+<img src="assets/content/images/Singleton%20class.png"/>
+<br/>
+
+<p>The sun is a great example of a singleton as there is only one instance of the sun, and all the planets can access the suns variables for example light and heat.</p>
+
+<h3>Unity Example of implementation of singleton</h3>
+
+<p>In our gameManager class we want to implement our singleton which will be accessed by the other classes in the game, for this example we want to access the singleton to check if the game is paused or not. In the code example below is the C# script for the singleton implementation.</p>
+<br/>
+<br/>
+<i>GameManager.cs</i>: The script is attached to the camera in unity.
+<pre class="line-numbers"><code class="language-c#">
+    using UnityEngine;
+    using System.Collections;
+
+    public class GameManager : MonoBehaviour {
+
+    static GameManager _instance;
+
+    public static GameManager managerInstance
+    {
+    get
+    {
+    if (_instance == null)
+    {
+    _instance = GameObject.Find("Main Camera").GetComponent<GameManager>();
+    }
+    return _instance;
+    }
+    }
+
+    public bool isPaused = false;
+
+    }
+
+</code></pre>
+
+<br/>
+<p>To check if the game is paused we want to access the gamemanager singleton, in the character script below we are accessing the singleton to check if the game is paused or not.</p>
+<br/>
+<i>character.cs</i>
+<pre class="line-numbers"><code class="language-c#">
+    using UnityEngine;
+    using System.Collections;
+
+    public class Character : MonoBehaviour {
+
+    void update	()
+    {
+    if (!GameManager.managerInstance.isPaused) {
+    //is paused
+    }	else {
+    //not paused
+    }
+    }
+    }
+
+
+</code></pre>
+<br/>
+<br/>
+<br/>
+<p>Throughout this tutorial you will be given short quizzes which will help you in making sure you understand what you are reading. To start a test click on the "Start Test" button below and answer the question by clicking the buttons below the question.</p>
+<kuizu datasource="intro.json" spark-scroll-animate="quizAnimation"></kuizu>

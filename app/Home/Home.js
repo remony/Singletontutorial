@@ -11,7 +11,7 @@ var HomeController = function($scope, $rootScope,  HomeBrowserAnimator, HomeMobi
 
   var mobile = HomeMobileAnimator.inMobile();
   var windows = HomeBrowserAnimator.inWindows();
-  $scope.firefox = HomeBrowserAnimator.inFirefox() || HomeBrowserAnimator.isIE();
+  $scope.firefox = HomeBrowserAnimator.inFirefox() || HomeBrowserAnimator.inIE();
 
   console.log('Mobile: ' + mobile);
   console.log('Windows: ' + windows);

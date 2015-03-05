@@ -46,6 +46,39 @@ var HomeBrowserAnimator = function() {
         '400'   : { bottom: '-50em', opacity : 0 }
     };
 
+    this.cloud1Animations = {
+        ease    : 'easeOutQuad',
+        '0'    : { left: '140vh', opacity : 1 },
+        '300'   : { left: '-0.9em' },
+        '400'   : { left: '-50em', opacity : 1 }
+    };
+    this.cloud2Animations = {
+        ease    : 'easeOutQuad',
+        '0'    : { left: '-50vh', opacity : 1 },
+        '300'   : { left: '-0.9em' },
+        '400'   : { left: '100vh', opacity : 1 }
+    };
+    this.cloud3Animations = {
+        ease    : 'easeOutQuad',
+        '0'    : { left: '-50vh', opacity : 1 },
+        '300'   : { left: '-0.9em' },
+        '400'   : { left: '2000vh', opacity : 1 }
+    };
+    this.cloud4Animations = {
+        ease    : 'easeOutQuad',
+        '0'    : { left: '100vh', opacity : 1 },
+        '300'   : { left: '-0.9em' },
+        '400'   : { left: '-50em', opacity : 1 }
+    };
+    this.cloud5Animations = {
+        ease    : 'easeOutQuad',
+        '0'    : { left: '100vh', opacity : 1 },
+        '300'   : { left: '-0.9em' },
+        '400'   : { left: '-50em', opacity : 1 }
+    };
+
+
+
     this.bannerAnimations = {
         ease    : 'easeOutQuad',
         '0'    : { top: '0em', opacity : 1 },
@@ -86,6 +119,8 @@ var HomeBrowserAnimator = function() {
         '350': { color: '#5d5d5d' },
         '200': { top: '8em', 'font-size': '4em', color: '#212121', ease: 'linear' }
     };
+
+
 
     this.skyAnimation = {
         '0'   : {

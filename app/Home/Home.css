@@ -257,3 +257,48 @@ p{
 }
 
 
+
+/*
+            Clouds
+
+*/
+.cloud1 {
+    position:fixed;
+    top:0;
+    left:0;
+    font-size:12em;
+    color:#fff;
+    z-index: 11;
+}
+.cloud2 {
+    position:fixed;
+    bottom:0;
+    left:-20px;
+    font-size:10em;
+    color:#fff;
+    z-index: 11;
+}
+.cloud3 {
+    position:fixed;
+    top:0;
+    right:0;
+    font-size:18em;
+    color:#fff;
+    z-index: 11;
+}
+.cloud4 {
+    position:fixed;
+    bottom:0;
+    right:200px;
+    font-size:14em;
+    color:#fff;
+    z-index: 11;
+}
+.cloud5 {
+    position:fixed;
+    top:0;
+    left:0;
+    font-size:7em;
+    color:#fff;
+    z-index: 11;
+}

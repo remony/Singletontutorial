@@ -21,6 +21,15 @@ var HomeBrowserAnimator = function() {
         }
     };
 
+    this.inIE = function () {
+        if (navigator.userAgent.match(/MSIE/i)){
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
+
     this.backgroundAnimation = {
         '0'     : { 'background-color'  : '#03A9F4' },
         '500'   : { 'background-color'  : '#fff' },

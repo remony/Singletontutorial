@@ -68,28 +68,30 @@
         </div>
 
         <div class="navigation" spark-scroll-animate="navigationAnimations">
-            <ul>
+            <ul ng-hide="firefox">
                 <li><h2>Topics</h2></li>
-                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="summary" duration="1800">Overview/summary</a>
-                </li>
-                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="TheSingleton" duration="1800">What is
-                    a Singleton</a></li>
-                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Singleton-Problems" duration="1800">Problems</a>
-                </li>
-                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Singletons-Pros" duration="1800">Pro's
-                    and con's</a></li>
-                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Were-To-Use" duration="1800">Where to
-                    use</a></li>
-                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Were-Not-To-Use" duration="1800">Where
-                    <b>not</b> to use</a></li>
-
-                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Singletons-Alternatives"
-                       duration="1800">Alternatives</a></li>
-                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="BigTest" duration="1800">Big Test</a>
-                </li>
+                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="summary" duration="1800">Overview/summary</a></li>
+                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="TheSingleton" duration="1800">What is a Singleton</a></li>
+                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Singleton-Problems" duration="1800">Problems</a></li>
+                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Singletons-Pros" duration="1800">Pro's and con's</a></li>
+                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Were-To-Use" duration="1800">Where to use</a></li>
+                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Were-Not-To-Use" duration="1800">Where <b>not</b> to use</a></li>
+                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="Singletons-Alternatives" duration="1800">Alternatives</a></li>
+                <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="BigTest" duration="1800">Big Test</a></li>
                 <li><a href="" class="nav_item" easing="easeInOutCubic" scroll-to="About" duration="1800">About</a></li>
             </ul>
-
+            <ul ng-show="firefox">
+                <li><h2>Topics</h2></li>
+                <li><a class="nav_item" href="#/Home/#summary">Overview/summary</a></li>
+                <li><a class="nav_item" href="#/Home/#TheSingleton">What is a Singleton</a></li>
+                <li><a class="nav_item" href="#/Home/#Singleton-Problems">Problems</a></li>
+                <li><a class="nav_item" href="#/Home/#Singletons-Pros">Pro's and con's</a></li>
+                <li><a class="nav_item" href="#/Home/#Were-To-Use">Where to use</a></li>
+                <li><a class="nav_item" href="#/Home/#Were-Not-To-Use">Where <b>not</b> to use</a></li>
+                <li><a class="nav_item" href="#/Home/#Singletons-Alternatives">Alternatives</a></li>
+                <li><a class="nav_item" href="#/Home/#BigTest">Big Test</a></li>
+                <li><a class="nav_item" href="#/Home/#About">About</a></li>
+            </ul>
         </div>
 
         <div class="arrowdown animated fx-fade-down bounce infinite" spark-scroll-animate="arrowAnimations">

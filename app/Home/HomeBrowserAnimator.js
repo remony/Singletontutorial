@@ -41,14 +41,16 @@ var HomeBrowserAnimator = function() {
 
     this.arrowAnimations = {
         ease    : 'easeOutQuad',
-        '20'    : {opacity: 1 },
-        '600'  : { opacity : 0 }
-    }
+        '20'    : { bottom: '-0.5em', opacity : 1 },
+        '300'   : { bottom: '-0.9em' },
+        '400'   : { bottom: '-50em', opacity : 0 }
+    };
+
     this.videoAnimations = {
         ease    : 'easeOutQuad',
         '20'    : {opacity: 1 },
         '600'  : { opacity : 0 }
-    }
+    };
 
     this.sunAnimation = {
         ease    : 'easeOutQuad',

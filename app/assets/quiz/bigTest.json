@@ -1,0 +1,51 @@
+[
+  {
+    "question": "What does a singleton do?",
+    "options": [
+      "create a object accessibly only by that class",
+      "prevent security issues by sharing variables publicly",
+      "create a single global access class"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is a good example of a singleton in unity",
+    "options": [
+      "the whole project",
+      "controlling what the user/player can do",
+      "game manager",
+      "as an interface to a library"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which of these is a CON for using a singleton ",
+    "options": [
+      "memory management",
+      "concurrency issues",
+      "limited to only one instance",
+      "There are no cons"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which of these is a PRO for using a singleton ",
+    "options": [
+      "memory management",
+      "concurrency issues",
+      "easy to debug",
+      "There are no pros"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Which of these is an alternative to using singleton",
+    "options": [
+      "toolbar",
+      "toolkit",
+      "toolbox",
+      "dynamic"
+    ],
+    "answer": 2
+  }
+]

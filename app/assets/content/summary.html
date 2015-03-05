@@ -22,54 +22,59 @@
 <br/>
 <br/>
 <i>GameManager.cs</i>: The script is attached to the camera in unity.
-<pre class="line-numbers"><code class="language-c#">
+<pre class="line-numbers">
+    <code class="language-c#">
     using UnityEngine;
     using System.Collections;
 
-    public class GameManager : MonoBehaviour {
-
-    static GameManager _instance;
-
-    public static GameManager managerInstance
+    public class GameManager : MonoBehaviour
     {
-    get
-    {
-    if (_instance == null)
-    {
-    _instance = GameObject.Find("Main Camera").GetComponent<GameManager>();
-    }
-    return _instance;
-    }
-    }
+        static GameManager _instance;
 
-    public bool isPaused = false;
+        public static GameManager managerInstance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = GameObject.Find("Main Camera").GetComponent<GameManager>();
+                }
 
+                return _instance;
+            }
+        }
+
+        public bool isPaused = false;
     }
-
-</code></pre>
+    </code>
+</pre>
 
 <br/>
 <p>To check if the game is paused we want to access the gamemanager singleton, in the character script below we are accessing the singleton to check if the game is paused or not.</p>
 <br/>
 <i>character.cs</i>
-<pre class="line-numbers"><code class="language-c#">
+<pre class="line-numbers">
+    <code class="language-c#">
     using UnityEngine;
     using System.Collections;
 
-    public class Character : MonoBehaviour {
-
-    void update	()
+    public class Character : MonoBehaviour
     {
-    if (!GameManager.managerInstance.isPaused) {
-    //is paused
-    }	else {
-    //not paused
-    }
-    }
-    }
 
-
-</code></pre>
+        void update	()
+        {
+            if (!GameManager.managerInstance.isPaused)
+            {
+                //is paused
+            }
+            else
+            {
+                //not paused
+            }
+        }
+    }
+    </code>
+</pre>
 <br/>
 <br/>
 <br/>

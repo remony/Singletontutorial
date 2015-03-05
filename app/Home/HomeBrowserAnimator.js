@@ -12,6 +12,15 @@ var HomeBrowserAnimator = function() {
         }
     };
 
+    this.inFirefox = function () {
+        if (navigator.userAgent.match(/Firefox/i)){
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
+
     this.backgroundAnimation = {
         '0'     : { 'background-color'  : '#03A9F4' },
         '500'   : { 'background-color'  : '#fff' },

@@ -1,16 +1,19 @@
-<h1>Pro's and Con's of The Singleton Pattern</h1>
+<h1>
+    Pro's and
+    Con's of The Singleton Pattern</h1>
 
 
 
-<h3 id="toc_4">Pros<sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup></h3>
+<h3 id="toc_4"><i class="fa fa-check makeGreen"></i> Pros<sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup></h3>
 
 <ul>
     <li>Since the singleton is initialized when it is first accessed it doesn&rsquo;t create instances of classes that are never accessed. This is good for memory management.</li>
     <li>It ensures that only one instance of a class is created.</li>
+    <li>When no one is using it the singleton is not initialized.</li>
     <li>The alternative to using singletons is static classes however there is one main issue with this: automatic initialization. The static class cannot access information which is not known until the program is running. Using lazy initialization the singletons are initialized as late as possible so it can access information when running.</li>
 </ul>
 
-<h3 id="toc_5">Cons</h3>
+<h3 id="toc_5"><i class="fa fa-times makeRed"></i> Cons</h3>
 
 <ul>
     <li>Singletons break the single responsibility of object oriented design. A singleton class has the responsibility of its main activity and the responsibility of creating an instance of itself.<sup id="fnref2"><a href="#fn2" rel="footnote">2</a></sup></li>

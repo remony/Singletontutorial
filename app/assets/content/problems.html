@@ -1,4 +1,4 @@
-<h1 id="toc_10">Where should we not use Singletons?</h1>
+<h1 id="toc_10"><i class="fa fa-exclamation-triangle makeRed"></i> Where should we not use Singletons?</h1>
 
 <h3 id="toc_11">Nowhere?</h3>
 
@@ -85,54 +85,5 @@
 <p>In this instance, using a Singleton could make your program a lot shorter, because you only have to execute a web request, and write the response to the singleton.</p>
 
 <p>However, as soon as a user does more than one request, you&rsquo;ll need to know which request was last executed. If you want to test a given request, you&rsquo;ll need to place data in the Singleton. Now all of your unit tests will depend on executing another request first to place data in the global singleton, and thus your tests are no longer independent.</p>
-
-<h2 id="toc_18">Quiz</h2>
-
-<pre class="line-numbers"><code class="language-javascript">[
-    {
-    &quot;question&quot;: &quot;Oftentimes the use of Singletons (and global variables as a whole) is discouraged because...&quot;,
-    &quot;options&quot;: [
-    &quot;... It makes classes more independent&quot;,
-    &quot;... It increases coupling&quot;,
-    &quot;... It lets the programmers see the code more clearly&quot;,
-    &quot;... Nobody likes global variables&quot;
-    ],
-    &quot;answer&quot;: 1
-    },
-    {
-    &quot;question&quot;: &quot;You should never, ever, use a Singleton.&quot;,
-    &quot;options&quot;: [
-    &quot;True&quot;,
-    &quot;False&quot;
-    ],
-    &quot;answer&quot;: 1
-    },
-    {
-    &quot;question&quot;: &quot;It is OK for you to have many Singletons in your application which communicate between them&quot;,
-    &quot;options&quot;: [
-    &quot;No, because this hides code from other classes, as you can&#39;t easily see the interactions between Singletons&quot;,
-    &quot;Yes, because this will make other classes shorter&quot;,
-    &quot;Yes, because it will hide code so the programmers won&#39;t get distracted by it&quot;,
-    &quot;No, because having many Singletons is bad&quot;
-    ],
-    &quot;answer&quot;: 0
-    },
-    {
-    &quot;question&quot;: &quot;Using Singletons is good for testing, because you can easily re-use them&quot;,
-    &quot;options&quot;: [
-    &quot;True&quot;,
-    &quot;False&quot;,
-    ],
-    &quot;answer&quot;: 1
-    },
-    {
-    &quot;question&quot;: &quot;Using Singletons to carry global state throughout the application is...&quot;,
-    &quot;options&quot;: [
-    &quot;Good, because it saves time since you don&#39;t have to pass the states from one method to another&quot;,
-    &quot;Good, because having all states available globally might be helpful later on, if you want to access them from elsewhere in the program&quot;,
-    &quot;Bad, because usually states should only be available where the programmer has specifically said they will be (e.g. passed as parameters)&quot;,
-    &quot;Bad, because global state is an unwanted overhead&quot;
-    ],
-    &quot;answer&quot;: 2
-    }
-    ]</code></pre>
+<br><br/>
+<kuizu datasource="wherenottouse.json" spark-scroll-animate="quizAnimation"></kuizu>

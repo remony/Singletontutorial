@@ -21,8 +21,33 @@
       "Yes",
       "No"
     ],
+    "answer": 0
+  },
+  {
+    "question": "Would you use a Singleton for the enemy Object?",
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": 1
   },
+  {
+    "question": "Would you use a Singleton for the Item Object?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": 1
+  },
+  {
+  "question": "Would you use a Singleton for the Logs?",
+  "options": [
+    "Yes",
+    "No"
+  ],
+  "answer": 0
+},
+
   {
     "question": "Having more than __ Singletons is bad",
     "options": [

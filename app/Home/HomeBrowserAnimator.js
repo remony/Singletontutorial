@@ -46,6 +46,46 @@ var HomeBrowserAnimator = function() {
         '400'   : { bottom: '-50em', opacity : 0 }
     };
 
+    this.cloud1Animations = {
+        ease    : 'easeOutQuad',
+        '0'    : { left: '140vh', opacity : 1 },
+        '400'   : { left: '-50em', opacity : 1 },
+        '401'   : { bottom:'-100em'}
+    };
+    this.cloud2Animations = {
+        ease    : 'easeOutQuad',
+        '0'    : { left: '0vh', opacity : 1 },
+        '400'   : { left: '200vh', opacity : 1 },
+        '401'   : { bottom:'-100em'}
+    };
+    this.cloud3Animations = {
+        ease    : 'easeOutQuad',
+        '0'    : { left: '10vh', opacity : 1 },
+        '400'   : { left: '200vh', opacity : 1 },
+        '401'   : { bottom:'-100em'}
+    };
+    this.cloud4Animations = {
+        ease    : 'easeOutQuad',
+        '0'    : { left: '40vh', opacity : 1 },
+        '400'   : { left: '-50em', opacity : 1 },
+        '401'   : { bottom:'-100em'}
+    };
+    this.cloud5Animations = {
+        ease    : 'easeOutQuad',
+        '0'    : { left: '100vh', opacity : 1 },
+        '400'   : { left: '-50em', opacity : 1 },
+        '401'   : { bottom:'-100em'}
+    };
+
+
+
+    this.bannerAnimations = {
+        ease    : 'easeOutQuad',
+        '0'    : { top: '0em', opacity : 1 },
+        '300'   : { top: '-0.9em' },
+        '400'   : { top: '-50em', opacity : 0 }
+    }
+
     this.videoAnimations = {
         ease    : 'easeOutQuad',
         '20'    : {opacity: 1 },
@@ -75,9 +115,72 @@ var HomeBrowserAnimator = function() {
 
     this.titleAnimation = {
         ease:'easeOutQuad',
-        '420': { top: '0px', 'font-size': '3em', color: '#fff' },
+        '420': { top: '0.8em', 'font-size': '4em', color: '#fff' },
         '350': { color: '#5d5d5d' },
-        '200': { top: '5em', 'font-size': '6em', color: '#333', ease: 'linear' }
+        '200': { top: '8em', 'font-size': '4em', color: '#212121', ease: 'linear' }
+    };
+
+    this.headerCloud1Animations  = {
+        ease    : 'easeOutQuad',
+        '20'    : { left:'-10vw', ease: 'easeOutSine' },
+        '130'   : { left:'-10vw', ease: 'easeOutSine' },
+        '1000'  : { left:'100vw', ease: 'easeOutSine' },
+        '2000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '3000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '4000'  : { left:'100vw', ease: 'easeOutSine' },
+        '5000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '5001'  : { left:'-10vw', ease: 'easeOutSine' },
+        '6000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '7000'  : { left:'100vw', ease: 'easeOutSine' },
+        '8000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '9000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '9001'  : { left:'100vw', ease: 'easeOutSine' },
+        '10000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '11000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '12000'  : { left:'100vw', ease: 'easeOutSine' },
+        '13000'  : { left:'-10vw', ease: 'easeOutSine' }
+    };
+
+    this.headerCloud2Animations  = {
+        ease    : 'easeOutQuad',
+        '20'    : { left:'200vh', ease: 'easeOutSine' },
+        '130'   : { left:'200vh', ease: 'easeOutSine' },
+        '1000'  : { left:'200vh', ease: 'easeOutSine' },
+        '2000'  : { left:'-10vh', ease: 'easeOutSine' },
+        '3000'  : { left:'200vh', ease: 'easeOutSine' },
+        '4000'  : { left:'200vh', ease: 'easeOutSine' },
+        '5000'  : { left:'-10vh', ease: 'easeOutSine' },
+        '5001'  : { left:'200vh', ease: 'easeOutSine' },
+        '6000'  : { left:'200vh', ease: 'easeOutSine' },
+        '7000'  : { left:'200vh', ease: 'easeOutSine' },
+        '8000'  : { left:'-10vh', ease: 'easeOutSine' },
+        '9000'  : { left:'200vh', ease: 'easeOutSine' },
+        '9001'  : { left:'200vh', ease: 'easeOutSine' },
+        '10000'  : { left:'-10vh', ease: 'easeOutSine' },
+        '11000'  : { left:'200vh', ease: 'easeOutSine' },
+        '12000'  : { left:'-10vh', ease: 'easeOutSine' },
+        '13000'  : { left:'200vh', ease: 'easeOutSine' }
+    };
+
+    this.headerCloud3Animations  = {
+        ease    : 'easeOutQuad',
+        '20'    : { left:'-10vw', ease: 'easeOutSine' },
+        '130'   : { left:'100vw', ease: 'easeOutSine' },
+        '1000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '2000'  : { left:'100vw', ease: 'easeOutSine' },
+        '3000'  : { left:'100vw', ease: 'easeOutSine' },
+        '4000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '5000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '5001'  : { left:'100vw', ease: 'easeOutSine' },
+        '6000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '7000'  : { left:'100vw', ease: 'easeOutSine' },
+        '8000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '9000'  : { left:'100vw', ease: 'easeOutSine' },
+        '9001'  : { left:'-10vw', ease: 'easeOutSine' },
+        '10000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '11000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '12000'  : { left:'-10vw', ease: 'easeOutSine' },
+        '13000'  : { left:'100vw', ease: 'easeOutSine' }
     };
 
     this.skyAnimation = {
@@ -264,6 +367,8 @@ var HomeBrowserAnimator = function() {
         '600'  : { left : '0em',
         opacity: 1}
     };
+
+
 
     return this;
 };

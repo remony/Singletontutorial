@@ -1,0 +1,48 @@
+[
+  {
+    "question": "Oftentimes the use of Singletons (and global variables as a whole) is discouraged because...",
+    "options": [
+      "... It makes classes more independent",
+      "... It increases coupling",
+      "... It lets the programmers see the code more clearly",
+      "... Nobody likes global variables"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "You should never, ever, use a Singleton.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "It is OK for you to have many Singletons in your application which communicate between them",
+    "options": [
+      "No, because this hides code from other classes, as you can't easily see the interactions between Singletons",
+      "Yes, because this will make other classes shorter",
+      "Yes, because it will hide code so the programmers won't get distracted by it",
+      "No, because having many Singletons is bad"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Using Singletons is good for testing, because you can easily re-use them",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Using Singletons to carry global state throughout the application is...",
+    "options": [
+      "Good, because it saves time since you don't have to pass the states from one method to another",
+      "Good, because having all states available globally might be helpful later on, if you want to access them from elsewhere in the program",
+      "Bad, because usually states should only be available where the programmer has specifically said they will be (e.g. passed as parameters)",
+      "Bad, because global state is an unwanted overhead"
+    ],
+    "answer": 2
+  }
+]

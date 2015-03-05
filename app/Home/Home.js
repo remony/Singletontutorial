@@ -37,6 +37,18 @@ var HomeController = function($scope, $rootScope,  HomeBrowserAnimator, HomeMobi
     $scope.navigationAnimations = Animator.navigationAnimations;
     $scope.arrowAnimations = Animator.arrowAnimations;
     $scope.videoAnimations = Animator.videoAnimations;
+    $scope.bannerAnimations = Animator.bannerAnimations;
+    $scope.cloud1Animations = Animator.cloud1Animations;
+    $scope.cloud2Animations = Animator.cloud2Animations;
+    $scope.cloud3Animations = Animator.cloud3Animations;
+    $scope.cloud4Animations = Animator.cloud4Animations;
+    $scope.cloud5Animations = Animator.cloud5Animations;
+
+
+    $scope.headerCloud1Animations = Animator.headerCloud1Animations;
+    $scope.headerCloud2Animations = Animator.headerCloud2Animations;
+    $scope.headerCloud3Animations = Animator.headerCloud3Animations;
+
 
 
 

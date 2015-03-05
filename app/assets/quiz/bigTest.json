@@ -47,5 +47,21 @@
       "dynamic"
     ],
     "answer": 2
+  },
+  {
+    "question": "Would you use a private or public constructor to instantiate a singleton ",
+    "options": [
+      "private",
+      "publc"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Using Singletons is good for testing, because you can easily re-use them",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1
   }
 ]

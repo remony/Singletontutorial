@@ -23,7 +23,7 @@
     text-align: center;
     font-family: "Open Sans", helvetica, arial, sans-serif;
     font-weight: 800;
-    font-size: 3em;
+    font-size: 2em;
     color: #212121;
 
     z-index: 12;
@@ -161,6 +161,11 @@
     padding-top:10px;
 }
 
+.bottom_options {
+    position:absolute;
+    bottom:30em;
+}
+
 .arrowdown {
     position: fixed;
     bottom: -0.5em;
@@ -224,6 +229,120 @@ blockquote .fa{
 }
 
 
+.banner {
+    position:fixed;
+    top:0;
+    height:auto;
+    background-color:#212121;
+    width:100%;
+    z-index: 20;
+    text-align:center;
+    font-size:3em;
+    color:#fff;
+    box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,1);
+}
+
+h1  {
+    font-weight:800;
+    padding-bottom:10px;
+}
+
+
+.youtubeVideo   {
+    right:0;
+}
+
+p{
+    font-size:1.2em;
+}
 
 
 
+/*
+            Clouds
+
+*/
+
+
+.cloud1 {
+    position:fixed;
+    top:0;
+    left:0;
+    font-size:12em;
+    color:#fff;
+    z-index: 12;
+    opacity:0.9;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+.cloud2 {
+    position:fixed;
+    bottom:0;
+    left:0;
+    font-size:10em;
+    color:#FAFAFA;
+    opacity:0.9;
+    z-index: 12;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+.cloud3 {
+    position:fixed;
+    top:0;
+    right:0;
+    font-size:18em;
+    color:#fff;
+    z-index: 12;
+    opacity:0.9;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+.cloud4 {
+    position:fixed;
+    bottom:0;
+    right:200px;
+    font-size:14em;
+    color: #fafafa;
+    z-index: 12;opacity:0.9;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+.cloud5 {
+    position:fixed;
+    top:0;
+    left:0;
+    font-size:7em;
+    color:#fff;
+    z-index: 12;
+    opacity:0.9;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+
+
+
+.headerCloud1   {
+    position:fixed;
+    top:0.1em;
+    left:0;
+    font-size:3em;
+    color:#fff;
+    z-index: 12;
+    opacity:0.9;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+.headerCloud2   {
+    position:fixed;
+    top:0.3em;
+    right:0;
+    font-size:2em;
+    color:#fff;
+    z-index: 12;
+    opacity:0.9;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+.headerCloud3   {
+    position:fixed;
+    top:0.1em;
+    left:0;
+    font-size:2.3em;
+    color:#fefefe;
+    z-index: 12;
+    opacity:0.9;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}

@@ -21,7 +21,7 @@
   {
     "question": "Which of these is a CON for using a singleton ",
     "options": [
-      "memory management",
+      "memory management issues",
       "concurrency issues",
       "limited to only one instance",
       "There are no cons"
@@ -31,8 +31,8 @@
   {
     "question": "Which of these is a PRO for using a singleton ",
     "options": [
-      "memory management",
-      "concurrency issues",
+      "good for memory management",
+      "no concurrency issues",
       "easy to debug",
       "There are no pros"
     ],
@@ -49,10 +49,28 @@
     "answer": 2
   },
   {
+    "question": "Would you use a Singleton for the Music Manager Object?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Would you use a Singleton for the Player Object?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": 1
+  },
+
+
+  {
     "question": "Would you use a private or public constructor to instantiate a singleton ",
     "options": [
       "private",
-      "publc"
+      "public"
     ],
     "answer": 0
   },
@@ -61,6 +79,35 @@
     "options": [
       "True",
       "False"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "How does android avoid the use of singletons ",
+    "options": [
+      "Static Variables",
+      "Using an SQLlite database to manage data",
+      "Passing the context as a parameter almost everywhere"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Sometimes, when using a singleton we can find problems with ________",
+    "options": [
+      "concurrency",
+      "speed",
+      "gui",
+      "access"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "If you were to use a Singleton on a Quiz, what would you use it for",
+    "options": [
+      "To display information",
+      "To keep the score between questions",
+      "To store the questions",
+      "To randomize the questions"
     ],
     "answer": 1
   }

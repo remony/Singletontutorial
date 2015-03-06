@@ -89,7 +89,7 @@
       "Using an SQLlite database to manage data",
       "Passing the context as a parameter almost everywhere"
     ],
-    "answer": 1
+    "answer": 2
   },
   {
     "question": "Sometimes, when using a singleton we can find problems with ________",

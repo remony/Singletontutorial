@@ -1,6 +1,6 @@
 [
   {
-    "question": "A singleton allows you to",
+    "question": "What is does a singleton do?",
     "options": [
       "create a object accessibly only by that class",
       "prevent security issues by sharing variables publicly",
@@ -8,24 +8,15 @@
     ],
     "answer": 2
   },
+
   {
-    "question": "Which is a good use case for a singleton?",
+    "question": "Which is a good use case for a singleton",
     "options": [
-      "the whole project",
-      "as a game manager",
-      "controlling what the user/player can do",
-      "as an interface to a library"
+      "Log files manager",
+      "Music Manager",
+      "Character controller ",
+      "All of the above"
     ],
     "answer": 3
-  },
-  {
-    "question": "What happens to the singleton when an application closes? ",
-    "options": [
-      "the world ends",
-      "nothing",
-      "it also closes",
-      "I'm not actually that sure"
-    ],
-    "answer": 2
   }
 ]

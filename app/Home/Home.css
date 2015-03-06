@@ -162,8 +162,8 @@
 }
 
 .bottom_options {
-    position:absolute;
-    bottom:30em;
+    position:relative;
+    bottom:1em;
 }
 
 .arrowdown {

@@ -17,7 +17,7 @@
 
 <p>This is an increase in coupling caused by a Singleton, which can make code not perform as you expect, and also introduce increased and unexpected complexity.</p>
 
-<p>Or, as <em>Miško Hevery</em> puts it<sup id="fnref4"><a href="#fn4" rel="footnote">4</a></sup>:</p>
+<p>Or, as <em>Miško Hevery</em> puts it<sup id="fnref4"><a href="#/Home/#fn4" rel="footnote">4</a></sup>:</p>
 
 <blockquote>
     <p>Think of it another way. You can live in a society where everyone (every class) declares who their friends (collaborators) are. If I know that Joe knows Mary but neither Mary nor Joe knows Tim, then it is safe for me to assume that if I give some information to Joe he may give it to Mary, but under no circumstances will Tim get hold of it. Now, imagine that everyone (every class) declares some of their friends (collaborators), but other friends (collaborators which are singletons) are kept secret. Now you are left wondering how in the world did Tim got hold of the information you gave to Joe.</p>
@@ -62,7 +62,7 @@
 
 <h3 id="toc_16">Testing</h3>
 
-<p>As Brian Button says<sup id="fnref5"><a href="#fn5" rel="footnote">5</a></sup>:</p>
+<p>As Brian Button says<sup id="fnref5"><a href="#/Home/#fn5" rel="footnote">5</a></sup>:</p>
 
 <blockquote>
     <p>Persistent state is the enemy of unit testing. One of the things that makes unit testing effective is that each test has to be independent of all the others.</p>
@@ -74,7 +74,7 @@
 
 <h3 id="toc_17">Web Service and global state</h3>
 
-<p>Mugunth Kumar<sup id="fnref6"><a href="#fn6" rel="footnote">6</a></sup> gives us an example of an abuse case for a Singleton. I hope nobody does this, but it&rsquo;s good to know that it is a really, really bad idea:</p>
+<p>Mugunth Kumar<sup id="fnref6"><a href="#/Home/#fn6" rel="footnote">6</a></sup> gives us an example of an abuse case for a Singleton. I hope nobody does this, but it&rsquo;s good to know that it is a really, really bad idea:</p>
 
 <blockquote>
     <p>Let me give you an example. When you develop an app that talks to a web service, the only “state” variable I could think of is your access token.</p>
